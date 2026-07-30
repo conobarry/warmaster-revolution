@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <catalogue library="false" id="384e-e970-000c-d59c" name="Sauron" gameSystemId="sys-3065-0af8-9913-4a4c" gameSystemRevision="1" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
-    <selectionEntry type="unit" import="true" name="Uruk-hai" hidden="false" id="8ef8-f74a-55ee-43ad">
+    <selectionEntry type="unit" import="true" name="Uruk-hai" hidden="false" id="8ef8-f74a-55ee-43ad" publicationId="2fdc-4bd3-bba1-56b9">
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="65"/>
       </costs>
@@ -20,8 +20,16 @@
       <categoryLinks>
         <categoryLink name="Infantry" hidden="false" id="d0d7-7082-cf7e-bc1c" targetId="5e38-77df-81d0-6399" primary="true"/>
       </categoryLinks>
+      <infoLinks>
+        <infoLink name="Warband" id="5226-05ff-c69b-a049" hidden="false" type="rule" targetId="0d1c-680a-f38d-6e29"/>
+      </infoLinks>
+      <rules>
+        <rule name="Uruk-hai" id="552c-34e6-a4de-293e" hidden="false">
+          <description>A regiment with Uruk-hai and Orcs suffers a -1 Command penalty. To represent the speed and aggression of the Uruk-hai they use the Warband rules, and may always advance 20 cm after combat regardless of how many rounds the initial combat engagement took.</description>
+        </rule>
+      </rules>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Orcs" hidden="false" id="8e83-c945-3fbb-3673">
+    <selectionEntry type="unit" import="true" name="Orcs" hidden="false" id="8e83-c945-3fbb-3673" publicationId="2fdc-4bd3-bba1-56b9">
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="30"/>
       </costs>
@@ -31,7 +39,7 @@
       <modifiers>
         <modifier type="increment" value="4" field="abdc-6ba4-dcf5-40ae">
           <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="force" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false"/>
+            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="force" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
           </repeats>
         </modifier>
       </modifiers>
@@ -50,8 +58,11 @@
       <categoryLinks>
         <categoryLink name="Infantry" hidden="false" id="642b-4364-b856-9bdf" targetId="5e38-77df-81d0-6399" primary="true"/>
       </categoryLinks>
+      <infoLinks>
+        <infoLink name="Warband" id="2107-421e-a64f-cc78" hidden="false" type="rule" targetId="0d1c-680a-f38d-6e29"/>
+      </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Servant of Sauron" hidden="false" id="2f39-93bc-4258-e949">
+    <selectionEntry type="unit" import="true" name="Servant of Sauron" hidden="false" id="2f39-93bc-4258-e949" publicationId="2fdc-4bd3-bba1-56b9">
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="95"/>
       </costs>
@@ -74,7 +85,7 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a050-ec66-374d-aa85"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Orc/Uruk-hai General" hidden="false" id="c234-1d3d-1a42-03c0">
+    <selectionEntry type="unit" import="true" name="Orc/Uruk-hai General" hidden="false" id="c234-1d3d-1a42-03c0" publicationId="2fdc-4bd3-bba1-56b9">
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="85"/>
       </costs>
@@ -97,6 +108,103 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bde8-40f6-83c8-3f34"/>
       </constraints>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Orc Archers" hidden="false" id="7899-e159-ced6-29c3" publicationId="2fdc-4bd3-bba1-56b9">
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="30"/>
+      </costs>
+      <profiles>
+        <profile name="Orc Archers" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="3bd0-ad96-724e-ed65">
+          <characteristics>
+            <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">2/1</characteristic>
+            <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">3</characteristic>
+            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">0</characteristic>
+            <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">-</characteristic>
+            <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="9ca2-5450-6484-1651" includeChildSelections="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="increment" value="4" field="9ca2-5450-6484-1651">
+          <repeats>
+            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="force" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <infoLinks>
+        <infoLink name="Warband" id="ddd2-aff9-c2e2-8aea" hidden="false" type="rule" targetId="0d1c-680a-f38d-6e29"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Trolls" hidden="false" id="04e1-e02a-1303-6b07" publicationId="2fdc-4bd3-bba1-56b9">
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="105"/>
+      </costs>
+      <profiles>
+        <profile name="Trolls" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="932d-5908-178e-d0af">
+          <characteristics>
+            <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">4</characteristic>
+            <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">4</characteristic>
+            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">5+</characteristic>
+            <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">-</characteristic>
+            <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="9ca2-5450-6484-1651" includeChildSelections="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="increment" value="3" field="9ca2-5450-6484-1651">
+          <repeats>
+            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="force" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <rules>
+        <rule name="Trolls" id="cfce-7a57-b66e-ac2a" hidden="false">
+          <description>Trolls were known to stop and bite the throats of their victims in combat, so a unit of trolls may never advance more than 10 cm after combat.
+
+
+Even though Trolls are quite stupid they have uncanny sense of smell. This sense of smell allows a unit of trolls to trace a LOS through friendly units to the enemy. A unit of Trolls will always use initiative to charge the closest enemy unit within 20cm, even if an unengaged friendly unit lies between the Trolls and their victims. When a unit of trolls is forced to charge an enemy unit and their path takes them through an unengaged friendly unit, a burst through is performed on the unit the Trolls were forced to move through. Remember this rule applies to unengaged friendly units only. Trolls will never trace a LOS through, charge through, or displace a friendly unit already in contact with the enemy.</description>
+        </rule>
+      </rules>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Olog-hai" hidden="false" id="9d74-e610-4a1a-8b47">
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="150"/>
+      </costs>
+      <profiles>
+        <profile name="Olog-hai" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="380f-bec0-32fc-06fc">
+          <characteristics>
+            <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">4</characteristic>
+            <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">4</characteristic>
+            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">4+</characteristic>
+            <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">-</characteristic>
+            <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="6f77-7adf-953c-6aa6" includeChildSelections="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="increment" value="1" field="6f77-7adf-953c-6aa6">
+          <repeats>
+            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="force" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <rules>
+        <rule name="Olog-hai" id="d451-8cf7-a12e-be43" hidden="false">
+          <description>A brigade with both Olog-hai and Trolls will suffer a -1 Command penalty.</description>
+        </rule>
+      </rules>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Orcs" hidden="false" id="9172-c355-2786-7414" type="selectionEntry" targetId="8e83-c945-3fbb-3673"/>
@@ -104,4 +212,7 @@
     <entryLink import="true" name="Orc/Uruk-hai General" hidden="false" id="89bd-c825-1ed6-e9ed" type="selectionEntry" targetId="c234-1d3d-1a42-03c0"/>
     <entryLink import="true" name="Servant of Sauron" hidden="false" id="54ae-102a-5441-29ee" type="selectionEntry" targetId="2f39-93bc-4258-e949"/>
   </entryLinks>
+  <catalogueLinks>
+    <catalogueLink type="catalogue" name="War of the Ring" id="580c-2721-9a93-5e3d" targetId="a85a-9f67-08e2-d9e9"/>
+  </catalogueLinks>
 </catalogue>

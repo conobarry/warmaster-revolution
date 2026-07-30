@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue library="true" id="a85a-9f67-08e2-d9e9" name="War of the Ring" gameSystemId="sys-3065-0af8-9913-4a4c" gameSystemRevision="1" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <sharedRules>
+    <rule name="Warband" id="0d1c-680a-f38d-6e29" hidden="false" publicationId="2fdc-4bd3-bba1-56b9">
+      <description>If all units of a brigade are classified as Warband and the brigade consists of at least 3 units, the brigade&apos;s command value is increased by 1.
+
+
+If a Warband has to roll for drive backs without losing a stand, the unit rolls 1 dice less than usual. If a Warband has to roll for drive backs after losing at least one stand, the unit has to roll one more dice than usual.
+
+
+Each stand of a Warband gets +2 attacks instead of the usual +1 when the Warband pursues. Each stand of a Warband loses 1 attack when the Warband fights a pursuing enemy (i.e. the Warband retreated)</description>
+    </rule>
+    <rule name="Shieldwall" id="0021-4af1-e9ee-f6ec" hidden="false" publicationId="2fdc-4bd3-bba1-56b9">
+      <description>Infantry must pass a successful command roll to form into a shieldwall (with Command modifiers applied for orders already issued in the current turn). All attacks to the front edge of a shieldwall have a -1 to Hit penalty (5+). If a unit in a shieldwall moves, all bonuses are lost, and the unit must again pass a Command roll to form the shieldwall.</description>
+    </rule>
+    <rule name="Horde" id="ac5a-d66a-e29a-5391" hidden="false" publicationId="2fdc-4bd3-bba1-56b9">
+      <description>A unit that is classified as a Horde has a unit of four stands, with no specific formation or facing. Horde units are arranged in a block formation with as many stands deep as wide if possible, the unit will always maintain this formation when possible.
+
+
+Even though Horde units are considered to be in an Irregular formation, a Horde suffers no movement penalties as it assumed the drivers, or orc overseers are whipping the mass into combat.
+
+
+Hordes may be brigaded with other units, but if the brigade consists of only Hordes the maximum brigade size is increased to six units.
+
+
+Units charging a Horde never gain a flank bonus, but instead the charging unit may wrap on the initial round of combat as if they were in pursuit. The charging unit places the closest stand in contact with the Horde as normal, the additional stands are placed into contact regardless of side as long as all stands remain in touch, and have movement to do so.
+
+
+Horde units armed with ranged weapons have a range of 15cm, but may shoot all around.</description>
+    </rule>
+    <rule name="Bodyguard" id="7ddf-8ea0-fe6d-6a72" hidden="false" publicationId="2fdc-4bd3-bba1-56b9">
+      <description>This unit is the General’s personal bodyguard. If joined by the army’s General, the unit gains +1 Attack in any close combat. If destroyed, the General gets a free 15cm move to a new unit as the last man dies in his General’s defense. If no unit is available for the General to flee to he is destroyed.</description>
+    </rule>
+    <rule name="Battle Fury" id="3f00-cca7-4f60-efd9" hidden="false" publicationId="2fdc-4bd3-bba1-56b9">
+      <description>The unit’s Attack value is increased by +1 for the first round of each close combat. This only applies in the first combat round of each combat phase but it applies throughout the entire battle.</description>
+    </rule>
+  </sharedRules>
+  <publications>
+    <publication name="War of the Ring" id="2fdc-4bd3-bba1-56b9" hidden="false" publisher="v1.5"/>
+  </publications>
+</catalogue>
