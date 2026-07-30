@@ -85,7 +85,7 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a050-ec66-374d-aa85"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Orc/Uruk-hai Hero" hidden="false" id="c234-1d3d-1a42-03c0" publicationId="2fdc-4bd3-bba1-56b9">
+    <selectionEntry type="unit" import="true" name="Orc/Uruk-hai Hero" hidden="false" id="ce8e-3118-c6b1-f02f" publicationId="2fdc-4bd3-bba1-56b9">
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="80"/>
       </costs>
@@ -93,7 +93,7 @@
         <categoryLink name="Hero" hidden="false" id="126b-af18-af7a-c4a7" targetId="227b-c83d-cd8c-bd1b" primary="true"/>
       </categoryLinks>
       <profiles>
-        <profile name="Orc/Uruk-hai Hero" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="f0c5-2f32-2520-7c6e">
+        <profile name="Orc/Uruk-hai Hero" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="2d10-c3e5-86f8-fbe3">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Hero</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">+1</characteristic>
@@ -585,7 +585,6 @@ of the living that they can’t be driven back by missile fire.</description>
   <entryLinks>
     <entryLink import="true" name="Orcs" hidden="false" id="9172-c355-2786-7414" type="selectionEntry" targetId="8e83-c945-3fbb-3673"/>
     <entryLink import="true" name="Uruk-hai" hidden="false" id="4fc1-3147-a383-85cf" type="selectionEntry" targetId="8ef8-f74a-55ee-43ad"/>
-    <entryLink import="true" name="Orc/Uruk-hai General" hidden="false" id="89bd-c825-1ed6-e9ed" type="selectionEntry" targetId="c234-1d3d-1a42-03c0"/>
     <entryLink import="true" name="Servant of Sauron" hidden="false" id="54ae-102a-5441-29ee" type="selectionEntry" targetId="2f39-93bc-4258-e949"/>
     <entryLink import="true" name="Olog-hai" hidden="false" id="f676-8690-8466-d55f" type="selectionEntry" targetId="9d74-e610-4a1a-8b47"/>
     <entryLink import="true" name="Trolls" hidden="false" id="3592-a4b6-8be1-916b" type="selectionEntry" targetId="04e1-e02a-1303-6b07"/>
@@ -600,6 +599,7 @@ of the living that they can’t be driven back by missile fire.</description>
     <entryLink import="true" name="Catapult" hidden="false" id="aeee-9bd9-407c-18e0" type="selectionEntry" targetId="8cca-f38b-fad2-133c"/>
     <entryLink import="true" name="Ballista" hidden="false" id="45ac-0870-8b48-e61d" type="selectionEntry" targetId="deeb-1f9c-34ce-6c3c"/>
     <entryLink import="true" name="Orc/Uruk-hai General" hidden="false" id="0350-5da8-88e6-690d" type="selectionEntry" targetId="c234-1d3d-1a42-03c0"/>
+    <entryLink import="true" name="Orc/Uruk-hai Hero" hidden="false" id="83bb-43c0-c393-f362" type="selectionEntry" targetId="ce8e-3118-c6b1-f02f"/>
   </entryLinks>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="War of the Ring" id="580c-2721-9a93-5e3d" targetId="a85a-9f67-08e2-d9e9"/>
