@@ -39,7 +39,7 @@
       <modifiers>
         <modifier type="increment" value="4" field="abdc-6ba4-dcf5-40ae">
           <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="force" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="force" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
           </repeats>
         </modifier>
       </modifiers>
@@ -130,7 +130,7 @@
       <modifiers>
         <modifier type="increment" value="4" field="9ca2-5450-6484-1651">
           <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="force" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="force" childId="any" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
           </repeats>
         </modifier>
       </modifiers>
@@ -163,7 +163,7 @@
       <modifiers>
         <modifier type="increment" value="3" field="9ca2-5450-6484-1651">
           <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="force" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="force" childId="any" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
           </repeats>
         </modifier>
       </modifiers>
@@ -201,7 +201,7 @@ Even though Trolls are quite stupid they have uncanny sense of smell. This sense
       <modifiers>
         <modifier type="increment" value="1" field="6f77-7adf-953c-6aa6">
           <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="force" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="force" childId="any" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
           </repeats>
         </modifier>
       </modifiers>
@@ -222,7 +222,7 @@ Even though Trolls are quite stupid they have uncanny sense of smell. This sense
     <entryLink import="true" name="Servant of Sauron" hidden="false" id="54ae-102a-5441-29ee" type="selectionEntry" targetId="2f39-93bc-4258-e949"/>
     <entryLink import="true" name="Olog-hai" hidden="false" id="f676-8690-8466-d55f" type="selectionEntry" targetId="9d74-e610-4a1a-8b47"/>
     <entryLink import="true" name="Trolls" hidden="false" id="3592-a4b6-8be1-916b" type="selectionEntry" targetId="04e1-e02a-1303-6b07"/>
-    <entryLink import="true" name="New Entry (link)" hidden="false" id="aa86-1d98-e0ee-9dd8" type="selectionEntry" targetId="7899-e159-ced6-29c3"/>
+    <entryLink import="true" name="Orc Archers" hidden="false" id="aa86-1d98-e0ee-9dd8" type="selectionEntry" targetId="7899-e159-ced6-29c3"/>
   </entryLinks>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="War of the Ring" id="580c-2721-9a93-5e3d" targetId="a85a-9f67-08e2-d9e9"/>
