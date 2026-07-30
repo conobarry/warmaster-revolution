@@ -163,7 +163,7 @@
       <modifiers>
         <modifier type="increment" value="3" field="9ca2-5450-6484-1651">
           <repeats>
-            <repeat value="1000" repeats="1" field="2085-9b6f-c588-0723" scope="force" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false" childId="any"/>
           </repeats>
         </modifier>
       </modifiers>
