@@ -17,6 +17,9 @@
           </characteristics>
         </profile>
       </profiles>
+      <categoryLinks>
+        <categoryLink name="Infantry" hidden="false" id="d0d7-7082-cf7e-bc1c" targetId="5e38-77df-81d0-6399" primary="true"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Orcs" hidden="false" id="8e83-c945-3fbb-3673">
       <costs>
@@ -44,6 +47,13 @@
           </characteristics>
         </profile>
       </profiles>
+      <categoryLinks>
+        <categoryLink name="Infantry" hidden="false" id="642b-4364-b856-9bdf" targetId="5e38-77df-81d0-6399" primary="true"/>
+      </categoryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
+  <entryLinks>
+    <entryLink import="true" name="Orcs" hidden="false" id="9172-c355-2786-7414" type="selectionEntry" targetId="8e83-c945-3fbb-3673"/>
+    <entryLink import="true" name="Uruk-hai" hidden="false" id="4fc1-3147-a383-85cf" type="selectionEntry" targetId="8ef8-f74a-55ee-43ad"/>
+  </entryLinks>
 </catalogue>

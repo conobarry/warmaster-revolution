@@ -2,6 +2,15 @@
 <gameSystem id="sys-3065-0af8-9913-4a4c" name="Warmaster Revolution" battleScribeVersion="2.03" revision="1" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Default Category" id="default-category"/>
+    <categoryEntry name="Infantry" id="5e38-77df-81d0-6399" hidden="false"/>
+    <categoryEntry name="Cavalry" id="6bff-b94d-a54a-8758" hidden="false"/>
+    <categoryEntry name="Monster" id="c05d-61e2-2cbd-0df9" hidden="false"/>
+    <categoryEntry name="Artillery" id="ab71-7ddd-db90-f5e5" hidden="false"/>
+    <categoryEntry name="Machine" id="0597-65e0-f876-8d6b" hidden="false"/>
+    <categoryEntry name="Special" id="7f2a-1579-92eb-2e27" hidden="false"/>
+    <categoryEntry name="General" id="bb23-a19b-bd9f-ba61" hidden="false"/>
+    <categoryEntry name="Hero" id="227b-c83d-cd8c-bd1b" hidden="false"/>
+    <categoryEntry name="Monstrous Mount" id="db9e-34ce-cbb2-4a2e" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="Default Force" hidden="false" id="default-force">
