@@ -26,6 +26,14 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9dd3-4512-005c-c216-max"/>
           </constraints>
         </categoryLink>
+        <categoryLink name="Artillery" hidden="false" id="3dfe-6354-a455-ec29" targetId="ab71-7ddd-db90-f5e5"/>
+        <categoryLink name="Cavalry" hidden="false" id="5836-71bd-643c-9690" targetId="6bff-b94d-a54a-8758"/>
+        <categoryLink name="Hero" hidden="false" id="b946-1e9b-c7a0-8295" targetId="227b-c83d-cd8c-bd1b"/>
+        <categoryLink name="Infantry" hidden="false" id="a993-10d3-7745-e435" targetId="5e38-77df-81d0-6399"/>
+        <categoryLink name="Machine" hidden="false" id="0e5d-239e-b61c-90a8" targetId="0597-65e0-f876-8d6b"/>
+        <categoryLink name="Monster" hidden="false" id="808c-25ca-389f-b876" targetId="c05d-61e2-2cbd-0df9"/>
+        <categoryLink name="Monstrous Mount" hidden="false" id="1942-2194-9782-2f83" targetId="db9e-34ce-cbb2-4a2e"/>
+        <categoryLink name="Special" hidden="false" id="a50f-c772-4265-eb04" targetId="7f2a-1579-92eb-2e27"/>
       </categoryLinks>
     </forceEntry>
   </forceEntries>

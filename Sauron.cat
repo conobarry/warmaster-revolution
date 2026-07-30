@@ -137,6 +137,9 @@
       <infoLinks>
         <infoLink name="Warband" id="ddd2-aff9-c2e2-8aea" hidden="false" type="rule" targetId="0d1c-680a-f38d-6e29"/>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink name="Infantry" hidden="false" id="8874-54d2-2757-8e42" targetId="5e38-77df-81d0-6399" primary="true"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Trolls" hidden="false" id="04e1-e02a-1303-6b07" publicationId="2fdc-4bd3-bba1-56b9">
       <costs>
@@ -172,6 +175,9 @@
 Even though Trolls are quite stupid they have uncanny sense of smell. This sense of smell allows a unit of trolls to trace a LOS through friendly units to the enemy. A unit of Trolls will always use initiative to charge the closest enemy unit within 20cm, even if an unengaged friendly unit lies between the Trolls and their victims. When a unit of trolls is forced to charge an enemy unit and their path takes them through an unengaged friendly unit, a burst through is performed on the unit the Trolls were forced to move through. Remember this rule applies to unengaged friendly units only. Trolls will never trace a LOS through, charge through, or displace a friendly unit already in contact with the enemy.</description>
         </rule>
       </rules>
+      <categoryLinks>
+        <categoryLink name="Infantry" hidden="false" id="8225-a20a-2a7c-5445" targetId="5e38-77df-81d0-6399" primary="true"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Olog-hai" hidden="false" id="9d74-e610-4a1a-8b47">
       <costs>
@@ -204,6 +210,9 @@ Even though Trolls are quite stupid they have uncanny sense of smell. This sense
           <description>A brigade with both Olog-hai and Trolls will suffer a -1 Command penalty.</description>
         </rule>
       </rules>
+      <categoryLinks>
+        <categoryLink name="Infantry" hidden="false" id="7ad7-ed00-9303-1850" targetId="5e38-77df-81d0-6399" primary="true"/>
+      </categoryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
@@ -211,6 +220,9 @@ Even though Trolls are quite stupid they have uncanny sense of smell. This sense
     <entryLink import="true" name="Uruk-hai" hidden="false" id="4fc1-3147-a383-85cf" type="selectionEntry" targetId="8ef8-f74a-55ee-43ad"/>
     <entryLink import="true" name="Orc/Uruk-hai General" hidden="false" id="89bd-c825-1ed6-e9ed" type="selectionEntry" targetId="c234-1d3d-1a42-03c0"/>
     <entryLink import="true" name="Servant of Sauron" hidden="false" id="54ae-102a-5441-29ee" type="selectionEntry" targetId="2f39-93bc-4258-e949"/>
+    <entryLink import="true" name="Olog-hai" hidden="false" id="f676-8690-8466-d55f" type="selectionEntry" targetId="9d74-e610-4a1a-8b47"/>
+    <entryLink import="true" name="Trolls" hidden="false" id="3592-a4b6-8be1-916b" type="selectionEntry" targetId="04e1-e02a-1303-6b07"/>
+    <entryLink import="true" name="New Entry (link)" hidden="false" id="aa86-1d98-e0ee-9dd8" type="selectionEntry" targetId="7899-e159-ced6-29c3"/>
   </entryLinks>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="War of the Ring" id="580c-2721-9a93-5e3d" targetId="a85a-9f67-08e2-d9e9"/>
