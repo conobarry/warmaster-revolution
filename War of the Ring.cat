@@ -34,6 +34,27 @@ Horde units armed with ranged weapons have a range of 15cm, but may shoot all ar
     <rule name="Battle Fury" id="3f00-cca7-4f60-efd9" hidden="false" publicationId="2fdc-4bd3-bba1-56b9">
       <description>The unit’s Attack value is increased by +1 for the first round of each close combat. This only applies in the first combat round of each combat phase but it applies throughout the entire battle.</description>
     </rule>
+    <rule name="Wolfriders" id="7724-23e1-ef2b-cefa" hidden="false">
+      <description>Wolfriders are described as performing ferocious charges against mounted units, the Wolfriders would ride through the ranks and strike at the bellies of the mounts. To show this, when Wolfriders are in combat with a mounted unit, and score more hits in the first round of a combat than the enemy, they will automatically strike 1 more Attack per stand before the combat results are worked out. Resolve these attacks as normal and then work out the results.</description>
+    </rule>
+    <rule name="Wargs" id="838b-1486-d17f-ea58" hidden="false">
+      <description>Although they are monsters, Wargs are mounted facing the long edge of the base like infantry. 
+
+
+As creatures of the forests and mountains, Wargs are able to move over or into any wooded or mountainous terrain features in the same way as infantry. This does not entitle them to claim defended status. 
+
+
+Due to their irascible, ursine nature, Wargs cannot be brigaded with units of other troops, only with other Wargs. 
+
+
+Due to their ferocity a Warg unit which scores more hits in the first round of a combat than the enemy will automatically strike 1 more Attack per stand before the combat result is worked out. Resolve these attacks as normal and then work out the results. 
+
+
+Wargs must always pursue retreating enemy where possible and must advance if they are able to do so. 
+
+
+Note that these rules apply only to Warg units – not to characters that ride Wargs.</description>
+    </rule>
   </sharedRules>
   <publications>
     <publication name="War of the Ring" id="2fdc-4bd3-bba1-56b9" hidden="false" publisher="v1.5"/>

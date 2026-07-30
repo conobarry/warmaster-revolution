@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <gameSystem id="sys-3065-0af8-9913-4a4c" name="Warmaster Revolution" battleScribeVersion="2.03" revision="1" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
-    <categoryEntry name="Default Category" id="default-category"/>
     <categoryEntry name="Infantry" id="5e38-77df-81d0-6399" hidden="false"/>
     <categoryEntry name="Cavalry" id="6bff-b94d-a54a-8758" hidden="false"/>
     <categoryEntry name="Monster" id="c05d-61e2-2cbd-0df9" hidden="false"/>
@@ -13,11 +12,6 @@
     <categoryEntry name="Monstrous Mount" id="db9e-34ce-cbb2-4a2e" hidden="false"/>
   </categoryEntries>
   <forceEntries>
-    <forceEntry name="Default Force" hidden="false" id="default-force">
-      <categoryLinks>
-        <categoryLink name="Default Category" hidden="false" id="default-force-category-link" targetId="default-category"/>
-      </categoryLinks>
-    </forceEntry>
     <forceEntry name="War of the Ring Army" id="a94a-70fe-51ba-395b" hidden="false">
       <categoryLinks>
         <categoryLink name="General" hidden="false" id="998a-2030-6999-a5d4" targetId="bb23-a19b-bd9f-ba61">
@@ -37,13 +31,6 @@
       </categoryLinks>
     </forceEntry>
   </forceEntries>
-  <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Default Root Entry" hidden="false" id="default-entry">
-      <categoryLinks>
-        <categoryLink targetId="default-category" id="default-category-link" primary="true" name="Default Category" hidden="false"/>
-      </categoryLinks>
-    </selectionEntry>
-  </selectionEntries>
   <costTypes>
     <costType name="pts" id="2085-9b6f-c588-0723" defaultCostLimit="-1"/>
   </costTypes>
@@ -59,4 +46,18 @@
       </characteristicTypes>
     </profileType>
   </profileTypes>
+  <sharedSelectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Show/Hide Options" hidden="false" id="4748-8380-34e0-5638">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Show Homebrew" hidden="false" id="2bc6-a5e8-b715-256f">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="de3d-751c-5e2d-55f2"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+  </sharedSelectionEntries>
+  <entryLinks>
+    <entryLink import="true" name="Show/Hide Options" hidden="false" id="69ee-7fab-09c9-9e6c" type="selectionEntry" targetId="4748-8380-34e0-5638"/>
+  </entryLinks>
 </gameSystem>
