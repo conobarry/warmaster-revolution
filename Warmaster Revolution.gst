@@ -18,7 +18,16 @@
         <categoryLink name="Default Category" hidden="false" id="default-force-category-link" targetId="default-category"/>
       </categoryLinks>
     </forceEntry>
-    <forceEntry name="War of the Ring Army" id="a94a-70fe-51ba-395b" hidden="false"/>
+    <forceEntry name="War of the Ring Army" id="a94a-70fe-51ba-395b" hidden="false">
+      <categoryLinks>
+        <categoryLink name="General" hidden="false" id="998a-2030-6999-a5d4" targetId="bb23-a19b-bd9f-ba61">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9dd3-4512-005c-c216-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9dd3-4512-005c-c216-max"/>
+          </constraints>
+        </categoryLink>
+      </categoryLinks>
+    </forceEntry>
   </forceEntries>
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Default Root Entry" hidden="false" id="default-entry">
