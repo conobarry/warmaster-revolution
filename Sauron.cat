@@ -744,40 +744,51 @@ of the living that they can’t be driven back by missile fire.</description>
   </sharedRules>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Shaman Spells" id="020d-c8ba-4491-6af1" hidden="false">
-      <profiles>
-        <profile name="Foul Frenzy" typeId="9867-0f84-d2fb-34c4" typeName="Spell" hidden="false" id="652a-41fe-6d6d-babf">
-          <characteristics>
-            <characteristic name="Casting roll" typeId="d148-3561-3fa8-550d">4+</characteristic>
-            <characteristic name="Range" typeId="938f-20ca-ebd8-865b">30cm</characteristic>
-            <characteristic name="Description" typeId="9b48-0ebf-2ca1-3b35">This spell can be cast on a friendly Goblin infantry or Goblin Wolfrider unit within range regardless of whether the Wizard has a line of sight or not. The spell can only be cast at a unit that is engaged in combat.
-
-Every stand in the unit, including a character that is fighting with the unit, adds +1 to its Attacks value during the first round of the following Combat phase.
-</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Dark Swarm" typeId="9867-0f84-d2fb-34c4" typeName="Spell" hidden="false" id="2e8b-9ca7-2d1a-28e8">
-          <characteristics>
-            <characteristic name="Casting roll" typeId="d148-3561-3fa8-550d">5+</characteristic>
-            <characteristic name="Range" typeId="938f-20ca-ebd8-865b">30cm</characteristic>
-            <characteristic name="Description" typeId="9b48-0ebf-2ca1-3b35">This spell can be cast on an enemy unit within range regardless of whether the Wizard has a line of sight or not. The spell can be cast at a target engaged in combat or at a target that is not engaged in combat – it makes no difference.
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Dark Swarm" hidden="false" id="b0bc-5f8f-7adf-3687">
+          <profiles>
+            <profile name="Dark Swarm" typeId="9867-0f84-d2fb-34c4" typeName="Spell" hidden="false" id="2e8b-9ca7-2d1a-28e8">
+              <characteristics>
+                <characteristic name="Casting roll" typeId="d148-3561-3fa8-550d">5+</characteristic>
+                <characteristic name="Range" typeId="938f-20ca-ebd8-865b">30cm</characteristic>
+                <characteristic name="Description" typeId="9b48-0ebf-2ca1-3b35">This spell can be cast on an enemy unit within range regardless of whether the Wizard has a line of sight or not. The spell can be cast at a target engaged in combat or at a target that is not engaged in combat – it makes no difference.
 
 
 
 The Dark Swarm is worked out exactly like three ordinary shooting attacks. If the target is not engaged in combat, hits inflicted by a Dark Swarm are counted towards drive backs just like ordinary shooting. If the target is engaged in combat, hits inflicted by a Dark Swarm are carried over into the Combat phase and count towards the combat result in the first round.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Faster You Dogs" typeId="9867-0f84-d2fb-34c4" typeName="Spell" hidden="false" id="8a5b-dd46-84ec-b172">
-          <characteristics>
-            <characteristic name="Casting roll" typeId="d148-3561-3fa8-550d">5+</characteristic>
-            <characteristic name="Range" typeId="938f-20ca-ebd8-865b">60cm</characteristic>
-            <characteristic name="Description" typeId="9b48-0ebf-2ca1-3b35">This spell can be cast upon a friendly Goblin infantry or Wolfrider unit within range regardless of whether the Wizard has a line of sight or not. The spell can only be cast at a unit that is not engaged in combat.
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Faster You Dogs" hidden="false" id="c40c-9572-3d8e-1234">
+          <profiles>
+            <profile name="Faster You Dogs" typeId="9867-0f84-d2fb-34c4" typeName="Spell" hidden="false" id="8a5b-dd46-84ec-b172">
+              <characteristics>
+                <characteristic name="Casting roll" typeId="d148-3561-3fa8-550d">5+</characteristic>
+                <characteristic name="Range" typeId="938f-20ca-ebd8-865b">60cm</characteristic>
+                <characteristic name="Description" typeId="9b48-0ebf-2ca1-3b35">This spell can be cast upon a friendly Goblin infantry or Wolfrider unit within range regardless of whether the Wizard has a line of sight or not. The spell can only be cast at a unit that is not engaged in combat.
 
 
 
 If the spell is cast upon a unit, it can move immediately just as if it had received an order in the Command phase. Note that the spell affects only a single unit – it is not a brigade order – and any characters with the unit will not move with it.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Foul Frenzy" hidden="false" id="de19-6afc-b027-6b95">
+          <profiles>
+            <profile name="Foul Frenzy" typeId="9867-0f84-d2fb-34c4" typeName="Spell" hidden="false" id="652a-41fe-6d6d-babf">
+              <characteristics>
+                <characteristic name="Casting roll" typeId="d148-3561-3fa8-550d">4+</characteristic>
+                <characteristic name="Range" typeId="938f-20ca-ebd8-865b">30cm</characteristic>
+                <characteristic name="Description" typeId="9b48-0ebf-2ca1-3b35">This spell can be cast on a friendly Goblin infantry or Goblin Wolfrider unit within range regardless of whether the Wizard has a line of sight or not. The spell can only be cast at a unit that is engaged in combat.
+
+Every stand in the unit, including a character that is fighting with the unit, adds +1 to its Attacks value during the first round of the following Combat phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
 </catalogue>
