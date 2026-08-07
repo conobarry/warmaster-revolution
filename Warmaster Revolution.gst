@@ -87,4 +87,29 @@
   <entryLinks>
     <entryLink import="true" name="Show/Hide Options" hidden="false" id="69ee-7fab-09c9-9e6c" type="selectionEntry" targetId="4748-8380-34e0-5638"/>
   </entryLinks>
+  <sharedRules>
+    <rule name="Stone Thrower" id="0906-900e-0f2c-3088" hidden="false">
+      <description>Range: 60cm
+
+Targets always ignore their armour when shot at by a Stone Thrower. No Armour roll is made.
+
+Stone Throwers shoot with such a high trajectory that they cannot shoot at charging enemies.
+
+Because of the high trajectory Stone Throwers can shoot blind at targets they cannot see. The targets are assumed to be reported by scouts or messengers from other units. If there is no target in sight a Stone Thrower may instead shoot at the nearest enemy unit in range it cannot see. When shooting blind it always hits on 6+ no matter if the target is in the open, defended or even fortified.</description>
+    </rule>
+    <rule name="Bolt Thrower" id="f737-907d-9b29-b48f" hidden="false">
+      <description>Range: 40cm
+
+Targets always ignore their armour when shot at by a Bolt Thrower. No Armour roll is made.
+
+When you shoot with a Bolt Thrower it will strike up to two touching stands within the missile’s line of flight. These can be stands from the same or a different unit – the missile will automatically pass through and strike up to two stands so long as they are touching and along the missile’s path.
+
+The target unit suffers two attacks plus +1 if an additional stand from the same unit is within the missile’s path. A shot that skewers into a different unit inflicts one attack on that unit. All attacks against the same unit are rolled at once – for example, an infantry unit in column takes three attacks so roll three dice.
+
+Because a bolt thrower can cause hits on different units by skewering shots, it is possible to inflict hits upon enemy units that are engaged in combat. These are normally ineligible targets, but in the case of skewering shots, they can suffer hits as a result of fire directed at a unit touching another enemy unit. Any hits on engaged units from either side will carry forward into the combat round and count as having been struck during that round for purposes of working out which side wins. Units engaged in combat are not driven back by any hits taken – carrying hits forward takes this into account. Units that are not engaged in combat are driven back in the usual way.
+
+Bolt Throwers can shoot at a charging enemy and can do so at any point as the enemy charges, including the start of the move or when the charger has reached its final position.
+</description>
+    </rule>
+  </sharedRules>
 </gameSystem>

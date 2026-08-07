@@ -483,6 +483,9 @@ of the living that they can’t be driven back by missile fire.</description>
           </repeats>
         </modifier>
       </modifiers>
+      <infoLinks>
+        <infoLink name="Stone Thrower" id="e79a-b104-10ce-59f9" hidden="false" type="rule" targetId="0906-900e-0f2c-3088"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Ballista" hidden="false" id="deeb-1f9c-34ce-6c3c">
       <profiles>
@@ -513,6 +516,9 @@ of the living that they can’t be driven back by missile fire.</description>
           </repeats>
         </modifier>
       </modifiers>
+      <infoLinks>
+        <infoLink name="Bolt Thrower" id="a59f-0a1a-9dc0-71d9" hidden="false" type="rule" targetId="f737-907d-9b29-b48f"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Grond" hidden="false" id="f8a2-67ec-aefd-a141">
       <costs>
@@ -759,6 +765,10 @@ The Dark Swarm is worked out exactly like three ordinary shooting attacks. If th
               </characteristics>
             </profile>
           </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9b80-e304-8e4a-145c-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9b80-e304-8e4a-145c-max"/>
+          </constraints>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Faster You Dogs" hidden="false" id="c40c-9572-3d8e-1234">
           <profiles>
@@ -774,6 +784,10 @@ If the spell is cast upon a unit, it can move immediately just as if it had rece
               </characteristics>
             </profile>
           </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8ad5-6520-7e5c-9e72-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8ad5-6520-7e5c-9e72-max"/>
+          </constraints>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Foul Frenzy" hidden="false" id="de19-6afc-b027-6b95">
           <profiles>
@@ -787,6 +801,10 @@ Every stand in the unit, including a character that is fighting with the unit, a
               </characteristics>
             </profile>
           </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4ccb-44c1-bda5-8580-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4ccb-44c1-bda5-8580-max"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>

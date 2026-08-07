@@ -61,6 +61,9 @@
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Shieldwall" id="139a-4730-ad56-2dec" hidden="false" type="rule" targetId="680f-f086-2048-28e1"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Gondorian Spearmen" hidden="false" id="0405-534b-2628-fc13">
       <costs>
@@ -413,6 +416,43 @@
           </repeats>
         </modifier>
       </modifiers>
+      <infoLinks>
+        <infoLink name="Bolt Thrower" id="ed3e-a853-8190-2029" hidden="false" type="rule" targetId="f737-907d-9b29-b48f"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Pikemen" hidden="false" id="f8f4-4bed-c153-7355">
+      <categoryLinks>
+        <categoryLink name="Infantry" hidden="false" id="3d14-9a48-afca-a589" targetId="5e38-77df-81d0-6399" primary="true"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Pikemen" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="b463-5789-b04a-91a6">
+          <characteristics>
+            <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">3</characteristic>
+            <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">3</characteristic>
+            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">6+</characteristic>
+            <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">-</characteristic>
+            <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="50"/>
+      </costs>
+      <rules>
+        <rule name="Pikemen" id="0925-7cb5-0569-49b4" hidden="false">
+          <description>Pikemen can not enter dense terrain (even partially). They still may be in a defended position on higher ground or behind a low obstacle as usual, but can only claim defended status when fighting to the front.
+
+
+An enemy does not receive charge bonuses when charging Pikemen in the front, nor do Pikemen receive any charge bonus themselves.
+
+
+
+A Pikemen stand cannot support or be supported by other infantry - only by other Pikemen stands. In all other respects they count as infantry (movement/pursuit etc.).
+
+</description>
+        </rule>
+      </rules>
     </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
@@ -428,6 +468,7 @@
     <entryLink import="true" name="Ithilien Rangers" hidden="false" id="25b6-e29f-a15f-af43" type="selectionEntry" targetId="0e29-f8fe-a495-ce28"/>
     <entryLink import="true" name="Knights of Dol Amroth" hidden="false" id="c297-e378-e664-0bd9" type="selectionEntry" targetId="f497-7471-3446-476e"/>
     <entryLink import="true" name="Ballista" hidden="false" id="0962-e87e-33b3-bb11" type="selectionEntry" targetId="d82c-f5f1-0967-0a04"/>
+    <entryLink import="true" name="Pikemen" hidden="false" id="1fab-b99c-3e95-7ae9" type="selectionEntry" targetId="f8f4-4bed-c153-7355"/>
   </entryLinks>
   <sharedRules>
     <rule name="Shieldwall" id="680f-f086-2048-28e1" hidden="false">
