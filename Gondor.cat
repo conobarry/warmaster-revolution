@@ -77,6 +77,9 @@
           <infoLinks>
             <infoLink name="Shieldwall" id="9d62-8ddc-f9be-d6f6" hidden="false" type="rule" targetId="680f-f086-2048-28e1"/>
           </infoLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bd68-622b-9f58-ae23"/>
+          </constraints>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
@@ -424,6 +427,7 @@
     <entryLink import="true" name="Hero" hidden="false" id="73fe-095c-4416-e80f" type="selectionEntry" targetId="6355-2139-a7ff-7a8d"/>
     <entryLink import="true" name="Ithilien Rangers" hidden="false" id="25b6-e29f-a15f-af43" type="selectionEntry" targetId="0e29-f8fe-a495-ce28"/>
     <entryLink import="true" name="Knights of Dol Amroth" hidden="false" id="c297-e378-e664-0bd9" type="selectionEntry" targetId="f497-7471-3446-476e"/>
+    <entryLink import="true" name="New Entry (link)" hidden="false" id="0962-e87e-33b3-bb11" type="selectionEntry" targetId="d82c-f5f1-0967-0a04"/>
   </entryLinks>
   <sharedRules>
     <rule name="Shieldwall" id="680f-f086-2048-28e1" hidden="false">

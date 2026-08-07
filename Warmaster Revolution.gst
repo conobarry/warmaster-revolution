@@ -29,6 +29,7 @@
         <categoryLink name="Monster" hidden="false" id="808c-25ca-389f-b876" targetId="c05d-61e2-2cbd-0df9"/>
         <categoryLink name="Monstrous Mount" hidden="false" id="1942-2194-9782-2f83" targetId="db9e-34ce-cbb2-4a2e"/>
         <categoryLink name="Special" hidden="false" id="a50f-c772-4265-eb04" targetId="7f2a-1579-92eb-2e27"/>
+        <categoryLink name="Wizard" hidden="false" id="661c-d35c-2904-8c76" targetId="7896-9879-0772-2624"/>
       </categoryLinks>
     </forceEntry>
   </forceEntries>
@@ -44,6 +45,13 @@
         <characteristicType name="Armour" id="1b25-0ce9-c54e-e226"/>
         <characteristicType name="Command" id="73c2-d4e8-04e7-dcbc"/>
         <characteristicType name="Unit size" id="72b4-6deb-0f8e-7f27"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType name="Spell" id="9867-0f84-d2fb-34c4" hidden="false">
+      <characteristicTypes>
+        <characteristicType name="Casting roll" id="d148-3561-3fa8-550d"/>
+        <characteristicType name="Range" id="938f-20ca-ebd8-865b"/>
+        <characteristicType name="Description" id="9b48-0ebf-2ca1-3b35"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>

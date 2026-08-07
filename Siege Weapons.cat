@@ -40,7 +40,7 @@
         <categoryLink name="Artillery" hidden="false" id="1d3a-03c3-8c60-e74f" targetId="ab71-7ddd-db90-f5e5" primary="true"/>
       </categoryLinks>
       <constraints>
-        <constraint type="min" value="0" field="selections" scope="force" shared="true" id="57fe-5004-b2ab-129b" automatic="false" negative="false" includeChildSelections="true"/>
+        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="57fe-5004-b2ab-129b" automatic="false" negative="false" includeChildSelections="true"/>
       </constraints>
       <rules>
         <rule name="Tribock" id="96db-1879-f1e6-ec9a" hidden="false">
