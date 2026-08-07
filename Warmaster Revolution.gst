@@ -10,6 +10,7 @@
     <categoryEntry name="General" id="bb23-a19b-bd9f-ba61" hidden="false"/>
     <categoryEntry name="Hero" id="227b-c83d-cd8c-bd1b" hidden="false"/>
     <categoryEntry name="Monstrous Mount" id="db9e-34ce-cbb2-4a2e" hidden="false"/>
+    <categoryEntry name="Wizard" id="7896-9879-0772-2624" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="War of the Ring Army" id="a94a-70fe-51ba-395b" hidden="false">

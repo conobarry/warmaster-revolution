@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue library="true" id="d49a-44f1-810f-4d9f" name="Siege Machines" gameSystemId="sys-3065-0af8-9913-4a4c" gameSystemRevision="1" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <sharedSelectionEntries>
+    <selectionEntry type="unit" import="true" name="Tribock" hidden="false" id="f27d-05ae-1439-9873">
+      <modifiers>
+        <modifier type="set" value="Trebuchet" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" value="1" field="57fe-5004-b2ab-129b">
+          <repeats>
+            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="120"/>
+      </costs>
+      <profiles>
+        <profile name="Tribock" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="c8b4-b95a-b3d4-fca1">
+          <characteristics>
+            <characteristic name="Type" typeId="3087-9431-0004-e975">Artillery</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">1/6</characteristic>
+            <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">4</characteristic>
+            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">0</characteristic>
+            <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">-</characteristic>
+            <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">1</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="Trebuchet" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="Artillery" hidden="false" id="1d3a-03c3-8c60-e74f" targetId="ab71-7ddd-db90-f5e5" primary="true"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="force" shared="true" id="57fe-5004-b2ab-129b" automatic="false" negative="false" includeChildSelections="true"/>
+      </constraints>
+      <rules>
+        <rule name="Tribock" id="96db-1879-f1e6-ec9a" hidden="false">
+          <description>Shooting: Range 20–120cm, 6 Attacks
+
+
+
+As the Tribock is such a giant machine it has to be placed on a special stand with a front edge of 40mm and flank edges of 60mm.
+
+
+For siege use only! May not move once it is deployed. Must be deployed before any other unit.
+
+
+Shooting straight ahead: Unlike normal shooting units the Tribock has a very restricted view. It can only draw line of sight to targets that lie in a strip that extends straight ahead from the front edge. So the Tribock only has a 4cm wide line of sight. For targets outside this strip it must be ordered to turn. If the order is failed it does not fire that turn.
+
+
+Any Hits caused by the Tribock allow no save.
+
+
+Because of its immense size the Tribock has a range of 120cm and a minimum range of 20cm as the slingshot like nature of the weapon makes it impossible to shoot at closer targets. This obviously makes units that are under 20cm ineligible as potential targets; thus they are ignored as far as the rules for firing at the closest target are concerned. The Tribock may not shoot at enemy units that charge it.
+
+</description>
+        </rule>
+      </rules>
+    </selectionEntry>
+  </sharedSelectionEntries>
+  <entryLinks>
+    <entryLink import="true" name="Tribock" hidden="false" id="0e61-d374-68fc-d16a" type="selectionEntry" targetId="f27d-05ae-1439-9873"/>
+  </entryLinks>
+</catalogue>

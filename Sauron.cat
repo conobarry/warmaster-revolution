@@ -42,6 +42,11 @@
             <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
           </repeats>
         </modifier>
+        <modifier type="decrement" value="1" field="abdc-6ba4-dcf5-40ae">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="ad2f-f587-03db-6c4f" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false" percentValue="false" childName="Goblins"/>
+          </repeats>
+        </modifier>
       </modifiers>
       <profiles>
         <profile name="Orcs" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="8a7f-9cd6-f04b-2e67">
@@ -105,7 +110,7 @@
         </profile>
       </profiles>
       <entryLinks>
-        <entryLink import="true" name="Warg" hidden="false" id="1392-7032-614a-a2a9" type="selectionEntry" targetId="228a-b32a-a4ff-ac0b">
+        <entryLink import="true" name="Warg Mount" hidden="false" id="1392-7032-614a-a2a9" type="selectionEntry" targetId="228a-b32a-a4ff-ac0b">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="92c4-55d0-32cc-8ddb"/>
           </constraints>
@@ -114,6 +119,16 @@
       <infoLinks>
         <infoLink name="Orc General/Hero" id="b7bb-bb0d-6bfc-5d30" hidden="false" type="rule" targetId="e8ac-e781-1beb-9317"/>
       </infoLinks>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="9030-4a99-8d7b-40be" includeChildSelections="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="increment" value="2" field="9030-4a99-8d7b-40be">
+          <repeats>
+            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Trolls" hidden="false" id="04e1-e02a-1303-6b07" publicationId="2fdc-4bd3-bba1-56b9">
       <costs>
@@ -361,7 +376,20 @@ of the living that they can’t be driven back by missile fire.</description>
             <condition type="lessThan" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="false" includeChildForces="false"/>
           </conditions>
         </modifier>
+        <modifier type="increment" value="4" field="14cf-8561-3c12-e79d">
+          <repeats>
+            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="decrement" value="1" field="14cf-8561-3c12-e79d">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false" percentValue="false" childId="9172-c355-2786-7414" childName="Orcs"/>
+          </repeats>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="force" shared="true" id="14cf-8561-3c12-e79d" automatic="false" negative="false" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Orc Cavalry" hidden="false" id="a6ae-a451-9acb-4e3e">
       <costs>
@@ -580,6 +608,109 @@ of the living that they can’t be driven back by missile fire.</description>
       <infoLinks>
         <infoLink name="Orc General/Hero" id="b02a-a912-25ac-e767" hidden="false" type="rule" targetId="e8ac-e781-1beb-9317"/>
       </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="826d-88e4-d623-3128"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Nazgûl" hidden="false" id="a441-e398-7ae7-b633">
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="80"/>
+      </costs>
+      <profiles>
+        <profile name="Nazgûl" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="c2e4-f7b8-0390-8e56">
+          <characteristics>
+            <characteristic name="Type" typeId="3087-9431-0004-e975">Hero</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">+1</characteristic>
+            <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">-</characteristic>
+            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">-</characteristic>
+            <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">8</characteristic>
+            <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <modifiers>
+        <modifier type="increment" value="2" field="9235-a778-0b91-e547">
+          <repeats>
+            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="9235-a778-0b91-e547" includeChildSelections="true"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Winged Nightmare" hidden="false" id="3ef8-8ed8-98ee-c850">
+          <costs>
+            <cost name="pts" typeId="2085-9b6f-c588-0723" value="40"/>
+          </costs>
+          <categoryLinks>
+            <categoryLink name="Monstrous Mount" hidden="false" id="c00e-4011-2df8-a437" targetId="db9e-34ce-cbb2-4a2e" primary="true"/>
+          </categoryLinks>
+          <constraints>
+            <constraint type="max" value="0" field="selections" scope="force" shared="true" id="5ed4-71fa-9411-ce68" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="5ed4-71fa-9411-ce68">
+              <repeats>
+                <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Winged Nightmare" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="d3bc-a0be-e7d2-6ae9">
+              <characteristics>
+                <characteristic name="Type" typeId="3087-9431-0004-e975">Monstrous Mount</characteristic>
+                <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">+2</characteristic>
+                <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">-</characteristic>
+                <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">-</characteristic>
+                <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">-</characteristic>
+                <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <categoryLinks>
+        <categoryLink name="Hero" hidden="false" id="8f37-37c4-2b45-f354" targetId="227b-c83d-cd8c-bd1b" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Shaman" hidden="false" id="f224-cbda-e88f-3a4d">
+      <categoryLinks>
+        <categoryLink name="Wizard" hidden="false" id="1f46-8f3e-d705-f09e" targetId="7896-9879-0772-2624" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="45"/>
+      </costs>
+      <profiles>
+        <profile name="Shaman" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="7fd8-7638-c06c-81c4">
+          <characteristics>
+            <characteristic name="Type" typeId="3087-9431-0004-e975">Wizard</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">+0</characteristic>
+            <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">-</characteristic>
+            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">-</characteristic>
+            <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">7</characteristic>
+            <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="7415-02ea-5536-38dd" includeChildSelections="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="increment" value="1" field="7415-02ea-5536-38dd">
+          <repeats>
+            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="false" includeChildForces="false"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Shaman Spells" hidden="false" id="97c4-4e21-7e2d-c714" type="selectionEntryGroup" targetId="020d-c8ba-4491-6af1"/>
+      </entryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
@@ -600,6 +731,8 @@ of the living that they can’t be driven back by missile fire.</description>
     <entryLink import="true" name="Ballista" hidden="false" id="45ac-0870-8b48-e61d" type="selectionEntry" targetId="deeb-1f9c-34ce-6c3c"/>
     <entryLink import="true" name="Orc/Uruk-hai General" hidden="false" id="0350-5da8-88e6-690d" type="selectionEntry" targetId="c234-1d3d-1a42-03c0"/>
     <entryLink import="true" name="Orc/Uruk-hai Hero" hidden="false" id="83bb-43c0-c393-f362" type="selectionEntry" targetId="ce8e-3118-c6b1-f02f"/>
+    <entryLink import="true" name="Nazgûl" hidden="false" id="dee9-5f50-2f84-abab" type="selectionEntry" targetId="a441-e398-7ae7-b633"/>
+    <entryLink import="true" name="Shaman" hidden="false" id="3176-9e6f-ca35-f6bd" type="selectionEntry" targetId="f224-cbda-e88f-3a4d"/>
   </entryLinks>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="War of the Ring" id="580c-2721-9a93-5e3d" targetId="a85a-9f67-08e2-d9e9"/>
@@ -609,4 +742,42 @@ of the living that they can’t be driven back by missile fire.</description>
       <description>An Orc General, or Hero can only issue orders or attach to Sauron&apos;s non-human forces.</description>
     </rule>
   </sharedRules>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup name="Shaman Spells" id="020d-c8ba-4491-6af1" hidden="false">
+      <profiles>
+        <profile name="Foul Frenzy" typeId="9867-0f84-d2fb-34c4" typeName="Spell" hidden="false" id="652a-41fe-6d6d-babf">
+          <characteristics>
+            <characteristic name="Casting roll" typeId="d148-3561-3fa8-550d">4+</characteristic>
+            <characteristic name="Range" typeId="938f-20ca-ebd8-865b">30cm</characteristic>
+            <characteristic name="Description" typeId="9b48-0ebf-2ca1-3b35">This spell can be cast on a friendly Goblin infantry or Goblin Wolfrider unit within range regardless of whether the Wizard has a line of sight or not. The spell can only be cast at a unit that is engaged in combat.
+
+Every stand in the unit, including a character that is fighting with the unit, adds +1 to its Attacks value during the first round of the following Combat phase.
+</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Dark Swarm" typeId="9867-0f84-d2fb-34c4" typeName="Spell" hidden="false" id="2e8b-9ca7-2d1a-28e8">
+          <characteristics>
+            <characteristic name="Casting roll" typeId="d148-3561-3fa8-550d">5+</characteristic>
+            <characteristic name="Range" typeId="938f-20ca-ebd8-865b">30cm</characteristic>
+            <characteristic name="Description" typeId="9b48-0ebf-2ca1-3b35">This spell can be cast on an enemy unit within range regardless of whether the Wizard has a line of sight or not. The spell can be cast at a target engaged in combat or at a target that is not engaged in combat – it makes no difference.
+
+
+
+The Dark Swarm is worked out exactly like three ordinary shooting attacks. If the target is not engaged in combat, hits inflicted by a Dark Swarm are counted towards drive backs just like ordinary shooting. If the target is engaged in combat, hits inflicted by a Dark Swarm are carried over into the Combat phase and count towards the combat result in the first round.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Faster You Dogs" typeId="9867-0f84-d2fb-34c4" typeName="Spell" hidden="false" id="8a5b-dd46-84ec-b172">
+          <characteristics>
+            <characteristic name="Casting roll" typeId="d148-3561-3fa8-550d">5+</characteristic>
+            <characteristic name="Range" typeId="938f-20ca-ebd8-865b">60cm</characteristic>
+            <characteristic name="Description" typeId="9b48-0ebf-2ca1-3b35">This spell can be cast upon a friendly Goblin infantry or Wolfrider unit within range regardless of whether the Wizard has a line of sight or not. The spell can only be cast at a unit that is not engaged in combat.
+
+
+
+If the spell is cast upon a unit, it can move immediately just as if it had received an order in the Command phase. Note that the spell affects only a single unit – it is not a brigade order – and any characters with the unit will not move with it.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntryGroup>
+  </sharedSelectionEntryGroups>
 </catalogue>
