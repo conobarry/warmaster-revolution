@@ -80,7 +80,7 @@
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="lessThan" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -92,7 +92,7 @@
       <modifiers>
         <modifier type="increment" value="5" field="2085-9b6f-c588-0723">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="false" includeChildForces="false"/>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
         <modifier type="increment" value="2" field="a2fc-fb57-3c07-232a">
@@ -114,7 +114,7 @@
           <modifiers>
             <modifier type="decrement" value="1" field="1b25-0ce9-c54e-e226" position="1">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="ea4b-5a2a-d631-f4ee" shared="true" childName="Shields"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="ea4b-5a2a-d631-f4ee" shared="true" childName="ea4b-5a2a-d631-f4ee"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -125,7 +125,7 @@
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="lessThan" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
           </modifiers>

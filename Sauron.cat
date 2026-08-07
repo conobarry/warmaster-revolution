@@ -335,7 +335,7 @@ of the living that they can’t be driven back by missile fire.</description>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="false" includeChildForces="false"/>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
         <modifier type="increment" value="4" field="a596-a9b3-1ad0-066a">
@@ -373,7 +373,7 @@ of the living that they can’t be driven back by missile fire.</description>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="false" includeChildForces="false"/>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
         <modifier type="increment" value="4" field="14cf-8561-3c12-e79d">
@@ -704,7 +704,7 @@ of the living that they can’t be driven back by missile fire.</description>
         </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="false" includeChildForces="false"/>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
       </modifiers>

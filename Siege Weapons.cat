@@ -5,7 +5,7 @@
       <modifiers>
         <modifier type="set" value="Trebuchet" field="name">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="false" includeChildForces="false"/>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifier>
         <modifier type="increment" value="1" field="57fe-5004-b2ab-129b">
@@ -30,7 +30,7 @@
           <modifiers>
             <modifier type="set" value="Trebuchet" field="name">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="false" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
           </modifiers>
