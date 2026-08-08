@@ -24,18 +24,13 @@
         </profile>
         <profile name="Citadel Guard" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="9c4e-4791-7981-ef59">
           <characteristics>
-            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">The Elite infantry sworn to protect the Steward of Gondor. The Guard can only be fielded if Denethor, Boromir, or Faramir are present for a battle, and only if the battle takes place at Minas Tirith. The Guard may form a Shieldwall. This is a unique unit so no more than one unit of Citadel guards will ever be fielded at once regardless of points,</characteristic>
+            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">The Elite infantry sworn to protect the Steward of Gondor. The Guard can only be fielded if Denethor, Boromir, or Faramir are present for a battle, and only if the battle takes place at Minas Tirith.</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Shieldwall" id="a8cc-25cd-fb08-2441" hidden="false" type="rule" targetId="680f-f086-2048-28e1"/>
       </infoLinks>
-      <rules>
-        <rule name="Citadel Guard" id="dd77-fe52-16f2-b683" hidden="false">
-          <description>The Elite infantry sworn to protect the Steward of Gondor. The Guard can only be fielded if Denethor, Boromir, or Faramir are present for a battle, and only if the battle takes place at Minas Tirith. The Guard may form a Shieldwall. This is a unique unit so no more than one unit of Citadel guards will ever be fielded at once regardless of points,</description>
-        </rule>
-      </rules>
       <entryLinks>
         <entryLink import="true" name="Brace" hidden="false" id="7d89-28a3-0053-ae30" type="selectionEntry" targetId="89f2-0839-9901-d14c"/>
       </entryLinks>
@@ -81,7 +76,7 @@
         <categoryLink name="Infantry" hidden="false" id="8f34-5c06-7081-61cf" targetId="5e38-77df-81d0-6399" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Shields" hidden="false" id="ea4b-5a2a-d631-f4ee">
+        <selectionEntry type="upgrade" import="true" name="Shieldwall" hidden="false" id="ea4b-5a2a-d631-f4ee">
           <costs>
             <cost name="pts" typeId="2085-9b6f-c588-0723" value="15"/>
           </costs>
@@ -98,6 +93,22 @@
               </conditions>
             </modifier>
           </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="decrement" value="1" field="1b25-0ce9-c54e-e226" scope="unit" affects="self.entries.recursive.profiles.Unit">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="ea4b-5a2a-d631-f4ee" shared="true" includeChildSelections="true" childName="Shieldwall"/>
+                  </conditions>
+                </modifier>
+                <modifier type="append" value="Shieldwall" field="annotation" scope="unit" affects="self.entries.recursive.profiles.Unit" join=",">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="ea4b-5a2a-d631-f4ee" shared="true" includeChildSelections="true" childName="Shieldwall"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
       </selectionEntries>
       <constraints>
@@ -163,15 +174,10 @@
         </profile>
         <profile name="Ithilien Rangers" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="6527-0167-6bbf-af26">
           <characteristics>
-            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">Troops who are at home in the forests of Middle-earth. Ithilien Rangers can see up to 2cm while in forests, and may be positioned 2cm inside forests and still shoot from the forest. In addition, Rangers do not suffer the normal -1 command penalty while in forests.</characteristic>
+            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">Ithilien Rangers can see up to 2cm while in forests, and may be positioned 2cm inside forests and still shoot from the forest. In addition, Rangers do not suffer the normal -1 command penalty while in forests.</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <rules>
-        <rule name="Ithilien Rangers" id="24fb-2704-8a85-c866" hidden="false">
-          <description>Troops who are at home in the forests of Middle-earth. Ithilien Rangers can see up to 2cm while in forests, and may be positioned 2cm inside forests and still shoot from the forest. In addition, Rangers do not suffer the normal -1 command penalty while in forests.</description>
-        </rule>
-      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Gondorian Militia" hidden="false" id="a37b-52fb-3747-0c8f">
       <costs>
@@ -328,21 +334,10 @@
           <characteristics>
             <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">If this unit is charging against an enemy in the open it receives an additional +1 Attack modifier in the same way as chariots and monsters.
 
-
-
-
 If Imrahil is present for a battle, a single unit of knights may designated as his household knights and use the Bodyguard rule.</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <rules>
-        <rule name="Knights of Dol Amroth" id="3546-1a57-867b-e619" hidden="false">
-          <description>If this unit is charging against an enemy in the open it receives an additional +1 Attack modifier in the same way as chariots and monsters.
-
-
-If Imrahil is present for a battle, a single unit of knights may designated as his household knights and use the Bodyguard rule.</description>
-        </rule>
-      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="General" hidden="false" id="f4b5-3015-7864-ae96">
       <costs>
@@ -478,16 +473,6 @@ A Pikemen stand cannot support or be supported by other infantry - only by other
           </conditions>
         </modifier>
       </modifiers>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Pikemen" hidden="false" id="310a-ca0c-87ae-e0d9">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="342a-7cc0-3827-4201"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="2085-9b6f-c588-0723" value="50"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Brace" hidden="false" id="89f2-0839-9901-d14c">
       <costs>
@@ -506,6 +491,17 @@ A Pikemen stand cannot support or be supported by other infantry - only by other
           </conditions>
         </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="append" value="Brace" field="annotation" scope="unit" affects="self.entries.recursive.profiles.Unit" join=",">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="unit" childId="89f2-0839-9901-d14c" shared="true" includeChildSelections="true" childName="Brace"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>

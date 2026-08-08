@@ -16,6 +16,14 @@
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
         </profile>
+        <profile name="Uruk-hai" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="eb81-d0ee-570c-9c78">
+          <characteristics>
+            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">A regiment with Uruk-hai and Orcs suffers a -1 Command penalty.
+
+
+Uruk-hai always advance 20cm after combat regardless of how many rounds the initial combat engagement took.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink name="Infantry" hidden="false" id="473e-155f-984f-b884" targetId="5e38-77df-81d0-6399" primary="true"/>
@@ -23,11 +31,6 @@
       <infoLinks>
         <infoLink name="Warband" id="5226-05ff-c69b-a049" hidden="false" type="rule" targetId="0d1c-680a-f38d-6e29"/>
       </infoLinks>
-      <rules>
-        <rule name="Uruk-hai" id="552c-34e6-a4de-293e" hidden="false">
-          <description>A regiment with Uruk-hai and Orcs suffers a -1 Command penalty. To represent the speed and aggression of the Uruk-hai they use the Warband rules, and may always advance 20cm after combat regardless of how many rounds the initial combat engagement took.</description>
-        </rule>
-      </rules>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Orcs" hidden="false" id="8e83-c945-3fbb-3673" publicationId="2fdc-4bd3-bba1-56b9">
       <costs>
@@ -145,6 +148,19 @@
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
         </profile>
+        <profile name="Trolls" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="50ac-d125-c98c-eb82">
+          <characteristics>
+            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">A unit of trolls may never advance more than 10cm after combat.
+
+Even though Trolls are quite stupid they have uncanny sense of smell. This sense of smell allows a unit of trolls to trace a LOS through friendly units to the enemy.
+
+
+A unit of Trolls will always use initiative to charge the closest enemy unit within 20cm, even if an unengaged friendly unit lies between the Trolls and their victims. When a unit of trolls is forced to charge an enemy unit and their path takes them through an unengaged friendly unit, a burst through is performed on the unit the Trolls were forced to move through. Remember this rule applies to unengaged friendly units only.
+
+
+Trolls will never trace a LOS through, charge through, or displace a friendly unit already in contact with the enemy.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <constraints>
         <constraint type="max" value="0" field="selections" scope="force" shared="true" id="9ca2-5450-6484-1651" includeChildSelections="true"/>
@@ -156,14 +172,6 @@
           </repeats>
         </modifier>
       </modifiers>
-      <rules>
-        <rule name="Trolls" id="cfce-7a57-b66e-ac2a" hidden="false">
-          <description>Trolls were known to stop and bite the throats of their victims in combat, so a unit of trolls may never advance more than 10 cm after combat.
-
-
-Even though Trolls are quite stupid they have uncanny sense of smell. This sense of smell allows a unit of trolls to trace a LOS through friendly units to the enemy. A unit of Trolls will always use initiative to charge the closest enemy unit within 20cm, even if an unengaged friendly unit lies between the Trolls and their victims. When a unit of trolls is forced to charge an enemy unit and their path takes them through an unengaged friendly unit, a burst through is performed on the unit the Trolls were forced to move through. Remember this rule applies to unengaged friendly units only. Trolls will never trace a LOS through, charge through, or displace a friendly unit already in contact with the enemy.</description>
-        </rule>
-      </rules>
       <categoryLinks>
         <categoryLink name="Infantry" hidden="false" id="8225-a20a-2a7c-5445" targetId="5e38-77df-81d0-6399" primary="true"/>
       </categoryLinks>
@@ -183,6 +191,11 @@ Even though Trolls are quite stupid they have uncanny sense of smell. This sense
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
         </profile>
+        <profile name="Olog-hai" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="c79a-c508-9987-9eee">
+          <characteristics>
+            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">A brigade with both Olog-hai and Trolls will suffer a -1 Command penalty.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <constraints>
         <constraint type="max" value="0" field="selections" scope="force" shared="true" id="6f77-7adf-953c-6aa6" includeChildSelections="true"/>
@@ -194,11 +207,6 @@ Even though Trolls are quite stupid they have uncanny sense of smell. This sense
           </repeats>
         </modifier>
       </modifiers>
-      <rules>
-        <rule name="Olog-hai" id="d451-8cf7-a12e-be43" hidden="false">
-          <description>A brigade with both Olog-hai and Trolls will suffer a -1 Command penalty.</description>
-        </rule>
-      </rules>
       <categoryLinks>
         <categoryLink name="Infantry" hidden="false" id="7ad7-ed00-9303-1850" targetId="5e38-77df-81d0-6399" primary="true"/>
       </categoryLinks>
@@ -251,13 +259,12 @@ Even though Trolls are quite stupid they have uncanny sense of smell. This sense
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
         </profile>
+        <profile name="Evil Spirits" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="e1db-3e37-b845-a2fa">
+          <characteristics>
+            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">Evil spirits cause Terror in their enemies. Evil Spirits are also so hungry for the souls of the living that they can’t be driven back by missile fire.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
-      <rules>
-        <rule name="Evil Spirits" id="d751-4716-134d-8b0b" hidden="false">
-          <description>Evil spirits cause Terror in their enemies. Evil Spirits are also so hungry for the souls
-of the living that they can’t be driven back by missile fire.</description>
-        </rule>
-      </rules>
       <constraints>
         <constraint type="max" value="0" field="selections" scope="force" shared="true" id="c610-02ce-7915-e7c1" includeChildSelections="true"/>
       </constraints>
@@ -287,10 +294,12 @@ of the living that they can’t be driven back by missile fire.</description>
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
         </profile>
+        <profile name="Wolfriders" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="6dd4-336b-0f06-a9ce">
+          <characteristics>
+            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">When Wolfriders are in combat with a mounted unit, and score more hits in the first round of a combat than the enemy, they will automatically strike 1 more Attack per stand before the combat results are worked out. Resolve these attacks as normal and then work out the results.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
-      <infoLinks>
-        <infoLink name="Wolfriders" id="a85e-0e23-21c1-49ee" hidden="false" type="rule" targetId="7724-23e1-ef2b-cefa"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink name="Cavalry" hidden="false" id="55e6-9c7e-9f5a-6416" targetId="6bff-b94d-a54a-8758" primary="true"/>
       </categoryLinks>
@@ -320,12 +329,12 @@ of the living that they can’t be driven back by missile fire.</description>
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
         </profile>
+        <profile name="Wolfrider Archers" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="7ee0-dec0-7638-4c17">
+          <characteristics>
+            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">A Wolf Rider stand is assumed to be able to see all the way round – not just to its front as are other stands. This enables Wolf Riders to shoot in any direction, or to charge or evade from the closest enemy within 20cm regardless of their relative position.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
-      <rules>
-        <rule name="Wolfrider Archers" id="fb3a-319b-7cbd-8ca9" hidden="false">
-          <description>A Wolf Rider stand is assumed to be able to see all the way round – not just to its front as are other stands. This enables Wolf Riders to shoot in any direction, or to charge or evade from the closest enemy within 20cm regardless of their relative position.</description>
-        </rule>
-      </rules>
       <categoryLinks>
         <categoryLink name="Cavalry" hidden="false" id="8aa1-4aab-30e7-9172" targetId="6bff-b94d-a54a-8758" primary="true"/>
       </categoryLinks>
@@ -436,10 +445,20 @@ of the living that they can’t be driven back by missile fire.</description>
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
         </profile>
+        <profile name="Wargs" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="105b-6a57-550f-74b1">
+          <characteristics>
+            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">Wargs are able to move over or into any wooded or mountainous terrain features in the same way as infantry. This does not allow them to claim the defended status. 
+
+Wargs cannot be brigaded with units of other troops, only with other Wargs.
+
+A Warg unit which scores more hits in the first round of a combat than the enemy will automatically strike 1 more Attack per stand before the combat result is worked out. Resolve these attacks as normal and then work out the results. 
+
+Wargs must always pursue retreating enemy where possible and must advance if they are able to do so. 
+
+Note that these rules apply only to Warg units – not to characters that ride Wargs.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
-      <infoLinks>
-        <infoLink name="Wargs" id="0fb3-757e-d71a-c9b1" hidden="false" type="rule" targetId="838b-1486-d17f-ea58"/>
-      </infoLinks>
       <categoryLinks>
         <categoryLink name="Monster" hidden="false" id="dd6d-507b-f11b-3457" targetId="c05d-61e2-2cbd-0df9" primary="true"/>
       </categoryLinks>
@@ -535,15 +554,15 @@ of the living that they can’t be driven back by missile fire.</description>
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">1</characteristic>
           </characteristics>
         </profile>
+        <profile name="Grond" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="d477-460d-15d7-04ac">
+          <characteristics>
+            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">Grond uses the normal battering ram rules except that it does two automatic hits, and only needs one breach to destroy a wall or gate. A unit of trolls must be bought to wield Grond. Grond has a movement of 10cm unless pulled by beasts.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <constraints>
         <constraint type="max" value="0" field="selections" scope="force" shared="true" id="bc0c-3930-81f5-c628" includeChildSelections="true"/>
       </constraints>
-      <rules>
-        <rule name="Grond" id="1add-18df-fc15-4de8" hidden="false">
-          <description>Grond uses the normal battering ram rules except that it does two automatic hits, and only needs one breach to destroy a wall or gate. A unit of trolls must be bought to wield Grond. Grond has a movement of 10cm unless pulled by beasts.</description>
-        </rule>
-      </rules>
       <modifiers>
         <modifier type="increment" value="1" field="bc0c-3930-81f5-c628">
           <repeats>

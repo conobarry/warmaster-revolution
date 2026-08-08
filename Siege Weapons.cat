@@ -35,6 +35,21 @@
             </modifier>
           </modifiers>
         </profile>
+        <profile name="Tribock" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="a6a5-4326-70bd-6806">
+          <characteristics>
+            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">Shooting: Range 20–120cm, 6 Attacks
+
+As the Tribock is such a giant machine it has to be placed on a special stand with a front edge of 40mm and flank edges of 60mm.
+
+For siege use only! May not move once it is deployed. Must be deployed before any other unit.
+
+Shooting straight ahead: Unlike normal shooting units the Tribock has a very restricted view. It can only draw line of sight to targets that lie in a strip that extends straight ahead from the front edge. So the Tribock only has a 4cm wide line of sight. For targets outside this strip it must be ordered to turn. If the order is failed it does not fire that turn.
+
+Any Hits caused by the Tribock allow no save.
+
+Because of its immense size the Tribock has a range of 120cm and a minimum range of 20cm as the slingshot like nature of the weapon makes it impossible to shoot at closer targets. This obviously makes units that are under 20cm ineligible as potential targets; thus they are ignored as far as the rules for firing at the closest target are concerned. The Tribock may not shoot at enemy units that charge it.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink name="Artillery" hidden="false" id="1d3a-03c3-8c60-e74f" targetId="ab71-7ddd-db90-f5e5" primary="true"/>
@@ -42,27 +57,6 @@
       <constraints>
         <constraint type="max" value="0" field="selections" scope="force" shared="true" id="57fe-5004-b2ab-129b" automatic="false" negative="false" includeChildSelections="true"/>
       </constraints>
-      <rules>
-        <rule name="Tribock" id="96db-1879-f1e6-ec9a" hidden="false">
-          <description>Shooting: Range 20–120cm, 6 Attacks
-
-
-
-As the Tribock is such a giant machine it has to be placed on a special stand with a front edge of 40mm and flank edges of 60mm.
-
-
-For siege use only! May not move once it is deployed. Must be deployed before any other unit.
-
-
-Shooting straight ahead: Unlike normal shooting units the Tribock has a very restricted view. It can only draw line of sight to targets that lie in a strip that extends straight ahead from the front edge. So the Tribock only has a 4cm wide line of sight. For targets outside this strip it must be ordered to turn. If the order is failed it does not fire that turn.
-
-
-Any Hits caused by the Tribock allow no save.
-
-
-Because of its immense size the Tribock has a range of 120cm and a minimum range of 20cm as the slingshot like nature of the weapon makes it impossible to shoot at closer targets. This obviously makes units that are under 20cm ineligible as potential targets; thus they are ignored as far as the rules for firing at the closest target are concerned. The Tribock may not shoot at enemy units that charge it.</description>
-        </rule>
-      </rules>
     </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
