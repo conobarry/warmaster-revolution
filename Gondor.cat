@@ -22,6 +22,11 @@
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
         </profile>
+        <profile name="Citadel Guard" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="9c4e-4791-7981-ef59">
+          <characteristics>
+            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">The Elite infantry sworn to protect the Steward of Gondor. The Guard can only be fielded if Denethor, Boromir, or Faramir are present for a battle, and only if the battle takes place at Minas Tirith. The Guard may form a Shieldwall. This is a unique unit so no more than one unit of Citadel guards will ever be fielded at once regardless of points,</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Shieldwall" id="a8cc-25cd-fb08-2441" hidden="false" type="rule" targetId="680f-f086-2048-28e1"/>
@@ -31,6 +36,9 @@
           <description>The Elite infantry sworn to protect the Steward of Gondor. The Guard can only be fielded if Denethor, Boromir, or Faramir are present for a battle, and only if the battle takes place at Minas Tirith. The Guard may form a Shieldwall. This is a unique unit so no more than one unit of Citadel guards will ever be fielded at once regardless of points,</description>
         </rule>
       </rules>
+      <entryLinks>
+        <entryLink import="true" name="Brace" hidden="false" id="7d89-28a3-0053-ae30" type="selectionEntry" targetId="89f2-0839-9901-d14c"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Gondorian Infantry" hidden="false" id="1bfb-c6b2-00de-3bf9">
       <costs>
@@ -96,11 +104,6 @@
         <constraint type="min" value="0" field="selections" scope="force" shared="true" id="a2fc-fb57-3c07-232a" automatic="false" negative="false" includeChildSelections="true"/>
       </constraints>
       <modifiers>
-        <modifier type="increment" value="5" field="2085-9b6f-c588-0723">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
         <modifier type="increment" value="2" field="a2fc-fb57-3c07-232a">
           <repeats>
             <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
@@ -118,26 +121,17 @@
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
           <modifiers>
-            <modifier type="decrement" value="1" field="1b25-0ce9-c54e-e226" position="1">
+            <modifier type="decrement" value="1" field="1b25-0ce9-c54e-e226" position="">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="ea4b-5a2a-d631-f4ee" shared="true" childName="ea4b-5a2a-d631-f4ee"/>
+                <condition type="atLeast" value="1" field="selections" scope="unit" childId="ea4b-5a2a-d631-f4ee" shared="true" childName="ea4b-5a2a-d631-f4ee"/>
               </conditions>
             </modifier>
           </modifiers>
         </profile>
       </profiles>
-      <rules>
-        <rule name="Brace" id="1bb8-d635-5da0-268d" hidden="false">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="lessThan" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <description>Infantry armed with spears can brace them to deter cavalry charges. Infantry must pass a successful command roll to brace (with Command modifiers applied for orders already issued in the current turn). Cavalry charging a braced unit have a -1 attack modifier in the combat phase. If a braced unit moves, they are no longer braced, and the unit must again pass a Command roll to brace. A unit cannot form a shieldwall and be braced at the same time.</description>
-        </rule>
-      </rules>
+      <entryLinks>
+        <entryLink import="true" name="Brace" hidden="false" id="8f9e-2ab4-9210-b393" type="selectionEntry" targetId="89f2-0839-9901-d14c"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Ithilien Rangers" hidden="false" id="0e29-f8fe-a495-ce28">
       <costs>
@@ -165,6 +159,11 @@
             <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">6+</characteristic>
             <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">-</characteristic>
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Ithilien Rangers" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="6527-0167-6bbf-af26">
+          <characteristics>
+            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">Troops who are at home in the forests of Middle-earth. Ithilien Rangers can see up to 2cm while in forests, and may be positioned 2cm inside forests and still shoot from the forest. In addition, Rangers do not suffer the normal -1 command penalty while in forests.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -203,6 +202,9 @@
           </characteristics>
         </profile>
       </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Brace" hidden="false" id="358a-be69-ee50-43d8" type="selectionEntry" targetId="89f2-0839-9901-d14c"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Gondorian Bowmen" hidden="false" id="71ca-be65-5023-e448">
       <costs>
@@ -322,10 +324,23 @@
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
         </profile>
+        <profile name="Knights of Dol Amroth" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="b44b-19de-76b7-9422">
+          <characteristics>
+            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">If this unit is charging against an enemy in the open it receives an additional +1 Attack modifier in the same way as chariots and monsters.
+
+
+
+
+If Imrahil is present for a battle, a single unit of knights may designated as his household knights and use the Bodyguard rule.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <rules>
         <rule name="Knights of Dol Amroth" id="3546-1a57-867b-e619" hidden="false">
-          <description>The Elite Knights of Dol Amroth. If this unit is charging against an enemy in the open it receives an additional +1 Attack modifier in the same way as chariots and monsters. If Imrahil is present for a battle, a single unit of knights may designated as his household knights and use the Bodyguard rule.</description>
+          <description>If this unit is charging against an enemy in the open it receives an additional +1 Attack modifier in the same way as chariots and monsters.
+
+
+If Imrahil is present for a battle, a single unit of knights may designated as his household knights and use the Bodyguard rule.</description>
         </rule>
       </rules>
     </selectionEntry>
@@ -352,7 +367,7 @@
         </profile>
       </profiles>
       <rules>
-        <rule name="Generals" id="d35b-0e6e-7f43-a75e" hidden="false">
+        <rule name="Gondor Generals" id="d35b-0e6e-7f43-a75e" hidden="false">
           <description>If Denethor, or Boromir are present for a battle one of them must be used as the army General.</description>
         </rule>
       </rules>
@@ -435,24 +450,62 @@
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
         </profile>
-      </profiles>
-      <costs>
-        <cost name="pts" typeId="2085-9b6f-c588-0723" value="50"/>
-      </costs>
-      <rules>
-        <rule name="Pikemen" id="0925-7cb5-0569-49b4" hidden="false">
-          <description>Pikemen can not enter dense terrain (even partially). They still may be in a defended position on higher ground or behind a low obstacle as usual, but can only claim defended status when fighting to the front.
+        <profile name="Pikemen" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="5f90-b8cc-37c8-7c2a">
+          <characteristics>
+            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">Pikemen can not enter dense terrain (even partially). They still may be in a defended position on higher ground or behind a low obstacle as usual, but can only claim defended status when fighting to the front.
+
+
 
 
 An enemy does not receive charge bonuses when charging Pikemen in the front, nor do Pikemen receive any charge bonus themselves.
 
 
 
-A Pikemen stand cannot support or be supported by other infantry - only by other Pikemen stands. In all other respects they count as infantry (movement/pursuit etc.).
 
-</description>
-        </rule>
-      </rules>
+
+
+A Pikemen stand cannot support or be supported by other infantry - only by other Pikemen stands. In all other respects they count as infantry (movement/pursuit etc.).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="50"/>
+      </costs>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Pikemen" hidden="false" id="310a-ca0c-87ae-e0d9">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="342a-7cc0-3827-4201"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="2085-9b6f-c588-0723" value="50"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Brace" hidden="false" id="89f2-0839-9901-d14c">
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="5"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Brace" id="fc2c-4e33-e20b-cd66" hidden="false" type="rule" targetId="cb95-fd3d-c914-72e7"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2225-417d-3b1c-cd07"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
@@ -472,7 +525,17 @@ A Pikemen stand cannot support or be supported by other infantry - only by other
   </entryLinks>
   <sharedRules>
     <rule name="Shieldwall" id="680f-f086-2048-28e1" hidden="false">
-      <description>Certain infantry in the open can form into a shield wall if the need arises. Infantry must pass a successful command roll to form into a shieldwall (with Command modifiers applied for orders already issued in the current turn). All attacks to the front edge of a shieldwall have a -1 to Hit penalty (5+). If a unit in a shieldwall moves, all bonuses are lost, and the unit must again pass a Command roll to form the shieldwall.</description>
+      <description>The unit must pass a successful command roll to form into a shieldwall (with Command modifiers applied for orders already issued in the current turn). All attacks to the front edge of a shieldwall have a -1 to Hit penalty (5+). If a unit in a shieldwall moves, all bonuses are lost, and the unit must again pass a Command roll to form the shieldwall.</description>
+    </rule>
+    <rule name="Brace" id="cb95-fd3d-c914-72e7" hidden="false">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <description>The unit must pass a successful command roll to brace (with Command modifiers applied for orders already issued in the current turn). Cavalry charging a braced unit have a -1 attack modifier in the combat phase. If a braced unit moves, they are no longer braced, and the unit must again pass a Command roll to brace. A unit cannot form a Shieldwall and be braced at the same time.</description>
     </rule>
   </sharedRules>
   <catalogueLinks>

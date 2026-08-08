@@ -72,13 +72,23 @@
         <characteristicType name="Description" id="9b48-0ebf-2ca1-3b35"/>
       </characteristicTypes>
     </profileType>
+    <profileType name="Ability" id="a5d3-6ea8-6425-5123" hidden="false" kind="ability">
+      <characteristicTypes>
+        <characteristicType name="Description" id="bc69-55f2-6b4e-18e7"/>
+      </characteristicTypes>
+    </profileType>
   </profileTypes>
   <sharedSelectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Show/Hide Options" hidden="false" id="4748-8380-34e0-5638">
+    <selectionEntry type="upgrade" import="true" name="Options" hidden="false" id="4748-8380-34e0-5638">
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Show Homebrew" hidden="false" id="2bc6-a5e8-b715-256f">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="de3d-751c-5e2d-55f2"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Compact Mode" hidden="false" id="bb2b-cb70-efe7-7fcf">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3521-34a2-c352-6809"/>
           </constraints>
         </selectionEntry>
       </selectionEntries>
@@ -108,8 +118,7 @@ The target unit suffers two attacks plus +1 if an additional stand from the same
 
 Because a bolt thrower can cause hits on different units by skewering shots, it is possible to inflict hits upon enemy units that are engaged in combat. These are normally ineligible targets, but in the case of skewering shots, they can suffer hits as a result of fire directed at a unit touching another enemy unit. Any hits on engaged units from either side will carry forward into the combat round and count as having been struck during that round for purposes of working out which side wins. Units engaged in combat are not driven back by any hits taken – carrying hits forward takes this into account. Units that are not engaged in combat are driven back in the usual way.
 
-Bolt Throwers can shoot at a charging enemy and can do so at any point as the enemy charges, including the start of the move or when the charger has reached its final position.
-</description>
+Bolt Throwers can shoot at a charging enemy and can do so at any point as the enemy charges, including the start of the move or when the charger has reached its final position.</description>
     </rule>
   </sharedRules>
 </gameSystem>
