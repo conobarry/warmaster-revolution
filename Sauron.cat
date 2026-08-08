@@ -511,7 +511,7 @@ Note that these rules apply only to Warg units – not to characters that ride W
         <profile name="Ballista" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="b32c-a78a-b62d-cd55">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Artillery</characteristic>
-            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">1/3</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">1/2</characteristic>
             <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">2</characteristic>
             <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">0</characteristic>
             <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">-</characteristic>

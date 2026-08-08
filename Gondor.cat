@@ -402,7 +402,7 @@ If Imrahil is present for a battle, a single unit of knights may designated as h
         <profile name="Ballista" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="cfe6-502b-7e48-8a45">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Artillery</characteristic>
-            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">1/3</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">1/2</characteristic>
             <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">2</characteristic>
             <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">0</characteristic>
             <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">-</characteristic>
@@ -503,6 +503,61 @@ A Pikemen stand cannot support or be supported by other infantry - only by other
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Field Trebuchet" hidden="false" id="3086-2c51-ec89-d1e5">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" value="1" field="b773-6784-f585-86ab">
+          <repeats>
+            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile name="Field Trebuchet" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="17e4-3c5f-0da6-16d4">
+          <characteristics>
+            <characteristic name="Type" typeId="3087-9431-0004-e975">Artillery</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">1/4</characteristic>
+            <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">4</characteristic>
+            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">-</characteristic>
+            <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">-</characteristic>
+            <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">1</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Field Trebuchet" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="9c10-8294-ce9b-e5b3">
+          <characteristics>
+            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">To represent that the Trebuchet is such a bulky warmachine, which takes time to assemble and disassemble, the Trebuchets can move but cannot shoot in the turn it moved.
+
+
+If a Trebuchet is driven back more than 10cm by shooting it is destroyed (drive backs of less than 10cm are simply ignored). If it is forced to retreat from combat it is also destroyed like any other artillery. A Trebuchet is not affected by Gerroff!!! spell.
+
+
+The Trebuchet has a shooting range of 80cm. Fortified units count as defended and defended targets count as in the open. No armour roll is made when shot at by a Trebuchet.
+
+
+The Trebuchet may not shoot at charging enemies.
+
+
+The Trebuchet can shoot at targets that it can see as for all other artillery, and it can shoot over the heads of friends and obstacles on lower ground just as can other artillery.
+
+
+Shooting Blind: If there is no target in sight a Trebuchet may instead shoot at the nearest enemy unit in range it cannot see. When Shooting Blind it always hits on 6+ no matter if the target is in the open, defended or even fortified.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="100"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="Artillery" hidden="false" id="0407-9d95-a80e-32ba" targetId="ab71-7ddd-db90-f5e5" primary="true"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="b773-6784-f585-86ab" includeChildSelections="true"/>
+      </constraints>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Citadel Guard" hidden="false" id="df8d-96a5-ae2d-1bd6" type="selectionEntry" targetId="f36e-4a74-aede-d3c1"/>
@@ -518,6 +573,7 @@ A Pikemen stand cannot support or be supported by other infantry - only by other
     <entryLink import="true" name="Knights of Dol Amroth" hidden="false" id="c297-e378-e664-0bd9" type="selectionEntry" targetId="f497-7471-3446-476e"/>
     <entryLink import="true" name="Ballista" hidden="false" id="0962-e87e-33b3-bb11" type="selectionEntry" targetId="d82c-f5f1-0967-0a04"/>
     <entryLink import="true" name="Pikemen" hidden="false" id="1fab-b99c-3e95-7ae9" type="selectionEntry" targetId="f8f4-4bed-c153-7355"/>
+    <entryLink import="true" name="Field Trebuchet" hidden="false" id="83d9-5496-24e7-25d1" type="selectionEntry" targetId="3086-2c51-ec89-d1e5"/>
   </entryLinks>
   <sharedRules>
     <rule name="Shieldwall" id="680f-f086-2048-28e1" hidden="false">
