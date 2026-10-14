@@ -143,7 +143,7 @@ Because of its immense size the Tribock has a range of 120cm and a minimum range
         <constraint type="min" value="0" field="selections" scope="force" shared="true" id="23b6-1d2c-ce2b-a562" automatic="false" negative="false" includeChildSelections="true"/>
       </constraints>
       <modifiers>
-        <modifier type="increment" value="4" field="23b6-1d2c-ce2b-a562">
+        <modifier type="increment" value="1" field="23b6-1d2c-ce2b-a562">
           <repeats>
             <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
           </repeats>
@@ -390,7 +390,7 @@ Because of its immense size the Tribock has a range of 120cm and a minimum range
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="roster" childId="c919-e2ab-c0b4-7c62" shared="true" includeChildSelections="true" includeChildForces="true" childName="Siege Defender"/>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="8189-2f46-bbba-df2a" shared="true" includeChildSelections="true" includeChildForces="true" childName="Show Siege units"/>
           </conditions>
         </modifier>
       </modifiers>

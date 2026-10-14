@@ -755,6 +755,44 @@ Note that these rules apply only to Warg units – not to characters that ride W
         <entryLink import="true" name="Shaman Spells" hidden="false" id="97c4-4e21-7e2d-c714" type="selectionEntryGroup" targetId="020d-c8ba-4491-6af1"/>
       </entryLinks>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Mûmakil" hidden="false" id="1647-4fe3-3da4-c316">
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="150"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="Monster" hidden="false" id="5b9b-bc1e-0a89-2167" targetId="c05d-61e2-2cbd-0df9" primary="true"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Mûmakil" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="71ca-7273-7606-3822">
+          <characteristics>
+            <characteristic name="Type" typeId="3087-9431-0004-e975">Monster</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">5/1</characteristic>
+            <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">4</characteristic>
+            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">4+</characteristic>
+            <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">-</characteristic>
+            <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Mûmakil" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="47fe-1293-a81d-a88d">
+          <characteristics>
+            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">When Mûmakil take hits from shooting there is a chance they will run amok. If a 6 is rolled when determining drive back, in addition to being confused, the unit has also run amok, and will move its drive back distance in a random direction.
+
+
+When a unit of Mûmakil has run amok, roll a scatter dice or use any other useful method to determine the direction of drive back. The Mûmakil will move its full drive back distance in the direction indicated, even if the drive back takes the Mûmakil unit through another unit or character of either side. When a unit of Mûmakil is forced to move through a unit because it has run amok, the unit is considered to have been burst through. If the unit of Mûmakil contacts a character stand during drive back, the character is displaced as if it had been contacted by an enemy unit. The character must be able to attach to a unit within a 30cm move or be destroyed. Characters already attached to the unit when it runs amok are affected as normal for a character attached to a unit during drive back.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="3b3c-24bf-e1c2-9ae9" includeChildSelections="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="increment" value="2" field="3b3c-24bf-e1c2-9ae9">
+          <repeats>
+            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Orcs" hidden="false" id="9172-c355-2786-7414" type="selectionEntry" targetId="8e83-c945-3fbb-3673"/>
@@ -776,6 +814,7 @@ Note that these rules apply only to Warg units – not to characters that ride W
     <entryLink import="true" name="Orc/Uruk-hai Hero" hidden="false" id="83bb-43c0-c393-f362" type="selectionEntry" targetId="ce8e-3118-c6b1-f02f"/>
     <entryLink import="true" name="Nazgûl" hidden="false" id="dee9-5f50-2f84-abab" type="selectionEntry" targetId="a441-e398-7ae7-b633"/>
     <entryLink import="true" name="Shaman" hidden="false" id="3176-9e6f-ca35-f6bd" type="selectionEntry" targetId="f224-cbda-e88f-3a4d"/>
+    <entryLink import="true" name="Mûmakil" hidden="false" id="c3af-f2b4-e6ad-f383" type="selectionEntry" targetId="1647-4fe3-3da4-c316"/>
   </entryLinks>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="War of the Ring" id="580c-2721-9a93-5e3d" targetId="a85a-9f67-08e2-d9e9"/>
