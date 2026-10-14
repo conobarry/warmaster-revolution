@@ -803,7 +803,7 @@ When a unit of Mûmakil has run amok, roll a scatter dice or use any other usef
         <constraint type="max" value="0" field="selections" scope="force" shared="true" id="3b3c-24bf-e1c2-9ae9" includeChildSelections="true"/>
       </constraints>
       <modifiers>
-        <modifier type="increment" value="2" field="3b3c-24bf-e1c2-9ae9">
+        <modifier type="increment" value="1" field="3b3c-24bf-e1c2-9ae9">
           <repeats>
             <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
           </repeats>

@@ -457,23 +457,6 @@ If Imrahil is present for a battle, a single unit of knights may designated as h
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
         </profile>
-        <profile name="Pikemen" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="5f90-b8cc-37c8-7c2a">
-          <characteristics>
-            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">Pikemen can not enter dense terrain (even partially). They still may be in a defended position on higher ground or behind a low obstacle as usual, but can only claim defended status when fighting to the front.
-
-
-
-
-An enemy does not receive charge bonuses when charging Pikemen in the front, nor do Pikemen receive any charge bonus themselves.
-
-
-
-
-
-
-A Pikemen stand cannot support or be supported by other infantry - only by other Pikemen stands. In all other respects they count as infantry (movement/pursuit etc.).</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="50"/>
@@ -488,6 +471,9 @@ A Pikemen stand cannot support or be supported by other infantry - only by other
       <entryLinks>
         <entryLink import="true" name="Siege Upgrades" hidden="false" id="e51c-48db-b9ed-4e6b" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
       </entryLinks>
+      <infoLinks>
+        <infoLink targetId="5f90-b8cc-37c8-7c2a" id="b079-7022-288a-db98" type="profile" name="Pikemen" hidden="false"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Brace" hidden="false" id="89f2-0839-9901-d14c">
       <costs>
@@ -573,7 +559,7 @@ Shooting Blind: If there is no target in sight a Trebuchet may instead shoot at 
         <constraint type="max" value="0" field="selections" scope="force" shared="true" id="b773-6784-f585-86ab" includeChildSelections="true"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Greenvale Archers" hidden="false" id="5aa4-434d-f2b8-abf9">
+    <selectionEntry type="unit" import="true" name="Greenvale Archers" hidden="false" id="5aa4-434d-f2b8-abf9">
       <profiles>
         <profile name="Greenvale Archers" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="1ec8-b7b9-a83e-9a09">
           <characteristics>
@@ -589,6 +575,92 @@ Shooting Blind: If there is no target in sight a Trebuchet may instead shoot at 
       <categoryLinks>
         <categoryLink name="Infantry" hidden="false" id="2889-bf08-f274-bb17" targetId="5e38-77df-81d0-6399" primary="true"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Siege Upgrades" hidden="false" id="6372-4318-b932-7210" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Pikemen of Dol Amroth" hidden="false" id="57eb-020f-89d7-5f1b">
+      <profiles>
+        <profile name="Pikemen of Dol Amroth" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="e9b3-f6f5-15dc-5ec7">
+          <characteristics>
+            <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">3</characteristic>
+            <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">3</characteristic>
+            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">5+</characteristic>
+            <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">-</characteristic>
+            <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="75"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Pikemen" id="3f86-a401-a34f-4209" hidden="false" type="profile" targetId="5f90-b8cc-37c8-7c2a"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink name="Infantry" hidden="false" id="88bd-30ee-c6db-06e7" targetId="5e38-77df-81d0-6399" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Siege Upgrades" hidden="false" id="e570-be48-8e57-352a" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Axemen of Lossarnach" hidden="false" id="c927-05f9-5c67-b6a5">
+      <categoryLinks>
+        <categoryLink name="Infantry" hidden="false" id="f8ed-4175-1bb1-6867" targetId="5e38-77df-81d0-6399" primary="true"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Axemen of Lossarnach" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="95a3-1317-5bbd-df94">
+          <characteristics>
+            <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">3</characteristic>
+            <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">3</characteristic>
+            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">5+</characteristic>
+            <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">-</characteristic>
+            <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="60"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Brace" hidden="false" id="35a9-8926-ecfe-a665" type="selectionEntry" targetId="89f2-0839-9901-d14c">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8756-b7ad-3a1f-b403-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8756-b7ad-3a1f-b403-max"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Siege Upgrades" hidden="false" id="041d-935a-23f7-4fec" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Clansmen of Lamedon" hidden="false" id="1cb7-967b-9b0c-eea2">
+      <profiles>
+        <profile name="Clansmen of Lamedon" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="b295-a3eb-9939-0e9f">
+          <characteristics>
+            <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">3</characteristic>
+            <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">3</characteristic>
+            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">6+</characteristic>
+            <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">-</characteristic>
+            <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Clansmen of Lamedon" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="201b-9658-374f-bb31">
+          <characteristics>
+            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">Clansmen of Lamedon get +1 Attack for the first round of combat when they charge.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="Infantry" hidden="false" id="b4c9-ef43-615b-0acb" targetId="5e38-77df-81d0-6399" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="60"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Siege Upgrades" hidden="false" id="1e6d-3b4a-9e14-8319" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
+      </entryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
@@ -606,6 +678,10 @@ Shooting Blind: If there is no target in sight a Trebuchet may instead shoot at 
     <entryLink import="true" name="Ballista" hidden="false" id="0962-e87e-33b3-bb11" type="selectionEntry" targetId="d82c-f5f1-0967-0a04"/>
     <entryLink import="true" name="Pikemen" hidden="false" id="1fab-b99c-3e95-7ae9" type="selectionEntry" targetId="f8f4-4bed-c153-7355"/>
     <entryLink import="true" name="Field Trebuchet" hidden="false" id="83d9-5496-24e7-25d1" type="selectionEntry" targetId="3086-2c51-ec89-d1e5"/>
+    <entryLink import="true" name="Axemen of Lossarnach" hidden="false" id="e3d5-c5f7-1dd5-a05d" type="selectionEntry" targetId="c927-05f9-5c67-b6a5"/>
+    <entryLink import="true" name="Clansmen of Lamedon" hidden="false" id="834b-33c8-4526-acf3" type="selectionEntry" targetId="1cb7-967b-9b0c-eea2"/>
+    <entryLink import="true" name="Pikemen of Dol Amroth" hidden="false" id="1018-4b1d-b5b2-cd98" type="selectionEntry" targetId="57eb-020f-89d7-5f1b"/>
+    <entryLink import="true" name="Greenvale Archers" hidden="false" id="0ad5-d90a-dba9-b88e" type="selectionEntry" targetId="5aa4-434d-f2b8-abf9"/>
   </entryLinks>
   <sharedRules>
     <rule name="Shieldwall" id="680f-f086-2048-28e1" hidden="false">
@@ -625,4 +701,23 @@ Shooting Blind: If there is no target in sight a Trebuchet may instead shoot at 
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Siege Machines" id="8977-08ca-64c5-a94d" targetId="d49a-44f1-810f-4d9f" importRootEntries="true"/>
   </catalogueLinks>
+  <sharedProfiles>
+    <profile name="Pikemen" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="5f90-b8cc-37c8-7c2a">
+      <characteristics>
+        <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">Pikemen can not enter dense terrain (even partially). They still may be in a defended position on higher ground or behind a low obstacle as usual, but can only claim defended status when fighting to the front.
+
+
+
+
+An enemy does not receive charge bonuses when charging Pikemen in the front, nor do Pikemen receive any charge bonus themselves.
+
+
+
+
+
+
+A Pikemen stand cannot support or be supported by other infantry - only by other Pikemen stands. In all other respects they count as infantry (movement/pursuit etc.).</characteristic>
+      </characteristics>
+    </profile>
+  </sharedProfiles>
 </catalogue>
