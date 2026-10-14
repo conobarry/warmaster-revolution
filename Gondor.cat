@@ -573,6 +573,23 @@ Shooting Blind: If there is no target in sight a Trebuchet may instead shoot at 
         <constraint type="max" value="0" field="selections" scope="force" shared="true" id="b773-6784-f585-86ab" includeChildSelections="true"/>
       </constraints>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Greenvale Archers" hidden="false" id="5aa4-434d-f2b8-abf9">
+      <profiles>
+        <profile name="Greenvale Archers" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="1ec8-b7b9-a83e-9a09">
+          <characteristics>
+            <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6"/>
+            <characteristic name="Hits" typeId="f51a-b726-0fbe-0569"/>
+            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">0</characteristic>
+            <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc"/>
+            <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="Infantry" hidden="false" id="2889-bf08-f274-bb17" targetId="5e38-77df-81d0-6399" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Citadel Guard" hidden="false" id="df8d-96a5-ae2d-1bd6" type="selectionEntry" targetId="f36e-4a74-aede-d3c1"/>

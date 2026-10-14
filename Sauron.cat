@@ -757,7 +757,7 @@ Note that these rules apply only to Warg units – not to characters that ride W
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Mûmakil" hidden="false" id="1647-4fe3-3da4-c316">
       <costs>
-        <cost name="pts" typeId="2085-9b6f-c588-0723" value="150"/>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="200"/>
       </costs>
       <categoryLinks>
         <categoryLink name="Monster" hidden="false" id="5b9b-bc1e-0a89-2167" targetId="c05d-61e2-2cbd-0df9" primary="true"/>
@@ -766,16 +766,33 @@ Note that these rules apply only to Warg units – not to characters that ride W
         <profile name="Mûmakil" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="71ca-7273-7606-3822">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Monster</characteristic>
-            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">5/1</characteristic>
-            <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">4</characteristic>
-            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">4+</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">8/2</characteristic>
+            <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">10</characteristic>
+            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">5+</characteristic>
             <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">-</characteristic>
-            <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
+            <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">1</characteristic>
           </characteristics>
         </profile>
         <profile name="Mûmakil" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="47fe-1293-a81d-a88d">
           <characteristics>
-            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">When Mûmakil take hits from shooting there is a chance they will run amok. If a 6 is rolled when determining drive back, in addition to being confused, the unit has also run amok, and will move its drive back distance in a random direction.
+            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">A Mûmakil causes terror.
+
+
+A Mûmakil may attack troops on ramparts with its trunk in the same manner as a Giant. Alternatively, it may elect to batter a wall section or gateway with its tusks in the same manner as a battering ram.
+
+
+Mûmakil can only be brigaded with other Mumakil units.
+
+
+
+
+If a Mûmakil has accumulated 6–9 hits by the end of the Shooting phase or Combat phase and is no longer engaged in combat it is deemed to have been badly hurt. Once a Mûmakil is badly hurt then all accumulated hits are discounted and its maximum Hits value and Attacks are halved for the rest of the battle (to 5 Hits and 4 Attacks).
+
+
+The Mûmakil&apos;s crew have a shooting range of 15cm and 360° vision - stands in this unit can draw line of sight from all edges for the purpose of evading and shooting, including shooting at charging enemies. Note that this unit still needs Line of Sight from its front edge to charge an enemy.
+
+
+When Mûmakil take hits from shooting there is a chance they will run amok. If a 6 is rolled when determining drive back, in addition to being confused, the unit has also run amok, and will move its drive back distance in a random direction.
 
 
 When a unit of Mûmakil has run amok, roll a scatter dice or use any other useful method to determine the direction of drive back. The Mûmakil will move its full drive back distance in the direction indicated, even if the drive back takes the Mûmakil unit through another unit or character of either side. When a unit of Mûmakil is forced to move through a unit because it has run amok, the unit is considered to have been burst through. If the unit of Mûmakil contacts a character stand during drive back, the character is displaced as if it had been contacted by an enemy unit. The character must be able to attach to a unit within a 30cm move or be destroyed. Characters already attached to the unit when it runs amok are affected as normal for a character attached to a unit during drive back.</characteristic>
