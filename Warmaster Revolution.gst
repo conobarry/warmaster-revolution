@@ -11,6 +11,7 @@
     <categoryEntry name="Hero" id="227b-c83d-cd8c-bd1b" hidden="false"/>
     <categoryEntry name="Monstrous Mount" id="db9e-34ce-cbb2-4a2e" hidden="false"/>
     <categoryEntry name="Wizard" id="7896-9879-0772-2624" hidden="false"/>
+    <categoryEntry name="Building" id="789b-cb55-4759-fbf1" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="War of the Ring Army" id="a94a-70fe-51ba-395b" hidden="false">
@@ -30,6 +31,7 @@
         <categoryLink name="Machine" hidden="false" id="0e5d-239e-b61c-90a8" targetId="0597-65e0-f876-8d6b"/>
         <categoryLink name="Artillery" hidden="false" id="3dfe-6354-a455-ec29" targetId="ab71-7ddd-db90-f5e5"/>
         <categoryLink name="Monstrous Mount" hidden="false" id="1942-2194-9782-2f83" targetId="db9e-34ce-cbb2-4a2e"/>
+        <categoryLink name="Building" hidden="false" id="c506-0189-e90c-af71" targetId="789b-cb55-4759-fbf1"/>
       </categoryLinks>
     </forceEntry>
   </forceEntries>
@@ -95,7 +97,7 @@
     </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
-    <entryLink import="true" name="Show/Hide Options" hidden="false" id="69ee-7fab-09c9-9e6c" type="selectionEntry" targetId="4748-8380-34e0-5638"/>
+    <entryLink import="true" name="Options" hidden="false" id="69ee-7fab-09c9-9e6c" type="selectionEntry" targetId="4748-8380-34e0-5638"/>
   </entryLinks>
   <sharedRules>
     <rule name="Stone Thrower" id="0906-900e-0f2c-3088" hidden="false">

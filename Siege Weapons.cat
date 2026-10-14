@@ -58,8 +58,493 @@ Because of its immense size the Tribock has a range of 120cm and a minimum range
         <constraint type="max" value="0" field="selections" scope="force" shared="true" id="57fe-5004-b2ab-129b" automatic="false" negative="false" includeChildSelections="true"/>
       </constraints>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Siege Tower" hidden="false" id="d162-bc9c-6593-1b90">
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="20"/>
+      </costs>
+      <profiles>
+        <profile name="Siege Tower" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="937e-c4cc-5a88-b991">
+          <characteristics>
+            <characteristic name="Type" typeId="3087-9431-0004-e975">Machine</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">0</characteristic>
+            <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">3</characteristic>
+            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">3+</characteristic>
+            <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">-</characteristic>
+            <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="Machine" hidden="false" id="f4e9-1cf2-1b66-f30a" targetId="0597-65e0-f876-8d6b" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Battering Ram" hidden="false" id="047e-ffd5-c12a-8fc2">
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="10"/>
+      </costs>
+      <profiles>
+        <profile name="Battering Ram" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="33bd-11a2-b216-3c00">
+          <characteristics>
+            <characteristic name="Type" typeId="3087-9431-0004-e975">Machine</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">0</characteristic>
+            <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">3</characteristic>
+            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">3+</characteristic>
+            <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">-</characteristic>
+            <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="Machine" hidden="false" id="a022-cfb5-13c0-66c8" targetId="0597-65e0-f876-8d6b" primary="true"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="8d5f-30e3-afda-f467" shared="true" includeChildSelections="true" includeChildForces="true" childName="Siege Attacker"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Gateway" hidden="false" id="d82c-17bb-5950-26dd">
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="40"/>
+      </costs>
+      <profiles>
+        <profile name="Gateway" typeId="1fbd-2891-b5cf-f126" typeName="Building" hidden="false" id="8f83-278c-6caf-6090">
+          <characteristics>
+            <characteristic name="Type" typeId="cac3-d123-a503-06e6">Building</characteristic>
+            <characteristic name="Attacks" typeId="4672-9df1-f8ff-4383">-</characteristic>
+            <characteristic name="Structure Points" typeId="196f-0daa-8dc3-b790">12</characteristic>
+            <characteristic name="Armour" typeId="ae72-3e8d-0078-4ac3">Special</characteristic>
+            <characteristic name="Command" typeId="131d-646b-baf0-eb22">-</characteristic>
+            <characteristic name="Unit size" typeId="77b5-8cc0-46f0-3380">40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="Building" hidden="false" id="6be2-116f-03a9-682d" targetId="789b-cb55-4759-fbf1" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Fortification" id="aa15-ac01-d6bd-25a2" hidden="false" type="profile" targetId="749e-0f77-78d3-c672"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="force" shared="true" id="23b6-1d2c-ce2b-a562" automatic="false" negative="false" includeChildSelections="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="increment" value="4" field="23b6-1d2c-ce2b-a562">
+          <repeats>
+            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Gateway Tower" hidden="false" id="c5be-c99a-d678-ceff">
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="150"/>
+      </costs>
+      <profiles>
+        <profile name="Gateway Tower" typeId="1fbd-2891-b5cf-f126" typeName="Building" hidden="false" id="b030-8399-6ce1-7fac">
+          <characteristics>
+            <characteristic name="Type" typeId="cac3-d123-a503-06e6">Building</characteristic>
+            <characteristic name="Attacks" typeId="4672-9df1-f8ff-4383">-</characteristic>
+            <characteristic name="Structure Points" typeId="196f-0daa-8dc3-b790">12/25</characteristic>
+            <characteristic name="Armour" typeId="ae72-3e8d-0078-4ac3">Special</characteristic>
+            <characteristic name="Command" typeId="131d-646b-baf0-eb22">-</characteristic>
+            <characteristic name="Unit size" typeId="77b5-8cc0-46f0-3380">40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="Building" hidden="false" id="13f8-670e-9796-f365" targetId="789b-cb55-4759-fbf1" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Fortification" id="1682-becd-8e5d-1bbb" hidden="false" type="profile" targetId="749e-0f77-78d3-c672"/>
+        <infoLink name="Tower" id="ea5a-d474-cf1d-036e" hidden="false" type="profile" targetId="b880-88a3-641f-3c6c"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Wall" hidden="false" id="3412-c3d9-ced9-d7c1">
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="55"/>
+      </costs>
+      <profiles>
+        <profile name="Wall" typeId="1fbd-2891-b5cf-f126" typeName="Building" hidden="false" id="d5d9-897a-9b8c-3bff">
+          <characteristics>
+            <characteristic name="Type" typeId="cac3-d123-a503-06e6">Building</characteristic>
+            <characteristic name="Attacks" typeId="4672-9df1-f8ff-4383">-</characteristic>
+            <characteristic name="Structure Points" typeId="196f-0daa-8dc3-b790">20</characteristic>
+            <characteristic name="Armour" typeId="ae72-3e8d-0078-4ac3">Special</characteristic>
+            <characteristic name="Command" typeId="131d-646b-baf0-eb22">-</characteristic>
+            <characteristic name="Unit size" typeId="77b5-8cc0-46f0-3380">40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="Building" hidden="false" id="1917-15a3-bd6a-0c7d" targetId="789b-cb55-4759-fbf1" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Fortification" id="efa2-0c7c-bb83-4ab1" hidden="false" type="profile" targetId="749e-0f77-78d3-c672"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Sally Gate" hidden="false" id="61af-e257-aaff-0641" type="selectionEntry" targetId="4678-5401-ee46-c822">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6b7d-b7d4-51af-5649"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Boiling Oil and Rock Dropper" hidden="false" id="460c-b396-e572-6150" type="selectionEntry" targetId="ab7f-d676-70d0-ddc2">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="783b-d233-a7f8-c874"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Sally Gate" hidden="false" id="4678-5401-ee46-c822">
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="10"/>
+      </costs>
+      <profiles>
+        <profile name="Sally Gate" typeId="1fbd-2891-b5cf-f126" typeName="Building" hidden="false" id="da34-df99-beff-1ebb">
+          <characteristics>
+            <characteristic name="Type" typeId="cac3-d123-a503-06e6">Building</characteristic>
+            <characteristic name="Attacks" typeId="4672-9df1-f8ff-4383">-</characteristic>
+            <characteristic name="Structure Points" typeId="196f-0daa-8dc3-b790">-</characteristic>
+            <characteristic name="Armour" typeId="ae72-3e8d-0078-4ac3">Special</characteristic>
+            <characteristic name="Command" typeId="131d-646b-baf0-eb22">-</characteristic>
+            <characteristic name="Unit size" typeId="77b5-8cc0-46f0-3380">20mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="Building" hidden="false" id="9634-4acf-4283-98db" targetId="789b-cb55-4759-fbf1" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Sally Gates" id="e275-b8c5-a142-c2a1" hidden="false" type="profile" targetId="56a9-8d9a-fb38-7bad"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="4b62-f42d-94e9-1987" automatic="false" negative="false" includeChildSelections="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="increment" value="1" field="4b62-f42d-94e9-1987">
+          <repeats>
+            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Tower" hidden="false" id="6a06-56d6-4624-3c7d">
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="200"/>
+      </costs>
+      <profiles>
+        <profile name="Tower" typeId="1fbd-2891-b5cf-f126" typeName="Building" hidden="false" id="1c51-8c46-67d9-7edd">
+          <characteristics>
+            <characteristic name="Type" typeId="cac3-d123-a503-06e6">Building</characteristic>
+            <characteristic name="Attacks" typeId="4672-9df1-f8ff-4383">-</characteristic>
+            <characteristic name="Structure Points" typeId="196f-0daa-8dc3-b790">30</characteristic>
+            <characteristic name="Armour" typeId="ae72-3e8d-0078-4ac3">Special</characteristic>
+            <characteristic name="Command" typeId="131d-646b-baf0-eb22">-</characteristic>
+            <characteristic name="Unit size" typeId="77b5-8cc0-46f0-3380">40x40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="Building" hidden="false" id="3c27-2174-2f3a-bacc" targetId="789b-cb55-4759-fbf1" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Fortification" id="ac34-da95-b4d3-31f7" hidden="false" type="profile" targetId="749e-0f77-78d3-c672"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Palisade Tower" hidden="false" id="fb99-3c39-5077-1b7e">
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="165"/>
+      </costs>
+      <profiles>
+        <profile name="Palisade Tower" typeId="1fbd-2891-b5cf-f126" typeName="Building" hidden="false" id="e84c-0978-047b-b626">
+          <characteristics>
+            <characteristic name="Type" typeId="cac3-d123-a503-06e6">Building</characteristic>
+            <characteristic name="Attacks" typeId="4672-9df1-f8ff-4383">-</characteristic>
+            <characteristic name="Structure Points" typeId="196f-0daa-8dc3-b790">25</characteristic>
+            <characteristic name="Armour" typeId="ae72-3e8d-0078-4ac3">Special</characteristic>
+            <characteristic name="Command" typeId="131d-646b-baf0-eb22">-</characteristic>
+            <characteristic name="Unit size" typeId="77b5-8cc0-46f0-3380">40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="Building" hidden="false" id="89c9-51a5-9235-1c11" targetId="789b-cb55-4759-fbf1" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Fortification" id="3dd6-8d5c-0255-fbd5" hidden="false" type="profile" targetId="749e-0f77-78d3-c672"/>
+        <infoLink name="Tower" id="c701-fb39-7b41-3402" hidden="false" type="profile" targetId="b880-88a3-641f-3c6c"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Palisade Wall" hidden="false" id="c0c5-bfc5-055a-94fe">
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="45"/>
+      </costs>
+      <profiles>
+        <profile name="Palisade Wall" typeId="1fbd-2891-b5cf-f126" typeName="Building" hidden="false" id="8624-7e49-36f4-f0b1">
+          <characteristics>
+            <characteristic name="Type" typeId="cac3-d123-a503-06e6">Building</characteristic>
+            <characteristic name="Attacks" typeId="4672-9df1-f8ff-4383">-</characteristic>
+            <characteristic name="Structure Points" typeId="196f-0daa-8dc3-b790">15</characteristic>
+            <characteristic name="Armour" typeId="ae72-3e8d-0078-4ac3">Special</characteristic>
+            <characteristic name="Command" typeId="131d-646b-baf0-eb22">-</characteristic>
+            <characteristic name="Unit size" typeId="77b5-8cc0-46f0-3380">40mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="Building" hidden="false" id="b708-810d-6b81-ea1d" targetId="789b-cb55-4759-fbf1" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Fortification" id="fc90-23bb-caf7-cc04" hidden="false" type="profile" targetId="749e-0f77-78d3-c672"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Sally Gate" hidden="false" id="444b-9a41-bd4f-b0ee" type="selectionEntry" targetId="4678-5401-ee46-c822">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7017-9d33-59fa-3b6e"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Earthwork" hidden="false" id="e709-09ec-6d11-9682">
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="15"/>
+      </costs>
+      <profiles>
+        <profile name="Earthwork" typeId="1fbd-2891-b5cf-f126" typeName="Building" hidden="false" id="2edb-a8f7-f9b5-2b48">
+          <characteristics>
+            <characteristic name="Type" typeId="cac3-d123-a503-06e6">Building</characteristic>
+            <characteristic name="Attacks" typeId="4672-9df1-f8ff-4383">-</characteristic>
+            <characteristic name="Structure Points" typeId="196f-0daa-8dc3-b790">-</characteristic>
+            <characteristic name="Armour" typeId="ae72-3e8d-0078-4ac3">Special</characteristic>
+            <characteristic name="Command" typeId="131d-646b-baf0-eb22">-</characteristic>
+            <characteristic name="Unit size" typeId="77b5-8cc0-46f0-3380">40x10mm</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="Building" hidden="false" id="a1c4-7165-a13e-4c8b" targetId="789b-cb55-4759-fbf1" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Earthwork" id="9ef0-caa0-f5ff-3b5f" hidden="false" type="profile" targetId="8058-0241-0faa-3a45"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Boiling Oil and Rock Dropper" hidden="false" id="ab7f-d676-70d0-ddc2">
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="5"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="Machine" hidden="false" id="15d5-ac8f-8f53-8440" targetId="0597-65e0-f876-8d6b" primary="true"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Boiling Oil and Rock Dropper" typeId="1fbd-2891-b5cf-f126" typeName="Siege Equipment" hidden="false" id="e569-fdff-6ae8-5c68">
+          <characteristics>
+            <characteristic name="Type" typeId="cac3-d123-a503-06e6">Machine</characteristic>
+            <characteristic name="Attacks" typeId="4672-9df1-f8ff-4383">-</characteristic>
+            <characteristic name="Structure Points" typeId="196f-0daa-8dc3-b790">-</characteristic>
+            <characteristic name="Armour" typeId="ae72-3e8d-0078-4ac3">Special</characteristic>
+            <characteristic name="Command" typeId="131d-646b-baf0-eb22">-</characteristic>
+            <characteristic name="Unit size" typeId="77b5-8cc0-46f0-3380">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Defenders Only" id="de7b-f50f-c8dc-035c" hidden="false" type="profile" targetId="f34f-74f3-07a6-e6c1"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Log Rams" hidden="false" id="d4c9-5b4a-8016-03ec">
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="5"/>
+      </costs>
+      <profiles>
+        <profile name="Log Rams" typeId="1fbd-2891-b5cf-f126" typeName="Siege Equipment" hidden="false" id="db18-996a-8f78-5ea1">
+          <characteristics>
+            <characteristic name="Type" typeId="cac3-d123-a503-06e6">Machine</characteristic>
+            <characteristic name="Attacks" typeId="4672-9df1-f8ff-4383">-</characteristic>
+            <characteristic name="Structure Points" typeId="196f-0daa-8dc3-b790">-</characteristic>
+            <characteristic name="Armour" typeId="ae72-3e8d-0078-4ac3">Special</characteristic>
+            <characteristic name="Command" typeId="131d-646b-baf0-eb22">-</characteristic>
+            <characteristic name="Unit size" typeId="77b5-8cc0-46f0-3380">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Attackers Only" id="c2d3-47a1-511c-596b" hidden="false" type="profile" targetId="7f0f-70ba-dc8a-509d"/>
+        <infoLink name="Mobile" id="f51b-40d2-9fa3-71e7" hidden="false" type="profile" targetId="4fdb-b878-6ef0-2d15"/>
+        <infoLink name="Ram" id="3720-6aa1-f0e0-0be8" hidden="false" type="profile" targetId="440b-26da-c658-a72e"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink name="Machine" hidden="false" id="463a-02ff-ef81-f420" targetId="0597-65e0-f876-8d6b" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Ladders" hidden="false" id="412f-c56e-3388-2eae">
+      <categoryLinks>
+        <categoryLink name="Machine" hidden="false" id="b8f9-db42-904b-6f7a" targetId="0597-65e0-f876-8d6b" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="5"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Attackers Only" id="677d-12e1-314a-10cd" hidden="false" type="profile" targetId="7f0f-70ba-dc8a-509d"/>
+      </infoLinks>
+      <profiles>
+        <profile name="Ladders" typeId="1fbd-2891-b5cf-f126" typeName="Siege Equipment" hidden="false" id="2600-6985-0c79-53de">
+          <characteristics>
+            <characteristic name="Type" typeId="cac3-d123-a503-06e6">Machine</characteristic>
+            <characteristic name="Attacks" typeId="4672-9df1-f8ff-4383">-</characteristic>
+            <characteristic name="Structure Points" typeId="196f-0daa-8dc3-b790">-</characteristic>
+            <characteristic name="Armour" typeId="ae72-3e8d-0078-4ac3">Special</characteristic>
+            <characteristic name="Command" typeId="131d-646b-baf0-eb22">-</characteristic>
+            <characteristic name="Unit size" typeId="77b5-8cc0-46f0-3380">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Sow" hidden="false" id="30d2-4d2c-5f7a-3432">
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="5"/>
+      </costs>
+      <profiles>
+        <profile name="Sow" typeId="1fbd-2891-b5cf-f126" typeName="Siege Equipment" hidden="false" id="c81c-a34c-d761-628b">
+          <characteristics>
+            <characteristic name="Type" typeId="cac3-d123-a503-06e6">Machine</characteristic>
+            <characteristic name="Attacks" typeId="4672-9df1-f8ff-4383">-</characteristic>
+            <characteristic name="Structure Points" typeId="196f-0daa-8dc3-b790">3</characteristic>
+            <characteristic name="Armour" typeId="ae72-3e8d-0078-4ac3">3+</characteristic>
+            <characteristic name="Command" typeId="131d-646b-baf0-eb22">-</characteristic>
+            <characteristic name="Unit size" typeId="77b5-8cc0-46f0-3380">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Mobile" id="c3bc-7f0a-eb8e-eb66" hidden="false" type="profile" targetId="4fdb-b878-6ef0-2d15"/>
+        <infoLink name="Attackers Only" id="7b99-f124-79fa-bcda" hidden="false" type="profile" targetId="7f0f-70ba-dc8a-509d"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink name="Machine" hidden="false" id="96c9-4d63-a97c-63f3" targetId="0597-65e0-f876-8d6b" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Mantlets" hidden="false" id="5be6-a3c6-376c-f6be">
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="10"/>
+      </costs>
+      <profiles>
+        <profile name="Mantlets" typeId="1fbd-2891-b5cf-f126" typeName="Siege Equipment" hidden="false" id="53ca-765e-f4d5-3347">
+          <characteristics>
+            <characteristic name="Type" typeId="cac3-d123-a503-06e6">Machine</characteristic>
+            <characteristic name="Attacks" typeId="4672-9df1-f8ff-4383">-</characteristic>
+            <characteristic name="Structure Points" typeId="196f-0daa-8dc3-b790">-</characteristic>
+            <characteristic name="Armour" typeId="ae72-3e8d-0078-4ac3">Special</characteristic>
+            <characteristic name="Command" typeId="131d-646b-baf0-eb22">-</characteristic>
+            <characteristic name="Unit size" typeId="77b5-8cc0-46f0-3380">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Attackers Only" id="cf3e-8aad-4579-e747" hidden="false" type="profile" targetId="7f0f-70ba-dc8a-509d"/>
+        <infoLink name="Mantlets" id="a490-c648-7613-c52d" hidden="false" type="profile" targetId="38b2-ea27-09a5-f5f1"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink name="Machine" hidden="false" id="f3c5-fc09-d146-9a61" targetId="0597-65e0-f876-8d6b" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Warmaster Siege" hidden="false" id="263c-31a4-1026-11b4">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Show Siege units" hidden="false" id="8189-2f46-bbba-df2a">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2563-62d5-b98c-ebda"/>
+          </constraints>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Attacker or Defender" id="7fd4-489f-2b9b-bbcf" hidden="false" flatten="true">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Siege Attacker" hidden="false" id="8d5f-30e3-afda-f467"/>
+                <selectionEntry type="upgrade" import="true" name="Siege Defender" hidden="false" id="c919-e2ab-c0b4-7c62"/>
+              </selectionEntries>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e044-4b48-267a-2239-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e044-4b48-267a-2239-max"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Tribock" hidden="false" id="0e61-d374-68fc-d16a" type="selectionEntry" targetId="f27d-05ae-1439-9873"/>
+    <entryLink import="true" name="Battering Ram" hidden="false" id="3e79-16f3-4bc5-a3cd" type="selectionEntry" targetId="047e-ffd5-c12a-8fc2"/>
+    <entryLink import="true" name="Earthwork" hidden="false" id="a654-2993-31f0-c0bf" type="selectionEntry" targetId="e709-09ec-6d11-9682"/>
+    <entryLink import="true" name="Gateway" hidden="false" id="8284-6ec5-025c-fc89" type="selectionEntry" targetId="d82c-17bb-5950-26dd"/>
+    <entryLink import="true" name="Gateway Tower" hidden="false" id="e32b-711a-9f25-d91f" type="selectionEntry" targetId="c5be-c99a-d678-ceff"/>
+    <entryLink import="true" name="Palisade Tower" hidden="false" id="5e90-9ab2-1a88-f56b" type="selectionEntry" targetId="fb99-3c39-5077-1b7e"/>
+    <entryLink import="true" name="Palisade Wall" hidden="false" id="6f47-61ee-370d-58b0" type="selectionEntry" targetId="c0c5-bfc5-055a-94fe"/>
+    <entryLink import="true" name="Siege Tower" hidden="false" id="75e5-fbee-53be-9df8" type="selectionEntry" targetId="d162-bc9c-6593-1b90"/>
+    <entryLink import="true" name="Sow" hidden="false" id="a258-d3a7-25ed-5150" type="selectionEntry" targetId="30d2-4d2c-5f7a-3432"/>
+    <entryLink import="true" name="Tower" hidden="false" id="75eb-a836-c1c3-a77e" type="selectionEntry" targetId="6a06-56d6-4624-3c7d"/>
+    <entryLink import="true" name="Wall" hidden="false" id="706c-95e7-2d25-7995" type="selectionEntry" targetId="3412-c3d9-ced9-d7c1"/>
+    <entryLink import="true" name="Warmaster Siege" hidden="false" id="a522-64db-a284-4555" type="selectionEntry" targetId="263c-31a4-1026-11b4"/>
   </entryLinks>
+  <sharedProfiles>
+    <profile name="Fortification" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="749e-0f77-78d3-c672">
+      <characteristics>
+        <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">With the exception of earthworks, only defenders are allowed to invest points into fortification.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Tower" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="b880-88a3-641f-3c6c">
+      <characteristics>
+        <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">The gateway may be destroyed independently with a Structure Point value of 12. If the tower is destroyed the gateway is destroyed with it.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Sally Gates" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="56a9-8d9a-fb38-7bad">
+      <characteristics>
+        <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">Sally Gates may secretly be placed in any piece of wall and are not revealed to the attacker until used.
+
+
+They may not be targeted separately by the attacker and do not weaken the structure of the wall (unless they are open).
+
+
+One defending unit may cross the Sally Gate per round either on order or initiative. For that reason a defending unit directly touching the Sally Gate may draw a line of sight as if it were invisible.
+
+
+Whenever a unit leaves or returns by the Sally Gate the defenders need to open and close the gates. Roll 3D6. If the result is equal to or more than the distance of the nearest enemy the Sally Gate counts as open and has to be closed by a successful command.
+
+
+An open Sally Gate counts as defended.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Earthwork" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="8058-0241-0faa-3a45">
+      <characteristics>
+        <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">Gives fortified status when shot at, defended status if in combat.
+
+
+May be removed by troops in contact by rolling a 6 with their attacks.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Defenders Only" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="f34f-74f3-07a6-e6c1">
+      <characteristics>
+        <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">Only defenders in a siege scenario may use these.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Attackers Only" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="7f0f-70ba-dc8a-509d">
+      <characteristics>
+        <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">Only attackers in a siege scenario may use these.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Mobile" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="4fdb-b878-6ef0-2d15">
+      <characteristics>
+        <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">Have a move of 15cm. Not driven back by shooting.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Mantlets" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="38b2-ea27-09a5-f5f1">
+      <characteristics>
+        <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">Give defended status. Are lost if carrying units are charging or are driven back more than half their move.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Ram" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="440b-26da-c658-a72e">
+      <characteristics>
+        <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">Rams always make one automatic hit when battering.</characteristic>
+      </characteristics>
+    </profile>
+  </sharedProfiles>
 </catalogue>

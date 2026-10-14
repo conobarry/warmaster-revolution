@@ -761,6 +761,7 @@ Note that these rules apply only to Warg units – not to characters that ride W
   </entryLinks>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="War of the Ring" id="580c-2721-9a93-5e3d" targetId="a85a-9f67-08e2-d9e9"/>
+    <catalogueLink type="catalogue" name="Siege Machines" id="67e7-7e50-df4c-e87f" targetId="d49a-44f1-810f-4d9f"/>
   </catalogueLinks>
   <sharedRules>
     <rule name="Orc General/Hero" id="e8ac-e781-1beb-9317" hidden="false">
