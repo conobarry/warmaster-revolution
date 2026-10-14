@@ -85,7 +85,7 @@ Because of its immense size the Tribock has a range of 120cm and a minimum range
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="roster" childId="c919-e2ab-c0b4-7c62" shared="true" includeChildSelections="true" includeChildForces="true" childName="Siege Defender"/>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="8d5f-30e3-afda-f467" shared="true" includeChildSelections="true" includeChildForces="true" childName="Siege Attacker"/>
           </conditions>
         </modifier>
       </modifiers>
