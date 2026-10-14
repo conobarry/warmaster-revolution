@@ -31,6 +31,9 @@ Uruk-hai always advance 20cm after combat regardless of how many rounds the init
       <infoLinks>
         <infoLink name="Warband" id="5226-05ff-c69b-a049" hidden="false" type="rule" targetId="0d1c-680a-f38d-6e29"/>
       </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Siege Upgrades" hidden="false" id="3d67-44a2-3271-c3ac" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Orcs" hidden="false" id="8e83-c945-3fbb-3673" publicationId="2fdc-4bd3-bba1-56b9">
       <costs>
@@ -69,6 +72,9 @@ Uruk-hai always advance 20cm after combat regardless of how many rounds the init
       <infoLinks>
         <infoLink name="Warband" id="2107-421e-a64f-cc78" hidden="false" type="rule" targetId="0d1c-680a-f38d-6e29"/>
       </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Siege Upgrades" hidden="false" id="46f4-4009-1d1c-0d35" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Servant of Sauron" hidden="false" id="2f39-93bc-4258-e949" publicationId="2fdc-4bd3-bba1-56b9">
       <costs>
@@ -175,6 +181,9 @@ Trolls will never trace a LOS through, charge through, or displace a friendly un
       <categoryLinks>
         <categoryLink name="Infantry" hidden="false" id="8225-a20a-2a7c-5445" targetId="5e38-77df-81d0-6399" primary="true"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Siege Upgrades" hidden="false" id="f161-4758-a5b6-a1b3" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Olog-hai" hidden="false" id="9d74-e610-4a1a-8b47">
       <costs>
@@ -210,6 +219,9 @@ Trolls will never trace a LOS through, charge through, or displace a friendly un
       <categoryLinks>
         <categoryLink name="Infantry" hidden="false" id="7ad7-ed00-9303-1850" targetId="5e38-77df-81d0-6399" primary="true"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Siege Upgrades" hidden="false" id="795b-88cc-39f4-f1a2" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Orc Archers" hidden="false" id="7899-e159-ced6-29c3" publicationId="2fdc-4bd3-bba1-56b9">
       <costs>
@@ -243,6 +255,9 @@ Trolls will never trace a LOS through, charge through, or displace a friendly un
       <categoryLinks>
         <categoryLink name="Infantry" hidden="false" id="91d6-064f-f45e-341b" targetId="5e38-77df-81d0-6399" primary="true"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Siege Upgrades" hidden="false" id="954f-70a9-b70b-9a7d" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Evil Spirits" hidden="false" id="e7dd-c882-031e-4dfe">
       <costs>
@@ -399,6 +414,9 @@ Trolls will never trace a LOS through, charge through, or displace a friendly un
       <constraints>
         <constraint type="min" value="0" field="selections" scope="force" shared="true" id="14cf-8561-3c12-e79d" automatic="false" negative="false" includeChildSelections="true"/>
       </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Siege Upgrades" hidden="false" id="c456-81b5-9a57-c4d9" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Orc Cavalry" hidden="false" id="a6ae-a451-9acb-4e3e">
       <costs>

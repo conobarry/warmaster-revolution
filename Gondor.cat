@@ -33,6 +33,7 @@
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="Brace" hidden="false" id="7d89-28a3-0053-ae30" type="selectionEntry" targetId="89f2-0839-9901-d14c"/>
+        <entryLink import="true" name="Siege Upgrades" hidden="false" id="0048-464f-82de-5d0a" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Gondorian Infantry" hidden="false" id="1bfb-c6b2-00de-3bf9">
@@ -67,6 +68,9 @@
       <infoLinks>
         <infoLink name="Shieldwall" id="139a-4730-ad56-2dec" hidden="false" type="rule" targetId="680f-f086-2048-28e1"/>
       </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Siege Upgrades" hidden="false" id="be95-e38a-a5ec-f04f" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Gondorian Spearmen" hidden="false" id="0405-534b-2628-fc13">
       <costs>
@@ -132,7 +136,7 @@
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
           <modifiers>
-            <modifier type="decrement" value="1" field="1b25-0ce9-c54e-e226" position="">
+            <modifier type="decrement" value="1" field="1b25-0ce9-c54e-e226">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="unit" childId="ea4b-5a2a-d631-f4ee" shared="true" childName="ea4b-5a2a-d631-f4ee"/>
               </conditions>
@@ -142,6 +146,7 @@
       </profiles>
       <entryLinks>
         <entryLink import="true" name="Brace" hidden="false" id="8f9e-2ab4-9210-b393" type="selectionEntry" targetId="89f2-0839-9901-d14c"/>
+        <entryLink import="true" name="Siege Upgrades" hidden="false" id="5bb0-279f-2845-5c79" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Ithilien Rangers" hidden="false" id="0e29-f8fe-a495-ce28">
@@ -178,6 +183,9 @@
           </characteristics>
         </profile>
       </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Siege Upgrades" hidden="false" id="baae-a435-19f2-1fc6" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Gondorian Militia" hidden="false" id="a37b-52fb-3747-0c8f">
       <costs>
@@ -210,6 +218,7 @@
       </profiles>
       <entryLinks>
         <entryLink import="true" name="Brace" hidden="false" id="358a-be69-ee50-43d8" type="selectionEntry" targetId="89f2-0839-9901-d14c"/>
+        <entryLink import="true" name="Siege Upgrades" hidden="false" id="ffda-6ef1-67b2-0c68" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Gondorian Bowmen" hidden="false" id="71ca-be65-5023-e448">
@@ -241,6 +250,9 @@
           </characteristics>
         </profile>
       </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Siege Upgrades" hidden="false" id="80bb-b906-cdee-32f8" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Gondorian Light Cavalry" hidden="false" id="cbb4-58e0-7966-4a46">
       <costs>
@@ -473,6 +485,9 @@ A Pikemen stand cannot support or be supported by other infantry - only by other
           </conditions>
         </modifier>
       </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Siege Upgrades" hidden="false" id="e51c-48db-b9ed-4e6b" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Brace" hidden="false" id="89f2-0839-9901-d14c">
       <costs>

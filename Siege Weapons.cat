@@ -13,6 +13,11 @@
             <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
           </repeats>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="8189-2f46-bbba-df2a" shared="true" includeChildSelections="true" includeChildForces="true" childName="Show Siege units"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="120"/>
@@ -77,6 +82,13 @@ Because of its immense size the Tribock has a range of 120cm and a minimum range
       <categoryLinks>
         <categoryLink name="Machine" hidden="false" id="f4e9-1cf2-1b66-f30a" targetId="0597-65e0-f876-8d6b" primary="true"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="c919-e2ab-c0b4-7c62" shared="true" includeChildSelections="true" includeChildForces="true" childName="Siege Defender"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Battering Ram" hidden="false" id="047e-ffd5-c12a-8fc2">
       <costs>
@@ -136,6 +148,11 @@ Because of its immense size the Tribock has a range of 120cm and a minimum range
             <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
           </repeats>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="c919-e2ab-c0b4-7c62" shared="true" includeChildSelections="true" includeChildForces="true" childName="Siege Defender"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Gateway Tower" hidden="false" id="c5be-c99a-d678-ceff">
@@ -161,6 +178,13 @@ Because of its immense size the Tribock has a range of 120cm and a minimum range
         <infoLink name="Fortification" id="1682-becd-8e5d-1bbb" hidden="false" type="profile" targetId="749e-0f77-78d3-c672"/>
         <infoLink name="Tower" id="ea5a-d474-cf1d-036e" hidden="false" type="profile" targetId="b880-88a3-641f-3c6c"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="c919-e2ab-c0b4-7c62" shared="true" includeChildSelections="true" includeChildForces="true" childName="Siege Defender"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Wall" hidden="false" id="3412-c3d9-ced9-d7c1">
       <costs>
@@ -196,6 +220,13 @@ Because of its immense size the Tribock has a range of 120cm and a minimum range
           </constraints>
         </entryLink>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="c919-e2ab-c0b4-7c62" shared="true" includeChildSelections="true" includeChildForces="true" childName="Siege Defender"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Sally Gate" hidden="false" id="4678-5401-ee46-c822">
       <costs>
@@ -228,6 +259,11 @@ Because of its immense size the Tribock has a range of 120cm and a minimum range
             <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
           </repeats>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="c919-e2ab-c0b4-7c62" shared="true" includeChildSelections="true" includeChildForces="true" childName="Siege Defender"/>
+          </conditions>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Tower" hidden="false" id="6a06-56d6-4624-3c7d">
@@ -252,6 +288,13 @@ Because of its immense size the Tribock has a range of 120cm and a minimum range
       <infoLinks>
         <infoLink name="Fortification" id="ac34-da95-b4d3-31f7" hidden="false" type="profile" targetId="749e-0f77-78d3-c672"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="c919-e2ab-c0b4-7c62" shared="true" includeChildSelections="true" includeChildForces="true" childName="Siege Defender"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Palisade Tower" hidden="false" id="fb99-3c39-5077-1b7e">
       <costs>
@@ -276,6 +319,13 @@ Because of its immense size the Tribock has a range of 120cm and a minimum range
         <infoLink name="Fortification" id="3dd6-8d5c-0255-fbd5" hidden="false" type="profile" targetId="749e-0f77-78d3-c672"/>
         <infoLink name="Tower" id="c701-fb39-7b41-3402" hidden="false" type="profile" targetId="b880-88a3-641f-3c6c"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="c919-e2ab-c0b4-7c62" shared="true" includeChildSelections="true" includeChildForces="true" childName="Siege Defender"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Palisade Wall" hidden="false" id="c0c5-bfc5-055a-94fe">
       <costs>
@@ -306,6 +356,13 @@ Because of its immense size the Tribock has a range of 120cm and a minimum range
           </constraints>
         </entryLink>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="c919-e2ab-c0b4-7c62" shared="true" includeChildSelections="true" includeChildForces="true" childName="Siege Defender"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Earthwork" hidden="false" id="e709-09ec-6d11-9682">
       <costs>
@@ -329,6 +386,13 @@ Because of its immense size the Tribock has a range of 120cm and a minimum range
       <infoLinks>
         <infoLink name="Earthwork" id="9ef0-caa0-f5ff-3b5f" hidden="false" type="profile" targetId="8058-0241-0faa-3a45"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="c919-e2ab-c0b4-7c62" shared="true" includeChildSelections="true" includeChildForces="true" childName="Siege Defender"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Boiling Oil and Rock Dropper" hidden="false" id="ab7f-d676-70d0-ddc2">
       <costs>
@@ -352,6 +416,13 @@ Because of its immense size the Tribock has a range of 120cm and a minimum range
       <infoLinks>
         <infoLink name="Defenders Only" id="de7b-f50f-c8dc-035c" hidden="false" type="profile" targetId="f34f-74f3-07a6-e6c1"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="c919-e2ab-c0b4-7c62" shared="true" includeChildSelections="true" includeChildForces="true" childName="Siege Defender"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Log Rams" hidden="false" id="d4c9-5b4a-8016-03ec">
       <costs>
@@ -377,6 +448,13 @@ Because of its immense size the Tribock has a range of 120cm and a minimum range
       <categoryLinks>
         <categoryLink name="Machine" hidden="false" id="463a-02ff-ef81-f420" targetId="0597-65e0-f876-8d6b" primary="true"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="8d5f-30e3-afda-f467" shared="true" includeChildSelections="true" includeChildForces="true" childName="Siege Attacker"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Ladders" hidden="false" id="412f-c56e-3388-2eae">
       <categoryLinks>
@@ -400,6 +478,13 @@ Because of its immense size the Tribock has a range of 120cm and a minimum range
           </characteristics>
         </profile>
       </profiles>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="8d5f-30e3-afda-f467" shared="true" includeChildSelections="true" includeChildForces="true" childName="Siege Attacker"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Sow" hidden="false" id="30d2-4d2c-5f7a-3432">
       <costs>
@@ -424,6 +509,13 @@ Because of its immense size the Tribock has a range of 120cm and a minimum range
       <categoryLinks>
         <categoryLink name="Machine" hidden="false" id="96c9-4d63-a97c-63f3" targetId="0597-65e0-f876-8d6b" primary="true"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="8d5f-30e3-afda-f467" shared="true" includeChildSelections="true" includeChildForces="true" childName="Siege Attacker"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Mantlets" hidden="false" id="5be6-a3c6-376c-f6be">
       <costs>
@@ -448,6 +540,13 @@ Because of its immense size the Tribock has a range of 120cm and a minimum range
       <categoryLinks>
         <categoryLink name="Machine" hidden="false" id="f3c5-fc09-d146-9a61" targetId="0597-65e0-f876-8d6b" primary="true"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="8d5f-30e3-afda-f467" shared="true" includeChildSelections="true" includeChildForces="true" childName="Siege Attacker"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Warmaster Siege" hidden="false" id="263c-31a4-1026-11b4">
       <selectionEntries>
@@ -547,4 +646,31 @@ May be removed by troops in contact by rolling a 6 with their attacks.</characte
       </characteristics>
     </profile>
   </sharedProfiles>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup name="Siege Upgrades" id="be2d-be4e-b1fe-b35a" hidden="false">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Attacker Upgrades" id="47c9-2fef-e109-d525" hidden="false" flatten="true">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="8d5f-30e3-afda-f467" shared="true" childName="Siege Attacker" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Mantlets" hidden="false" id="4c35-9a9f-ca82-9dc3" type="selectionEntry" targetId="5be6-a3c6-376c-f6be"/>
+            <entryLink import="true" name="Log Rams" hidden="false" id="28fc-f2d1-2b58-4786" type="selectionEntry" targetId="d4c9-5b4a-8016-03ec"/>
+            <entryLink import="true" name="Ladders" hidden="false" id="35a0-6441-36b4-fa84" type="selectionEntry" targetId="412f-c56e-3388-2eae"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="8189-2f46-bbba-df2a" shared="true" childName="Show Siege units" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntryGroup>
+  </sharedSelectionEntryGroups>
 </catalogue>
