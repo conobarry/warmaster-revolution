@@ -252,6 +252,7 @@ Because of its immense size the Tribock has a range of 120cm and a minimum range
       </infoLinks>
       <constraints>
         <constraint type="max" value="0" field="selections" scope="force" shared="true" id="4b62-f42d-94e9-1987" automatic="false" negative="false" includeChildSelections="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="734a-7a57-2c6d-637d"/>
       </constraints>
       <modifiers>
         <modifier type="increment" value="1" field="4b62-f42d-94e9-1987">
@@ -423,6 +424,9 @@ Because of its immense size the Tribock has a range of 120cm and a minimum range
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e293-31a0-db27-94d2"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Log Rams" hidden="false" id="d4c9-5b4a-8016-03ec">
       <costs>
@@ -455,6 +459,9 @@ Because of its immense size the Tribock has a range of 120cm and a minimum range
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2e69-e933-6ab2-12d5"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Ladders" hidden="false" id="412f-c56e-3388-2eae">
       <categoryLinks>
@@ -485,6 +492,9 @@ Because of its immense size the Tribock has a range of 120cm and a minimum range
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d2ec-be1f-5ce5-6eae"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Sow" hidden="false" id="30d2-4d2c-5f7a-3432">
       <costs>
@@ -547,6 +557,9 @@ Because of its immense size the Tribock has a range of 120cm and a minimum range
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fc1b-83d2-f330-ffc3"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Warmaster Siege" hidden="false" id="263c-31a4-1026-11b4">
       <selectionEntries>
