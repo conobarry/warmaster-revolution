@@ -1,12 +1,52 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="384e-e970-000c-d59c" name="Sauron" gameSystemId="sys-3065-0af8-9913-4a4c" gameSystemRevision="1" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Sauron" id="384e-e970-000c-d59c" battleScribeVersion="2.03" gameSystemId="sys-3065-0af8-9913-4a4c" gameSystemRevision="1" library="false" revision="1" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <catalogueLinks>
+    <catalogueLink name="War of the Ring" id="580c-2721-9a93-5e3d" targetId="a85a-9f67-08e2-d9e9" type="catalogue"/>
+    <catalogueLink name="Siege Machines" id="67e7-7e50-df4c-e87f" importRootEntries="true" targetId="d49a-44f1-810f-4d9f" type="catalogue"/>
+  </catalogueLinks>
+  <entryLinks>
+    <entryLink name="Orcs" id="9172-c355-2786-7414" hidden="false" import="true" targetId="8e83-c945-3fbb-3673" type="selectionEntry"/>
+    <entryLink name="Uruk-hai" id="4fc1-3147-a383-85cf" hidden="false" import="true" targetId="8ef8-f74a-55ee-43ad" type="selectionEntry"/>
+    <entryLink name="Servant of Sauron" id="54ae-102a-5441-29ee" hidden="false" import="true" targetId="2f39-93bc-4258-e949" type="selectionEntry"/>
+    <entryLink name="Olog-hai" id="f676-8690-8466-d55f" hidden="false" import="true" targetId="9d74-e610-4a1a-8b47" type="selectionEntry"/>
+    <entryLink name="Trolls" id="3592-a4b6-8be1-916b" hidden="false" import="true" targetId="04e1-e02a-1303-6b07" type="selectionEntry"/>
+    <entryLink name="Orc Archers" id="dc46-c231-cfd6-46ef" hidden="false" import="true" targetId="7899-e159-ced6-29c3" type="selectionEntry"/>
+    <entryLink name="Evil Spirits" id="671d-f683-ed92-9f88" hidden="false" import="true" targetId="e7dd-c882-031e-4dfe" type="selectionEntry"/>
+    <entryLink name="Wolfriders" id="6bf6-85db-e17b-093f" hidden="false" import="true" targetId="fc28-f127-2f89-f81f" type="selectionEntry"/>
+    <entryLink name="Wolfrider Archers" id="6334-8209-e6cb-8949" hidden="false" import="true" targetId="f922-b95b-bc4d-5aee" type="selectionEntry"/>
+    <entryLink name="Wargs" id="f322-a9cc-26a3-a9a3" hidden="false" import="true" targetId="c802-e384-988f-7e42" type="selectionEntry"/>
+    <entryLink name="Orc Cavalry" id="b651-7f23-1740-ef3c" hidden="false" import="true" targetId="a6ae-a451-9acb-4e3e" type="selectionEntry"/>
+    <entryLink name="Grond" id="6a49-542e-23c2-2233" hidden="false" import="true" targetId="f8a2-67ec-aefd-a141" type="selectionEntry"/>
+    <entryLink name="Goblins" id="ad2f-f587-03db-6c4f" hidden="false" import="true" targetId="a6bc-3e7c-60e8-991b" type="selectionEntry"/>
+    <entryLink name="Catapult" id="aeee-9bd9-407c-18e0" hidden="false" import="true" targetId="8cca-f38b-fad2-133c" type="selectionEntry"/>
+    <entryLink name="Ballista" id="45ac-0870-8b48-e61d" hidden="false" import="true" targetId="deeb-1f9c-34ce-6c3c" type="selectionEntry"/>
+    <entryLink name="Orc/Uruk-hai General" id="0350-5da8-88e6-690d" hidden="false" import="true" targetId="c234-1d3d-1a42-03c0" type="selectionEntry"/>
+    <entryLink name="Orc/Uruk-hai Hero" id="83bb-43c0-c393-f362" hidden="false" import="true" targetId="ce8e-3118-c6b1-f02f" type="selectionEntry"/>
+    <entryLink name="Nazgûl" id="dee9-5f50-2f84-abab" hidden="false" import="true" targetId="a441-e398-7ae7-b633" type="selectionEntry"/>
+    <entryLink name="Shaman" id="3176-9e6f-ca35-f6bd" hidden="false" import="true" targetId="f224-cbda-e88f-3a4d" type="selectionEntry"/>
+    <entryLink name="Mûmakil" id="c3af-f2b4-e6ad-f383" hidden="false" import="true" targetId="1647-4fe3-3da4-c316" type="selectionEntry"/>
+  </entryLinks>
+  <sharedRules>
+    <rule name="Orc General/Hero" id="e8ac-e781-1beb-9317" hidden="false">
+      <description>An Orc General, or Hero can only issue orders or attach to Sauron&apos;s non-human forces.</description>
+    </rule>
+  </sharedRules>
   <sharedSelectionEntries>
-    <selectionEntry type="unit" import="true" name="Uruk-hai" hidden="false" id="8ef8-f74a-55ee-43ad" publicationId="2fdc-4bd3-bba1-56b9">
+    <selectionEntry name="Uruk-hai" id="8ef8-f74a-55ee-43ad" hidden="false" import="true" publicationId="2fdc-4bd3-bba1-56b9" type="unit">
+      <categoryLinks>
+        <categoryLink name="Infantry" id="473e-155f-984f-b884" hidden="false" primary="true" targetId="5e38-77df-81d0-6399"/>
+      </categoryLinks>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="65"/>
       </costs>
+      <entryLinks>
+        <entryLink name="Siege Upgrades" id="3d67-44a2-3271-c3ac" hidden="false" import="true" targetId="be2d-be4e-b1fe-b35a" type="selectionEntryGroup"/>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Warband" id="5226-05ff-c69b-a049" hidden="false" targetId="0d1c-680a-f38d-6e29" type="rule"/>
+      </infoLinks>
       <profiles>
-        <profile name="Uruk-hai" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="346d-25e0-abbe-4f7c">
+        <profile name="Uruk-hai" id="346d-25e0-abbe-4f7c" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">3</characteristic>
@@ -16,7 +56,7 @@
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
         </profile>
-        <profile name="Uruk-hai" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="eb81-d0ee-570c-9c78">
+        <profile name="Uruk-hai" id="eb81-d0ee-570c-9c78" hidden="false" typeId="a5d3-6ea8-6425-5123" typeName="Ability">
           <characteristics>
             <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">A regiment with Uruk-hai and Orcs suffers a -1 Command penalty.
 
@@ -25,37 +65,37 @@ Uruk-hai always advance 20cm after combat regardless of how many rounds the init
           </characteristics>
         </profile>
       </profiles>
-      <categoryLinks>
-        <categoryLink name="Infantry" hidden="false" id="473e-155f-984f-b884" targetId="5e38-77df-81d0-6399" primary="true"/>
-      </categoryLinks>
-      <infoLinks>
-        <infoLink name="Warband" id="5226-05ff-c69b-a049" hidden="false" type="rule" targetId="0d1c-680a-f38d-6e29"/>
-      </infoLinks>
-      <entryLinks>
-        <entryLink import="true" name="Siege Upgrades" hidden="false" id="3d67-44a2-3271-c3ac" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
-      </entryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Orcs" hidden="false" id="8e83-c945-3fbb-3673" publicationId="2fdc-4bd3-bba1-56b9">
+    <selectionEntry name="Orcs" id="8e83-c945-3fbb-3673" hidden="false" import="true" publicationId="2fdc-4bd3-bba1-56b9" type="unit">
+      <categoryLinks>
+        <categoryLink name="Infantry" id="4544-ae40-7f26-6f2d" hidden="false" primary="true" targetId="5e38-77df-81d0-6399"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="abdc-6ba4-dcf5-40ae" automatic="false" field="selections" includeChildSelections="true" negative="false" scope="force" shared="true" type="min" value="0"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="30"/>
       </costs>
-      <constraints>
-        <constraint type="min" value="0" field="selections" scope="force" shared="true" id="abdc-6ba4-dcf5-40ae" automatic="false" negative="false" includeChildSelections="true"/>
-      </constraints>
+      <entryLinks>
+        <entryLink name="Siege Upgrades" id="46f4-4009-1d1c-0d35" hidden="false" import="true" targetId="be2d-be4e-b1fe-b35a" type="selectionEntryGroup"/>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Warband" id="2107-421e-a64f-cc78" hidden="false" targetId="0d1c-680a-f38d-6e29" type="rule"/>
+      </infoLinks>
       <modifiers>
-        <modifier type="increment" value="4" field="abdc-6ba4-dcf5-40ae">
+        <modifier field="abdc-6ba4-dcf5-40ae" type="increment" value="4">
           <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
           </repeats>
         </modifier>
-        <modifier type="decrement" value="1" field="abdc-6ba4-dcf5-40ae">
+        <modifier field="abdc-6ba4-dcf5-40ae" type="decrement" value="1">
           <repeats>
-            <repeat value="1" repeats="1" field="selections" scope="roster" childId="ad2f-f587-03db-6c4f" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false" percentValue="false" childName="Goblins"/>
+            <repeat childId="ad2f-f587-03db-6c4f" childName="Goblins" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="roster" shared="true" value="1"/>
           </repeats>
         </modifier>
       </modifiers>
       <profiles>
-        <profile name="Orcs" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="8a7f-9cd6-f04b-2e67">
+        <profile name="Orcs" id="8a7f-9cd6-f04b-2e67" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">2</characteristic>
@@ -66,22 +106,19 @@ Uruk-hai always advance 20cm after combat regardless of how many rounds the init
           </characteristics>
         </profile>
       </profiles>
-      <categoryLinks>
-        <categoryLink name="Infantry" hidden="false" id="4544-ae40-7f26-6f2d" targetId="5e38-77df-81d0-6399" primary="true"/>
-      </categoryLinks>
-      <infoLinks>
-        <infoLink name="Warband" id="2107-421e-a64f-cc78" hidden="false" type="rule" targetId="0d1c-680a-f38d-6e29"/>
-      </infoLinks>
-      <entryLinks>
-        <entryLink import="true" name="Siege Upgrades" hidden="false" id="46f4-4009-1d1c-0d35" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
-      </entryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Servant of Sauron" hidden="false" id="2f39-93bc-4258-e949" publicationId="2fdc-4bd3-bba1-56b9">
+    <selectionEntry name="Servant of Sauron" id="2f39-93bc-4258-e949" hidden="false" import="true" publicationId="2fdc-4bd3-bba1-56b9" type="unit">
+      <categoryLinks>
+        <categoryLink name="General" id="f372-27d6-88bc-5ff2" hidden="false" primary="true" targetId="bb23-a19b-bd9f-ba61"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="a050-ec66-374d-aa85" field="selections" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="95"/>
       </costs>
       <profiles>
-        <profile name="Servant of Sauron" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="9845-cd7d-4376-7def">
+        <profile name="Servant of Sauron" id="9845-cd7d-4376-7def" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">General</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">+2</characteristic>
@@ -92,22 +129,36 @@ Uruk-hai always advance 20cm after combat regardless of how many rounds the init
           </characteristics>
         </profile>
       </profiles>
+    </selectionEntry>
+    <selectionEntry name="Orc/Uruk-hai Hero" id="ce8e-3118-c6b1-f02f" hidden="false" import="true" publicationId="2fdc-4bd3-bba1-56b9" type="unit">
       <categoryLinks>
-        <categoryLink name="General" hidden="false" id="f372-27d6-88bc-5ff2" targetId="bb23-a19b-bd9f-ba61" primary="true"/>
+        <categoryLink name="Hero" id="126b-af18-af7a-c4a7" hidden="false" primary="true" targetId="227b-c83d-cd8c-bd1b"/>
       </categoryLinks>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a050-ec66-374d-aa85"/>
+        <constraint id="9030-4a99-8d7b-40be" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Orc/Uruk-hai Hero" hidden="false" id="ce8e-3118-c6b1-f02f" publicationId="2fdc-4bd3-bba1-56b9">
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="80"/>
       </costs>
-      <categoryLinks>
-        <categoryLink name="Hero" hidden="false" id="126b-af18-af7a-c4a7" targetId="227b-c83d-cd8c-bd1b" primary="true"/>
-      </categoryLinks>
+      <entryLinks>
+        <entryLink name="Warg Mount" id="1392-7032-614a-a2a9" hidden="false" import="true" targetId="228a-b32a-a4ff-ac0b" type="selectionEntry">
+          <constraints>
+            <constraint id="92c4-55d0-32cc-8ddb" field="selections" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Orc General/Hero" id="b7bb-bb0d-6bfc-5d30" hidden="false" targetId="e8ac-e781-1beb-9317" type="rule"/>
+      </infoLinks>
+      <modifiers>
+        <modifier field="9030-4a99-8d7b-40be" type="increment" value="2">
+          <repeats>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile name="Orc/Uruk-hai Hero" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="2d10-c3e5-86f8-fbe3">
+        <profile name="Orc/Uruk-hai Hero" id="2d10-c3e5-86f8-fbe3" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Hero</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">+1</characteristic>
@@ -118,33 +169,29 @@ Uruk-hai always advance 20cm after combat regardless of how many rounds the init
           </characteristics>
         </profile>
       </profiles>
-      <entryLinks>
-        <entryLink import="true" name="Warg Mount" hidden="false" id="1392-7032-614a-a2a9" type="selectionEntry" targetId="228a-b32a-a4ff-ac0b">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="92c4-55d0-32cc-8ddb"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
-      <infoLinks>
-        <infoLink name="Orc General/Hero" id="b7bb-bb0d-6bfc-5d30" hidden="false" type="rule" targetId="e8ac-e781-1beb-9317"/>
-      </infoLinks>
-      <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="9030-4a99-8d7b-40be" includeChildSelections="true"/>
-      </constraints>
-      <modifiers>
-        <modifier type="increment" value="2" field="9030-4a99-8d7b-40be">
-          <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
-          </repeats>
-        </modifier>
-      </modifiers>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Trolls" hidden="false" id="04e1-e02a-1303-6b07" publicationId="2fdc-4bd3-bba1-56b9">
+    <selectionEntry name="Trolls" id="04e1-e02a-1303-6b07" hidden="false" import="true" publicationId="2fdc-4bd3-bba1-56b9" type="unit">
+      <categoryLinks>
+        <categoryLink name="Infantry" id="8225-a20a-2a7c-5445" hidden="false" primary="true" targetId="5e38-77df-81d0-6399"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="9ca2-5450-6484-1651" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="105"/>
       </costs>
+      <entryLinks>
+        <entryLink name="Siege Upgrades" id="f161-4758-a5b6-a1b3" hidden="false" import="true" targetId="be2d-be4e-b1fe-b35a" type="selectionEntryGroup"/>
+      </entryLinks>
+      <modifiers>
+        <modifier field="9ca2-5450-6484-1651" type="increment" value="3">
+          <repeats>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile name="Trolls" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="932d-5908-178e-d0af">
+        <profile name="Trolls" id="932d-5908-178e-d0af" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">4</characteristic>
@@ -154,7 +201,7 @@ Uruk-hai always advance 20cm after combat regardless of how many rounds the init
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
         </profile>
-        <profile name="Trolls" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="50ac-d125-c98c-eb82">
+        <profile name="Trolls" id="50ac-d125-c98c-eb82" hidden="false" typeId="a5d3-6ea8-6425-5123" typeName="Ability">
           <characteristics>
             <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">A unit of trolls may never advance more than 10cm after combat.
 
@@ -168,29 +215,29 @@ Trolls will never trace a LOS through, charge through, or displace a friendly un
           </characteristics>
         </profile>
       </profiles>
-      <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="9ca2-5450-6484-1651" includeChildSelections="true"/>
-      </constraints>
-      <modifiers>
-        <modifier type="increment" value="3" field="9ca2-5450-6484-1651">
-          <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false" childId="any"/>
-          </repeats>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink name="Infantry" hidden="false" id="8225-a20a-2a7c-5445" targetId="5e38-77df-81d0-6399" primary="true"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink import="true" name="Siege Upgrades" hidden="false" id="f161-4758-a5b6-a1b3" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
-      </entryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Olog-hai" hidden="false" id="9d74-e610-4a1a-8b47">
+    <selectionEntry name="Olog-hai" id="9d74-e610-4a1a-8b47" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Infantry" id="7ad7-ed00-9303-1850" hidden="false" primary="true" targetId="5e38-77df-81d0-6399"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="6f77-7adf-953c-6aa6" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="150"/>
       </costs>
+      <entryLinks>
+        <entryLink name="Siege Upgrades" id="795b-88cc-39f4-f1a2" hidden="false" import="true" targetId="be2d-be4e-b1fe-b35a" type="selectionEntryGroup"/>
+      </entryLinks>
+      <modifiers>
+        <modifier field="6f77-7adf-953c-6aa6" type="increment" value="1">
+          <repeats>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile name="Olog-hai" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="380f-bec0-32fc-06fc">
+        <profile name="Olog-hai" id="380f-bec0-32fc-06fc" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">4</characteristic>
@@ -200,35 +247,38 @@ Trolls will never trace a LOS through, charge through, or displace a friendly un
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
         </profile>
-        <profile name="Olog-hai" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="c79a-c508-9987-9eee">
+        <profile name="Olog-hai" id="c79a-c508-9987-9eee" hidden="false" typeId="a5d3-6ea8-6425-5123" typeName="Ability">
           <characteristics>
             <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">A brigade with both Olog-hai and Trolls will suffer a -1 Command penalty.</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="6f77-7adf-953c-6aa6" includeChildSelections="true"/>
-      </constraints>
-      <modifiers>
-        <modifier type="increment" value="1" field="6f77-7adf-953c-6aa6">
-          <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
-          </repeats>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink name="Infantry" hidden="false" id="7ad7-ed00-9303-1850" targetId="5e38-77df-81d0-6399" primary="true"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink import="true" name="Siege Upgrades" hidden="false" id="795b-88cc-39f4-f1a2" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
-      </entryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Orc Archers" hidden="false" id="7899-e159-ced6-29c3" publicationId="2fdc-4bd3-bba1-56b9">
+    <selectionEntry name="Orc Archers" id="7899-e159-ced6-29c3" hidden="false" import="true" publicationId="2fdc-4bd3-bba1-56b9" type="unit">
+      <categoryLinks>
+        <categoryLink name="Infantry" id="91d6-064f-f45e-341b" hidden="false" primary="true" targetId="5e38-77df-81d0-6399"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="5f14-a082-98b7-8a76" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="30"/>
       </costs>
+      <entryLinks>
+        <entryLink name="Siege Upgrades" id="954f-70a9-b70b-9a7d" hidden="false" import="true" targetId="be2d-be4e-b1fe-b35a" type="selectionEntryGroup"/>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Warband" id="ddd2-aff9-c2e2-8aea" hidden="false" targetId="0d1c-680a-f38d-6e29" type="rule"/>
+      </infoLinks>
+      <modifiers>
+        <modifier field="5f14-a082-98b7-8a76" type="increment" value="4">
+          <repeats>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile name="Orc Archers" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="3bd0-ad96-724e-ed65">
+        <profile name="Orc Archers" id="3bd0-ad96-724e-ed65" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">2/1</characteristic>
@@ -239,32 +289,26 @@ Trolls will never trace a LOS through, charge through, or displace a friendly un
           </characteristics>
         </profile>
       </profiles>
-      <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="5f14-a082-98b7-8a76" includeChildSelections="true"/>
-      </constraints>
-      <modifiers>
-        <modifier type="increment" value="4" field="5f14-a082-98b7-8a76">
-          <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
-          </repeats>
-        </modifier>
-      </modifiers>
-      <infoLinks>
-        <infoLink name="Warband" id="ddd2-aff9-c2e2-8aea" hidden="false" type="rule" targetId="0d1c-680a-f38d-6e29"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink name="Infantry" hidden="false" id="91d6-064f-f45e-341b" targetId="5e38-77df-81d0-6399" primary="true"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink import="true" name="Siege Upgrades" hidden="false" id="954f-70a9-b70b-9a7d" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
-      </entryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Evil Spirits" hidden="false" id="e7dd-c882-031e-4dfe">
+    <selectionEntry name="Evil Spirits" id="e7dd-c882-031e-4dfe" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Infantry" id="8780-706a-43d3-8ef5" hidden="false" primary="true" targetId="5e38-77df-81d0-6399"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="c610-02ce-7915-e7c1" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="75"/>
       </costs>
+      <modifiers>
+        <modifier field="c610-02ce-7915-e7c1" type="increment" value="2">
+          <repeats>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile name="Evil Spirits" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="3cf7-1a59-47e6-5d7d">
+        <profile name="Evil Spirits" id="3cf7-1a59-47e6-5d7d" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">2</characteristic>
@@ -274,32 +318,32 @@ Trolls will never trace a LOS through, charge through, or displace a friendly un
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
         </profile>
-        <profile name="Evil Spirits" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="e1db-3e37-b845-a2fa">
+        <profile name="Evil Spirits" id="e1db-3e37-b845-a2fa" hidden="false" typeId="a5d3-6ea8-6425-5123" typeName="Ability">
           <characteristics>
             <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">Evil spirits cause Terror in their enemies. Evil Spirits are also so hungry for the souls of the living that they can’t be driven back by missile fire.</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="c610-02ce-7915-e7c1" includeChildSelections="true"/>
-      </constraints>
-      <modifiers>
-        <modifier type="increment" value="2" field="c610-02ce-7915-e7c1">
-          <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
-          </repeats>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink name="Infantry" hidden="false" id="8780-706a-43d3-8ef5" targetId="5e38-77df-81d0-6399" primary="true"/>
-      </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Wolfriders" hidden="false" id="fc28-f127-2f89-f81f">
+    <selectionEntry name="Wolfriders" id="fc28-f127-2f89-f81f" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Cavalry" id="55e6-9c7e-9f5a-6416" hidden="false" primary="true" targetId="6bff-b94d-a54a-8758"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="661e-2c83-2855-4553" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="50"/>
       </costs>
+      <modifiers>
+        <modifier field="661e-2c83-2855-4553" type="increment" value="4">
+          <repeats>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile name="Wolfriders" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="7281-a960-d474-3272">
+        <profile name="Wolfriders" id="7281-a960-d474-3272" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Cavalry</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">2</characteristic>
@@ -309,32 +353,37 @@ Trolls will never trace a LOS through, charge through, or displace a friendly un
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
         </profile>
-        <profile name="Wolfriders" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="6dd4-336b-0f06-a9ce">
+        <profile name="Wolfriders" id="6dd4-336b-0f06-a9ce" hidden="false" typeId="a5d3-6ea8-6425-5123" typeName="Ability">
           <characteristics>
             <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">When Wolfriders are in combat with a mounted unit, and score more hits in the first round of a combat than the enemy, they will automatically strike 1 more Attack per stand before the combat results are worked out. Resolve these attacks as normal and then work out the results.</characteristic>
           </characteristics>
         </profile>
       </profiles>
+    </selectionEntry>
+    <selectionEntry name="Wolfrider Archers" id="f922-b95b-bc4d-5aee" hidden="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink name="Cavalry" hidden="false" id="55e6-9c7e-9f5a-6416" targetId="6bff-b94d-a54a-8758" primary="true"/>
+        <categoryLink name="Cavalry" id="8aa1-4aab-30e7-9172" hidden="false" primary="true" targetId="6bff-b94d-a54a-8758"/>
       </categoryLinks>
       <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="661e-2c83-2855-4553" includeChildSelections="true"/>
+        <constraint id="a596-a9b3-1ad0-066a" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
       </constraints>
-      <modifiers>
-        <modifier type="increment" value="4" field="661e-2c83-2855-4553">
-          <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
-          </repeats>
-        </modifier>
-      </modifiers>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Wolfrider Archers" hidden="false" id="f922-b95b-bc4d-5aee">
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="60"/>
       </costs>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="2bc6-a5e8-b715-256f" childName="Show Homebrew" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="a596-a9b3-1ad0-066a" type="increment" value="4">
+          <repeats>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile name="Wolfrider Archers" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="537c-6c2f-de28-57c6">
+        <profile name="Wolfrider Archers" id="537c-6c2f-de28-57c6" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Cavalry</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">2/1</characteristic>
@@ -344,37 +393,48 @@ Trolls will never trace a LOS through, charge through, or displace a friendly un
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
         </profile>
-        <profile name="Wolfrider Archers" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="7ee0-dec0-7638-4c17">
+        <profile name="Wolfrider Archers" id="7ee0-dec0-7638-4c17" hidden="false" typeId="a5d3-6ea8-6425-5123" typeName="Ability">
           <characteristics>
             <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">A Wolf Rider stand is assumed to be able to see all the way round – not just to its front as are other stands. This enables Wolf Riders to shoot in any direction, or to charge or evade from the closest enemy within 20cm regardless of their relative position.</characteristic>
           </characteristics>
         </profile>
       </profiles>
+    </selectionEntry>
+    <selectionEntry name="Goblins" id="a6bc-3e7c-60e8-991b" hidden="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink name="Cavalry" hidden="false" id="8aa1-4aab-30e7-9172" targetId="6bff-b94d-a54a-8758" primary="true"/>
+        <categoryLink name="Infantry" id="8ed7-0086-d226-896f" hidden="false" primary="true" targetId="5e38-77df-81d0-6399"/>
       </categoryLinks>
       <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="a596-a9b3-1ad0-066a" includeChildSelections="true"/>
+        <constraint id="14cf-8561-3c12-e79d" automatic="false" field="selections" includeChildSelections="true" negative="false" scope="force" shared="true" type="min" value="0"/>
       </constraints>
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="30"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Siege Upgrades" id="c456-81b5-9a57-c4d9" hidden="false" import="true" targetId="be2d-be4e-b1fe-b35a" type="selectionEntryGroup"/>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Horde" id="6a1b-cd5f-8d9f-5f46" hidden="false" targetId="ac5a-d66a-e29a-5391" type="rule"/>
+      </infoLinks>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
+        <modifier field="hidden" type="set" value="true">
           <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="true" includeChildForces="true"/>
+            <condition childId="2bc6-a5e8-b715-256f" childName="Show Homebrew" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
           </conditions>
         </modifier>
-        <modifier type="increment" value="4" field="a596-a9b3-1ad0-066a">
+        <modifier field="14cf-8561-3c12-e79d" type="increment" value="4">
           <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
+          </repeats>
+        </modifier>
+        <modifier field="14cf-8561-3c12-e79d" type="decrement" value="1">
+          <repeats>
+            <repeat childId="9172-c355-2786-7414" childName="Orcs" field="selections" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="false" scope="roster" shared="true" value="1"/>
           </repeats>
         </modifier>
       </modifiers>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Goblins" hidden="false" id="a6bc-3e7c-60e8-991b">
-      <infoLinks>
-        <infoLink name="Horde" id="6a1b-cd5f-8d9f-5f46" hidden="false" type="rule" targetId="ac5a-d66a-e29a-5391"/>
-      </infoLinks>
       <profiles>
-        <profile name="Goblins" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="6974-c768-99ef-6718">
+        <profile name="Goblins" id="6974-c768-99ef-6718" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">2</characteristic>
@@ -384,46 +444,30 @@ Trolls will never trace a LOS through, charge through, or displace a friendly un
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
           <modifiers>
-            <modifier type="set" value="4" field="72b4-6deb-0f8e-7f27"/>
+            <modifier field="72b4-6deb-0f8e-7f27" type="set" value="4"/>
           </modifiers>
         </profile>
       </profiles>
-      <costs>
-        <cost name="pts" typeId="2085-9b6f-c588-0723" value="30"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="Infantry" hidden="false" id="8ed7-0086-d226-896f" targetId="5e38-77df-81d0-6399" primary="true"/>
-      </categoryLinks>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="increment" value="4" field="14cf-8561-3c12-e79d">
-          <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="decrement" value="1" field="14cf-8561-3c12-e79d">
-          <repeats>
-            <repeat value="1" repeats="1" field="selections" scope="roster" shared="true" roundUp="false" includeChildSelections="false" includeChildForces="false" percentValue="false" childId="9172-c355-2786-7414" childName="Orcs"/>
-          </repeats>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="min" value="0" field="selections" scope="force" shared="true" id="14cf-8561-3c12-e79d" automatic="false" negative="false" includeChildSelections="true"/>
-      </constraints>
-      <entryLinks>
-        <entryLink import="true" name="Siege Upgrades" hidden="false" id="c456-81b5-9a57-c4d9" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
-      </entryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Orc Cavalry" hidden="false" id="a6ae-a451-9acb-4e3e">
+    <selectionEntry name="Orc Cavalry" id="a6ae-a451-9acb-4e3e" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Cavalry" id="9799-4c62-71bf-af49" hidden="false" primary="true" targetId="6bff-b94d-a54a-8758"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="b98f-f4c3-4dc8-cac4" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="90"/>
       </costs>
+      <modifiers>
+        <modifier field="b98f-f4c3-4dc8-cac4" type="increment" value="4">
+          <repeats>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile name="Orc Cavalry" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="2a90-1297-609b-eb0b">
+        <profile name="Orc Cavalry" id="2a90-1297-609b-eb0b" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Cavalry</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">3</characteristic>
@@ -434,26 +478,26 @@ Trolls will never trace a LOS through, charge through, or displace a friendly un
           </characteristics>
         </profile>
       </profiles>
+    </selectionEntry>
+    <selectionEntry name="Wargs" id="c802-e384-988f-7e42" hidden="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink name="Cavalry" hidden="false" id="9799-4c62-71bf-af49" targetId="6bff-b94d-a54a-8758" primary="true"/>
+        <categoryLink name="Monster" id="dd6d-507b-f11b-3457" hidden="false" primary="true" targetId="c05d-61e2-2cbd-0df9"/>
       </categoryLinks>
       <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="b98f-f4c3-4dc8-cac4" includeChildSelections="true"/>
+        <constraint id="ee51-ced7-7c54-d328" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
       </constraints>
-      <modifiers>
-        <modifier type="increment" value="4" field="b98f-f4c3-4dc8-cac4">
-          <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
-          </repeats>
-        </modifier>
-      </modifiers>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Wargs" hidden="false" id="c802-e384-988f-7e42">
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="55"/>
       </costs>
+      <modifiers>
+        <modifier field="ee51-ced7-7c54-d328" type="increment" value="2">
+          <repeats>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile name="Wargs" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="e0c4-1fa2-eb83-ce7d">
+        <profile name="Wargs" id="e0c4-1fa2-eb83-ce7d" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Monster</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">3</characteristic>
@@ -463,7 +507,7 @@ Trolls will never trace a LOS through, charge through, or displace a friendly un
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
         </profile>
-        <profile name="Wargs" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="105b-6a57-550f-74b1">
+        <profile name="Wargs" id="105b-6a57-550f-74b1" hidden="false" typeId="a5d3-6ea8-6425-5123" typeName="Ability">
           <characteristics>
             <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">Wargs are able to move over or into any wooded or mountainous terrain features in the same way as infantry. This does not allow them to claim the defended status. 
 
@@ -477,29 +521,29 @@ Note that these rules apply only to Warg units – not to characters that ride W
           </characteristics>
         </profile>
       </profiles>
+    </selectionEntry>
+    <selectionEntry name="Catapult" id="8cca-f38b-fad2-133c" hidden="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink name="Monster" hidden="false" id="dd6d-507b-f11b-3457" targetId="c05d-61e2-2cbd-0df9" primary="true"/>
+        <categoryLink name="Artillery" id="6152-e8ff-e7ec-8c00" hidden="false" primary="true" targetId="ab71-7ddd-db90-f5e5"/>
       </categoryLinks>
       <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="ee51-ced7-7c54-d328" includeChildSelections="true"/>
+        <constraint id="b6fa-606c-e035-d64b" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
       </constraints>
-      <modifiers>
-        <modifier type="increment" value="2" field="ee51-ced7-7c54-d328">
-          <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
-          </repeats>
-        </modifier>
-      </modifiers>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Catapult" hidden="false" id="8cca-f38b-fad2-133c">
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="75"/>
       </costs>
-      <categoryLinks>
-        <categoryLink name="Artillery" hidden="false" id="6152-e8ff-e7ec-8c00" targetId="ab71-7ddd-db90-f5e5" primary="true"/>
-      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Stone Thrower" id="e79a-b104-10ce-59f9" hidden="false" targetId="0906-900e-0f2c-3088" type="rule"/>
+      </infoLinks>
+      <modifiers>
+        <modifier field="b6fa-606c-e035-d64b" type="increment" value="1">
+          <repeats>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile name="Catapult" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="5e55-5146-7e61-829f">
+        <profile name="Catapult" id="5e55-5146-7e61-829f" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Artillery</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">1/3</characteristic>
@@ -510,23 +554,29 @@ Note that these rules apply only to Warg units – not to characters that ride W
           </characteristics>
         </profile>
       </profiles>
+    </selectionEntry>
+    <selectionEntry name="Ballista" id="deeb-1f9c-34ce-6c3c" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Artillery" id="d041-b249-5815-ab24" hidden="false" primary="true" targetId="ab71-7ddd-db90-f5e5"/>
+      </categoryLinks>
       <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="b6fa-606c-e035-d64b" includeChildSelections="true"/>
+        <constraint id="721c-7570-6bfa-e800" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
       </constraints>
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="65"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Bolt Thrower" id="a59f-0a1a-9dc0-71d9" hidden="false" targetId="f737-907d-9b29-b48f" type="rule"/>
+      </infoLinks>
       <modifiers>
-        <modifier type="increment" value="1" field="b6fa-606c-e035-d64b">
+        <modifier field="721c-7570-6bfa-e800" type="increment" value="1">
           <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
           </repeats>
         </modifier>
       </modifiers>
-      <infoLinks>
-        <infoLink name="Stone Thrower" id="e79a-b104-10ce-59f9" hidden="false" type="rule" targetId="0906-900e-0f2c-3088"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Ballista" hidden="false" id="deeb-1f9c-34ce-6c3c">
       <profiles>
-        <profile name="Ballista" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="b32c-a78a-b62d-cd55">
+        <profile name="Ballista" id="b32c-a78a-b62d-cd55" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Artillery</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">1/2</characteristic>
@@ -537,32 +587,26 @@ Note that these rules apply only to Warg units – not to characters that ride W
           </characteristics>
         </profile>
       </profiles>
-      <costs>
-        <cost name="pts" typeId="2085-9b6f-c588-0723" value="65"/>
-      </costs>
+    </selectionEntry>
+    <selectionEntry name="Grond" id="f8a2-67ec-aefd-a141" hidden="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink name="Artillery" hidden="false" id="d041-b249-5815-ab24" targetId="ab71-7ddd-db90-f5e5" primary="true"/>
+        <categoryLink name="Machine" id="6ed8-4d62-9f74-daba" hidden="false" primary="true" targetId="0597-65e0-f876-8d6b"/>
       </categoryLinks>
       <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="721c-7570-6bfa-e800" includeChildSelections="true"/>
+        <constraint id="bc0c-3930-81f5-c628" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
       </constraints>
-      <modifiers>
-        <modifier type="increment" value="1" field="721c-7570-6bfa-e800">
-          <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
-          </repeats>
-        </modifier>
-      </modifiers>
-      <infoLinks>
-        <infoLink name="Bolt Thrower" id="a59f-0a1a-9dc0-71d9" hidden="false" type="rule" targetId="f737-907d-9b29-b48f"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Grond" hidden="false" id="f8a2-67ec-aefd-a141">
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="100"/>
       </costs>
+      <modifiers>
+        <modifier field="bc0c-3930-81f5-c628" type="increment" value="1">
+          <repeats>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile name="Grond" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="7492-43e6-5ede-1bbb">
+        <profile name="Grond" id="7492-43e6-5ede-1bbb" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Machine</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">0</characteristic>
@@ -572,45 +616,32 @@ Note that these rules apply only to Warg units – not to characters that ride W
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">1</characteristic>
           </characteristics>
         </profile>
-        <profile name="Grond" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="d477-460d-15d7-04ac">
+        <profile name="Grond" id="d477-460d-15d7-04ac" hidden="false" typeId="a5d3-6ea8-6425-5123" typeName="Ability">
           <characteristics>
             <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">Grond uses the normal battering ram rules except that it does two automatic hits, and only needs one breach to destroy a wall or gate. A unit of trolls must be bought to wield Grond. Grond has a movement of 10cm unless pulled by beasts.</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="bc0c-3930-81f5-c628" includeChildSelections="true"/>
-      </constraints>
-      <modifiers>
-        <modifier type="increment" value="1" field="bc0c-3930-81f5-c628">
-          <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
-          </repeats>
-        </modifier>
-      </modifiers>
-      <categoryLinks>
-        <categoryLink name="Machine" hidden="false" id="6ed8-4d62-9f74-daba" targetId="0597-65e0-f876-8d6b" primary="true"/>
-      </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Warg Mount" hidden="false" id="228a-b32a-a4ff-ac0b">
+    <selectionEntry name="Warg Mount" id="228a-b32a-a4ff-ac0b" hidden="false" import="true" type="upgrade">
+      <categoryLinks>
+        <categoryLink name="Monstrous Mount" id="2e3c-d97c-b795-1a89" hidden="false" primary="true" targetId="db9e-34ce-cbb2-4a2e"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="b220-bfd9-7720-540e" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="10"/>
       </costs>
-      <categoryLinks>
-        <categoryLink name="Monstrous Mount" hidden="false" id="2e3c-d97c-b795-1a89" targetId="db9e-34ce-cbb2-4a2e" primary="true"/>
-      </categoryLinks>
-      <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="b220-bfd9-7720-540e" includeChildSelections="true"/>
-      </constraints>
       <modifiers>
-        <modifier type="increment" value="1" field="b220-bfd9-7720-540e">
+        <modifier field="b220-bfd9-7720-540e" type="increment" value="1">
           <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
           </repeats>
         </modifier>
       </modifiers>
       <profiles>
-        <profile name="Warg Mount" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="47cd-e274-91d7-71f9">
+        <profile name="Warg Mount" id="47cd-e274-91d7-71f9" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Monstrous Mount</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">+1</characteristic>
@@ -622,15 +653,28 @@ Note that these rules apply only to Warg units – not to characters that ride W
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Orc/Uruk-hai General" hidden="false" id="c234-1d3d-1a42-03c0" publicationId="2fdc-4bd3-bba1-56b9">
+    <selectionEntry name="Orc/Uruk-hai General" id="c234-1d3d-1a42-03c0" hidden="false" import="true" publicationId="2fdc-4bd3-bba1-56b9" type="unit">
+      <categoryLinks>
+        <categoryLink name="General" id="5a65-a523-0b1d-7929" hidden="false" primary="true" targetId="bb23-a19b-bd9f-ba61"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="826d-88e4-d623-3128" field="selections" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="85"/>
       </costs>
-      <categoryLinks>
-        <categoryLink name="General" hidden="false" id="5a65-a523-0b1d-7929" targetId="bb23-a19b-bd9f-ba61" primary="true"/>
-      </categoryLinks>
+      <entryLinks>
+        <entryLink name="Warg Mount" id="11a1-927f-a8aa-740f" hidden="false" import="true" targetId="228a-b32a-a4ff-ac0b" type="selectionEntry">
+          <constraints>
+            <constraint id="2e0b-63aa-79b4-4a01" field="selections" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Orc General/Hero" id="b02a-a912-25ac-e767" hidden="false" targetId="e8ac-e781-1beb-9317" type="rule"/>
+      </infoLinks>
       <profiles>
-        <profile name="Orc/Uruk-hai General" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="f0c5-2f32-2520-7c6e">
+        <profile name="Orc/Uruk-hai General" id="f0c5-2f32-2520-7c6e" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">General</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">+2</characteristic>
@@ -641,26 +685,26 @@ Note that these rules apply only to Warg units – not to characters that ride W
           </characteristics>
         </profile>
       </profiles>
-      <entryLinks>
-        <entryLink import="true" name="Warg Mount" hidden="false" id="11a1-927f-a8aa-740f" type="selectionEntry" targetId="228a-b32a-a4ff-ac0b">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2e0b-63aa-79b4-4a01"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
-      <infoLinks>
-        <infoLink name="Orc General/Hero" id="b02a-a912-25ac-e767" hidden="false" type="rule" targetId="e8ac-e781-1beb-9317"/>
-      </infoLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="826d-88e4-d623-3128"/>
-      </constraints>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Nazgûl" hidden="false" id="a441-e398-7ae7-b633">
+    <selectionEntry name="Nazgûl" id="a441-e398-7ae7-b633" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Hero" id="8f37-37c4-2b45-f354" hidden="false" primary="true" targetId="227b-c83d-cd8c-bd1b"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="9235-a778-0b91-e547" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="80"/>
       </costs>
+      <modifiers>
+        <modifier field="9235-a778-0b91-e547" type="increment" value="2">
+          <repeats>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile name="Nazgûl" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="c2e4-f7b8-0390-8e56">
+        <profile name="Nazgûl" id="c2e4-f7b8-0390-8e56" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Hero</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">+1</characteristic>
@@ -671,36 +715,26 @@ Note that these rules apply only to Warg units – not to characters that ride W
           </characteristics>
         </profile>
       </profiles>
-      <modifiers>
-        <modifier type="increment" value="2" field="9235-a778-0b91-e547">
-          <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
-          </repeats>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="9235-a778-0b91-e547" includeChildSelections="true"/>
-      </constraints>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Winged Nightmare" hidden="false" id="3ef8-8ed8-98ee-c850">
+        <selectionEntry name="Winged Nightmare" id="3ef8-8ed8-98ee-c850" hidden="false" import="true" type="upgrade">
+          <categoryLinks>
+            <categoryLink name="Monstrous Mount" id="c00e-4011-2df8-a437" hidden="false" primary="true" targetId="db9e-34ce-cbb2-4a2e"/>
+          </categoryLinks>
+          <constraints>
+            <constraint id="5ed4-71fa-9411-ce68" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
+          </constraints>
           <costs>
             <cost name="pts" typeId="2085-9b6f-c588-0723" value="40"/>
           </costs>
-          <categoryLinks>
-            <categoryLink name="Monstrous Mount" hidden="false" id="c00e-4011-2df8-a437" targetId="db9e-34ce-cbb2-4a2e" primary="true"/>
-          </categoryLinks>
-          <constraints>
-            <constraint type="max" value="0" field="selections" scope="force" shared="true" id="5ed4-71fa-9411-ce68" includeChildSelections="true"/>
-          </constraints>
           <modifiers>
-            <modifier type="increment" value="1" field="5ed4-71fa-9411-ce68">
+            <modifier field="5ed4-71fa-9411-ce68" type="increment" value="1">
               <repeats>
-                <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+                <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
               </repeats>
             </modifier>
           </modifiers>
           <profiles>
-            <profile name="Winged Nightmare" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="d3bc-a0be-e7d2-6ae9">
+            <profile name="Winged Nightmare" id="d3bc-a0be-e7d2-6ae9" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
               <characteristics>
                 <characteristic name="Type" typeId="3087-9431-0004-e975">Monstrous Mount</characteristic>
                 <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">+2</characteristic>
@@ -713,19 +747,34 @@ Note that these rules apply only to Warg units – not to characters that ride W
           </profiles>
         </selectionEntry>
       </selectionEntries>
-      <categoryLinks>
-        <categoryLink name="Hero" hidden="false" id="8f37-37c4-2b45-f354" targetId="227b-c83d-cd8c-bd1b" primary="true"/>
-      </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Shaman" hidden="false" id="f224-cbda-e88f-3a4d">
+    <selectionEntry name="Shaman" id="f224-cbda-e88f-3a4d" hidden="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink name="Wizard" hidden="false" id="1f46-8f3e-d705-f09e" targetId="7896-9879-0772-2624" primary="true"/>
+        <categoryLink name="Wizard" id="1f46-8f3e-d705-f09e" hidden="false" primary="true" targetId="7896-9879-0772-2624"/>
       </categoryLinks>
+      <constraints>
+        <constraint id="7415-02ea-5536-38dd" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="45"/>
       </costs>
+      <entryLinks>
+        <entryLink name="Shaman Spells" id="97c4-4e21-7e2d-c714" hidden="false" import="true" targetId="020d-c8ba-4491-6af1" type="selectionEntryGroup"/>
+      </entryLinks>
+      <modifiers>
+        <modifier field="7415-02ea-5536-38dd" type="increment" value="1">
+          <repeats>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
+          </repeats>
+        </modifier>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="2bc6-a5e8-b715-256f" childName="Show Homebrew" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile name="Shaman" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="7fd8-7638-c06c-81c4">
+        <profile name="Shaman" id="7fd8-7638-c06c-81c4" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Wizard</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">+0</characteristic>
@@ -736,34 +785,26 @@ Note that these rules apply only to Warg units – not to characters that ride W
           </characteristics>
         </profile>
       </profiles>
-      <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="7415-02ea-5536-38dd" includeChildSelections="true"/>
-      </constraints>
-      <modifiers>
-        <modifier type="increment" value="1" field="7415-02ea-5536-38dd">
-          <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
-          </repeats>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <entryLinks>
-        <entryLink import="true" name="Shaman Spells" hidden="false" id="97c4-4e21-7e2d-c714" type="selectionEntryGroup" targetId="020d-c8ba-4491-6af1"/>
-      </entryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Mûmakil" hidden="false" id="1647-4fe3-3da4-c316">
+    <selectionEntry name="Mûmakil" id="1647-4fe3-3da4-c316" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Monster" id="5b9b-bc1e-0a89-2167" hidden="false" primary="true" targetId="c05d-61e2-2cbd-0df9"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="3b3c-24bf-e1c2-9ae9" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="200"/>
       </costs>
-      <categoryLinks>
-        <categoryLink name="Monster" hidden="false" id="5b9b-bc1e-0a89-2167" targetId="c05d-61e2-2cbd-0df9" primary="true"/>
-      </categoryLinks>
+      <modifiers>
+        <modifier field="3b3c-24bf-e1c2-9ae9" type="increment" value="1">
+          <repeats>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile name="Mûmakil" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="71ca-7273-7606-3822">
+        <profile name="Mûmakil" id="71ca-7273-7606-3822" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Monster</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">8/2</characteristic>
@@ -773,7 +814,7 @@ Note that these rules apply only to Warg units – not to characters that ride W
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">1</characteristic>
           </characteristics>
         </profile>
-        <profile name="Mûmakil" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="47fe-1293-a81d-a88d">
+        <profile name="Mûmakil" id="47fe-1293-a81d-a88d" hidden="false" typeId="a5d3-6ea8-6425-5123" typeName="Ability">
           <characteristics>
             <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">A Mûmakil causes terror.
 
@@ -799,55 +840,18 @@ When a unit of Mûmakil has run amok, roll a scatter dice or use any other usef
           </characteristics>
         </profile>
       </profiles>
-      <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="3b3c-24bf-e1c2-9ae9" includeChildSelections="true"/>
-      </constraints>
-      <modifiers>
-        <modifier type="increment" value="1" field="3b3c-24bf-e1c2-9ae9">
-          <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
-          </repeats>
-        </modifier>
-      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
-  <entryLinks>
-    <entryLink import="true" name="Orcs" hidden="false" id="9172-c355-2786-7414" type="selectionEntry" targetId="8e83-c945-3fbb-3673"/>
-    <entryLink import="true" name="Uruk-hai" hidden="false" id="4fc1-3147-a383-85cf" type="selectionEntry" targetId="8ef8-f74a-55ee-43ad"/>
-    <entryLink import="true" name="Servant of Sauron" hidden="false" id="54ae-102a-5441-29ee" type="selectionEntry" targetId="2f39-93bc-4258-e949"/>
-    <entryLink import="true" name="Olog-hai" hidden="false" id="f676-8690-8466-d55f" type="selectionEntry" targetId="9d74-e610-4a1a-8b47"/>
-    <entryLink import="true" name="Trolls" hidden="false" id="3592-a4b6-8be1-916b" type="selectionEntry" targetId="04e1-e02a-1303-6b07"/>
-    <entryLink import="true" name="Orc Archers" hidden="false" id="dc46-c231-cfd6-46ef" type="selectionEntry" targetId="7899-e159-ced6-29c3"/>
-    <entryLink import="true" name="Evil Spirits" hidden="false" id="671d-f683-ed92-9f88" type="selectionEntry" targetId="e7dd-c882-031e-4dfe"/>
-    <entryLink import="true" name="Wolfriders" hidden="false" id="6bf6-85db-e17b-093f" type="selectionEntry" targetId="fc28-f127-2f89-f81f"/>
-    <entryLink import="true" name="Wolfrider Archers" hidden="false" id="6334-8209-e6cb-8949" type="selectionEntry" targetId="f922-b95b-bc4d-5aee"/>
-    <entryLink import="true" name="Wargs" hidden="false" id="f322-a9cc-26a3-a9a3" type="selectionEntry" targetId="c802-e384-988f-7e42"/>
-    <entryLink import="true" name="Orc Cavalry" hidden="false" id="b651-7f23-1740-ef3c" type="selectionEntry" targetId="a6ae-a451-9acb-4e3e"/>
-    <entryLink import="true" name="Grond" hidden="false" id="6a49-542e-23c2-2233" type="selectionEntry" targetId="f8a2-67ec-aefd-a141"/>
-    <entryLink import="true" name="Goblins" hidden="false" id="ad2f-f587-03db-6c4f" type="selectionEntry" targetId="a6bc-3e7c-60e8-991b"/>
-    <entryLink import="true" name="Catapult" hidden="false" id="aeee-9bd9-407c-18e0" type="selectionEntry" targetId="8cca-f38b-fad2-133c"/>
-    <entryLink import="true" name="Ballista" hidden="false" id="45ac-0870-8b48-e61d" type="selectionEntry" targetId="deeb-1f9c-34ce-6c3c"/>
-    <entryLink import="true" name="Orc/Uruk-hai General" hidden="false" id="0350-5da8-88e6-690d" type="selectionEntry" targetId="c234-1d3d-1a42-03c0"/>
-    <entryLink import="true" name="Orc/Uruk-hai Hero" hidden="false" id="83bb-43c0-c393-f362" type="selectionEntry" targetId="ce8e-3118-c6b1-f02f"/>
-    <entryLink import="true" name="Nazgûl" hidden="false" id="dee9-5f50-2f84-abab" type="selectionEntry" targetId="a441-e398-7ae7-b633"/>
-    <entryLink import="true" name="Shaman" hidden="false" id="3176-9e6f-ca35-f6bd" type="selectionEntry" targetId="f224-cbda-e88f-3a4d"/>
-    <entryLink import="true" name="Mûmakil" hidden="false" id="c3af-f2b4-e6ad-f383" type="selectionEntry" targetId="1647-4fe3-3da4-c316"/>
-  </entryLinks>
-  <catalogueLinks>
-    <catalogueLink type="catalogue" name="War of the Ring" id="580c-2721-9a93-5e3d" targetId="a85a-9f67-08e2-d9e9"/>
-    <catalogueLink type="catalogue" name="Siege Machines" id="67e7-7e50-df4c-e87f" targetId="d49a-44f1-810f-4d9f" importRootEntries="true"/>
-  </catalogueLinks>
-  <sharedRules>
-    <rule name="Orc General/Hero" id="e8ac-e781-1beb-9317" hidden="false">
-      <description>An Orc General, or Hero can only issue orders or attach to Sauron&apos;s non-human forces.</description>
-    </rule>
-  </sharedRules>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Shaman Spells" id="020d-c8ba-4491-6af1" hidden="false">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Dark Swarm" hidden="false" id="b0bc-5f8f-7adf-3687">
+        <selectionEntry name="Dark Swarm" id="b0bc-5f8f-7adf-3687" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="9b80-e304-8e4a-145c-min" field="selections" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="9b80-e304-8e4a-145c-max" field="selections" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
           <profiles>
-            <profile name="Dark Swarm" typeId="9867-0f84-d2fb-34c4" typeName="Spell" hidden="false" id="2e8b-9ca7-2d1a-28e8">
+            <profile name="Dark Swarm" id="2e8b-9ca7-2d1a-28e8" hidden="false" typeId="9867-0f84-d2fb-34c4" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting roll" typeId="d148-3561-3fa8-550d">5+</characteristic>
                 <characteristic name="Range" typeId="938f-20ca-ebd8-865b">30cm</characteristic>
@@ -859,14 +863,14 @@ The Dark Swarm is worked out exactly like three ordinary shooting attacks. If th
               </characteristics>
             </profile>
           </profiles>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9b80-e304-8e4a-145c-min"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9b80-e304-8e4a-145c-max"/>
-          </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Faster You Dogs" hidden="false" id="c40c-9572-3d8e-1234">
+        <selectionEntry name="Faster You Dogs" id="c40c-9572-3d8e-1234" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="8ad5-6520-7e5c-9e72-min" field="selections" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="8ad5-6520-7e5c-9e72-max" field="selections" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
           <profiles>
-            <profile name="Faster You Dogs" typeId="9867-0f84-d2fb-34c4" typeName="Spell" hidden="false" id="8a5b-dd46-84ec-b172">
+            <profile name="Faster You Dogs" id="8a5b-dd46-84ec-b172" hidden="false" typeId="9867-0f84-d2fb-34c4" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting roll" typeId="d148-3561-3fa8-550d">5+</characteristic>
                 <characteristic name="Range" typeId="938f-20ca-ebd8-865b">60cm</characteristic>
@@ -878,14 +882,14 @@ If the spell is cast upon a unit, it can move immediately just as if it had rece
               </characteristics>
             </profile>
           </profiles>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8ad5-6520-7e5c-9e72-min"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8ad5-6520-7e5c-9e72-max"/>
-          </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Foul Frenzy" hidden="false" id="de19-6afc-b027-6b95">
+        <selectionEntry name="Foul Frenzy" id="de19-6afc-b027-6b95" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="4ccb-44c1-bda5-8580-min" field="selections" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="4ccb-44c1-bda5-8580-max" field="selections" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
           <profiles>
-            <profile name="Foul Frenzy" typeId="9867-0f84-d2fb-34c4" typeName="Spell" hidden="false" id="652a-41fe-6d6d-babf">
+            <profile name="Foul Frenzy" id="652a-41fe-6d6d-babf" hidden="false" typeId="9867-0f84-d2fb-34c4" typeName="Spell">
               <characteristics>
                 <characteristic name="Casting roll" typeId="d148-3561-3fa8-550d">4+</characteristic>
                 <characteristic name="Range" typeId="938f-20ca-ebd8-865b">30cm</characteristic>
@@ -895,10 +899,6 @@ Every stand in the unit, including a character that is fighting with the unit, a
               </characteristics>
             </profile>
           </profiles>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4ccb-44c1-bda5-8580-min"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4ccb-44c1-bda5-8580-max"/>
-          </constraints>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="a85a-9f67-08e2-d9e9" name="War of the Ring" gameSystemId="sys-3065-0af8-9913-4a4c" gameSystemRevision="1" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="War of the Ring" id="a85a-9f67-08e2-d9e9" battleScribeVersion="2.03" gameSystemId="sys-3065-0af8-9913-4a4c" gameSystemRevision="1" library="true" revision="1" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <publications>
+    <publication name="War of the Ring" id="2fdc-4bd3-bba1-56b9" hidden="false" publisher="v1.5"/>
+  </publications>
   <sharedRules>
     <rule name="Warband" id="0d1c-680a-f38d-6e29" hidden="false" publicationId="2fdc-4bd3-bba1-56b9">
       <description>If all units of a brigade are classified as Warband and the brigade consists of at least 3 units, the brigade&apos;s command value is increased by 1.
@@ -56,7 +59,4 @@ Wargs must always pursue retreating enemy where possible and must advance if th
 Note that these rules apply only to Warg units – not to characters that ride Wargs.</description>
     </rule>
   </sharedRules>
-  <publications>
-    <publication name="War of the Ring" id="2fdc-4bd3-bba1-56b9" hidden="false" publisher="v1.5"/>
-  </publications>
 </catalogue>

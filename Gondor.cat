@@ -1,18 +1,82 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="2a94-c33d-4532-52e8" name="Gondor" gameSystemId="sys-3065-0af8-9913-4a4c" gameSystemRevision="1" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="Gondor" id="2a94-c33d-4532-52e8" battleScribeVersion="2.03" gameSystemId="sys-3065-0af8-9913-4a4c" gameSystemRevision="1" library="false" revision="3" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <catalogueLinks>
+    <catalogueLink name="Siege Machines" id="8977-08ca-64c5-a94d" importRootEntries="true" targetId="d49a-44f1-810f-4d9f" type="catalogue"/>
+  </catalogueLinks>
+  <entryLinks>
+    <entryLink name="Citadel Guard" id="df8d-96a5-ae2d-1bd6" hidden="false" import="true" targetId="f36e-4a74-aede-d3c1" type="selectionEntry"/>
+    <entryLink name="General" id="d8e3-f796-28c0-fe4b" hidden="false" import="true" targetId="f4b5-3015-7864-ae96" type="selectionEntry"/>
+    <entryLink name="Gondorian Bowmen" id="82ea-2b86-df50-3f54" hidden="false" import="true" targetId="71ca-be65-5023-e448" type="selectionEntry"/>
+    <entryLink name="Gondorian Cavalry" id="56f5-873e-3800-a34b" hidden="false" import="true" targetId="d7b2-c7f2-f87f-3603" type="selectionEntry"/>
+    <entryLink name="Gondorian Infantry" id="cb58-577a-9d51-2d68" hidden="false" import="true" targetId="1bfb-c6b2-00de-3bf9" type="selectionEntry"/>
+    <entryLink name="Gondorian Light Cavalry" id="6074-e91a-911c-11d1" hidden="false" import="true" targetId="cbb4-58e0-7966-4a46" type="selectionEntry"/>
+    <entryLink name="Gondorian Militia" id="66c1-22a8-9a6d-b23e" hidden="false" import="true" targetId="a37b-52fb-3747-0c8f" type="selectionEntry"/>
+    <entryLink name="Gondorian Spearmen" id="5ebf-a26b-fcc1-5e9b" hidden="false" import="true" targetId="0405-534b-2628-fc13" type="selectionEntry"/>
+    <entryLink name="Hero" id="73fe-095c-4416-e80f" hidden="false" import="true" targetId="6355-2139-a7ff-7a8d" type="selectionEntry"/>
+    <entryLink name="Ithilien Rangers" id="25b6-e29f-a15f-af43" hidden="false" import="true" targetId="0e29-f8fe-a495-ce28" type="selectionEntry"/>
+    <entryLink name="Knights of Dol Amroth" id="c297-e378-e664-0bd9" hidden="false" import="true" targetId="f497-7471-3446-476e" type="selectionEntry"/>
+    <entryLink name="Ballista" id="0962-e87e-33b3-bb11" hidden="false" import="true" targetId="d82c-f5f1-0967-0a04" type="selectionEntry"/>
+    <entryLink name="Pikemen" id="1fab-b99c-3e95-7ae9" hidden="false" import="true" targetId="f8f4-4bed-c153-7355" type="selectionEntry"/>
+    <entryLink name="Field Trebuchet" id="83d9-5496-24e7-25d1" hidden="false" import="true" targetId="3086-2c51-ec89-d1e5" type="selectionEntry"/>
+    <entryLink name="Axemen of Lossarnach" id="e3d5-c5f7-1dd5-a05d" hidden="false" import="true" targetId="c927-05f9-5c67-b6a5" type="selectionEntry"/>
+    <entryLink name="Clansmen of Lamedon" id="834b-33c8-4526-acf3" hidden="false" import="true" targetId="1cb7-967b-9b0c-eea2" type="selectionEntry"/>
+    <entryLink name="Pikemen of Dol Amroth" id="1018-4b1d-b5b2-cd98" hidden="false" import="true" targetId="57eb-020f-89d7-5f1b" type="selectionEntry"/>
+    <entryLink name="Greenvale Archers" id="0ad5-d90a-dba9-b88e" hidden="false" import="true" targetId="5aa4-434d-f2b8-abf9" type="selectionEntry"/>
+  </entryLinks>
+  <sharedProfiles>
+    <profile name="Pikemen" id="5f90-b8cc-37c8-7c2a" hidden="false" typeId="a5d3-6ea8-6425-5123" typeName="Ability">
+      <characteristics>
+        <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">Pikemen can not enter dense terrain (even partially). They still may be in a defended position on higher ground or behind a low obstacle as usual, but can only claim defended status when fighting to the front.
+
+
+
+
+An enemy does not receive charge bonuses when charging Pikemen in the front, nor do Pikemen receive any charge bonus themselves.
+
+
+
+
+
+
+A Pikemen stand cannot support or be supported by other infantry - only by other Pikemen stands. In all other respects they count as infantry (movement/pursuit etc.).</characteristic>
+      </characteristics>
+    </profile>
+  </sharedProfiles>
+  <sharedRules>
+    <rule name="Shieldwall" id="680f-f086-2048-28e1" hidden="false">
+      <description>The unit must pass a successful command roll to form into a shieldwall (with Command modifiers applied for orders already issued in the current turn). All attacks to the front edge of a shieldwall have a -1 to Hit penalty (5+). If a unit in a shieldwall moves, all bonuses are lost, and the unit must again pass a Command roll to form the shieldwall.</description>
+    </rule>
+    <rule name="Brace" id="cb95-fd3d-c914-72e7" hidden="false">
+      <description>The unit must pass a successful command roll to brace (with Command modifiers applied for orders already issued in the current turn). Cavalry charging a braced unit have a -1 attack modifier in the combat phase. If a braced unit moves, they are no longer braced, and the unit must again pass a Command roll to brace. A unit cannot form a Shieldwall and be braced at the same time.</description>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="2bc6-a5e8-b715-256f" childName="Show Homebrew" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </rule>
+  </sharedRules>
   <sharedSelectionEntries>
-    <selectionEntry type="unit" import="true" name="Citadel Guard" hidden="false" id="f36e-4a74-aede-d3c1">
+    <selectionEntry name="Citadel Guard" id="f36e-4a74-aede-d3c1" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Infantry" id="e843-2a9b-6960-3ba8" hidden="false" primary="true" targetId="5e38-77df-81d0-6399"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="b35c-3d46-e5cf-0d22" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="1"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="75"/>
       </costs>
-      <categoryLinks>
-        <categoryLink name="Infantry" hidden="false" id="e843-2a9b-6960-3ba8" targetId="5e38-77df-81d0-6399" primary="true"/>
-      </categoryLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="b35c-3d46-e5cf-0d22" includeChildSelections="true"/>
-      </constraints>
+      <entryLinks>
+        <entryLink name="Brace" id="7d89-28a3-0053-ae30" hidden="false" import="true" targetId="89f2-0839-9901-d14c" type="selectionEntry"/>
+        <entryLink name="Siege Upgrades" id="0048-464f-82de-5d0a" hidden="false" import="true" targetId="be2d-be4e-b1fe-b35a" type="selectionEntryGroup"/>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Shieldwall" id="a8cc-25cd-fb08-2441" hidden="false" targetId="680f-f086-2048-28e1" type="rule"/>
+      </infoLinks>
       <profiles>
-        <profile name="Citadel Guard" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="fceb-f483-118b-c351">
+        <profile name="Citadel Guard" id="fceb-f483-118b-c351" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">4</characteristic>
@@ -22,39 +86,38 @@
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
         </profile>
-        <profile name="Citadel Guard" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="9c4e-4791-7981-ef59">
+        <profile name="Citadel Guard" id="9c4e-4791-7981-ef59" hidden="false" typeId="a5d3-6ea8-6425-5123" typeName="Ability">
           <characteristics>
             <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">The Elite infantry sworn to protect the Steward of Gondor. The Guard can only be fielded if Denethor, Boromir, or Faramir are present for a battle, and only if the battle takes place at Minas Tirith.</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <infoLinks>
-        <infoLink name="Shieldwall" id="a8cc-25cd-fb08-2441" hidden="false" type="rule" targetId="680f-f086-2048-28e1"/>
-      </infoLinks>
-      <entryLinks>
-        <entryLink import="true" name="Brace" hidden="false" id="7d89-28a3-0053-ae30" type="selectionEntry" targetId="89f2-0839-9901-d14c"/>
-        <entryLink import="true" name="Siege Upgrades" hidden="false" id="0048-464f-82de-5d0a" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
-      </entryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Gondorian Infantry" hidden="false" id="1bfb-c6b2-00de-3bf9">
+    <selectionEntry name="Gondorian Infantry" id="1bfb-c6b2-00de-3bf9" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Infantry" id="4c69-909b-f5bf-59df" hidden="false" primary="true" targetId="5e38-77df-81d0-6399"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="a548-6b7b-afb6-c54a" automatic="false" field="selections" includeChildSelections="true" negative="false" scope="force" shared="true" type="min" value="0"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="60"/>
       </costs>
-      <categoryLinks>
-        <categoryLink name="Infantry" hidden="false" id="4c69-909b-f5bf-59df" targetId="5e38-77df-81d0-6399" primary="true"/>
-      </categoryLinks>
-      <constraints>
-        <constraint type="min" value="0" field="selections" scope="force" shared="true" id="a548-6b7b-afb6-c54a" automatic="false" negative="false" includeChildSelections="true"/>
-      </constraints>
+      <entryLinks>
+        <entryLink name="Siege Upgrades" id="be95-e38a-a5ec-f04f" hidden="false" import="true" targetId="be2d-be4e-b1fe-b35a" type="selectionEntryGroup"/>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Shieldwall" id="139a-4730-ad56-2dec" hidden="false" targetId="680f-f086-2048-28e1" type="rule"/>
+      </infoLinks>
       <modifiers>
-        <modifier type="increment" value="2" field="a548-6b7b-afb6-c54a">
+        <modifier field="a548-6b7b-afb6-c54a" type="increment" value="2">
           <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
           </repeats>
         </modifier>
       </modifiers>
       <profiles>
-        <profile name="Gondorian Infantry" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="bedd-ddd0-f78b-650e">
+        <profile name="Gondorian Infantry" id="bedd-ddd0-f78b-650e" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">3</characteristic>
@@ -65,68 +128,29 @@
           </characteristics>
         </profile>
       </profiles>
-      <infoLinks>
-        <infoLink name="Shieldwall" id="139a-4730-ad56-2dec" hidden="false" type="rule" targetId="680f-f086-2048-28e1"/>
-      </infoLinks>
-      <entryLinks>
-        <entryLink import="true" name="Siege Upgrades" hidden="false" id="be95-e38a-a5ec-f04f" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
-      </entryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Gondorian Spearmen" hidden="false" id="0405-534b-2628-fc13">
+    <selectionEntry name="Gondorian Spearmen" id="0405-534b-2628-fc13" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Infantry" id="8f34-5c06-7081-61cf" hidden="false" primary="true" targetId="5e38-77df-81d0-6399"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="a2fc-fb57-3c07-232a" automatic="false" field="selections" includeChildSelections="true" negative="false" scope="force" shared="true" type="min" value="0"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="45"/>
       </costs>
-      <categoryLinks>
-        <categoryLink name="Infantry" hidden="false" id="8f34-5c06-7081-61cf" targetId="5e38-77df-81d0-6399" primary="true"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Shieldwall" hidden="false" id="ea4b-5a2a-d631-f4ee">
-          <costs>
-            <cost name="pts" typeId="2085-9b6f-c588-0723" value="15"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Shieldwall" id="9d62-8ddc-f9be-d6f6" hidden="false" type="rule" targetId="680f-f086-2048-28e1"/>
-          </infoLinks>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bd68-622b-9f58-ae23"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="lessThan" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <modifiers>
-                <modifier type="decrement" value="1" field="1b25-0ce9-c54e-e226" scope="unit" affects="self.entries.recursive.profiles.Unit">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="ea4b-5a2a-d631-f4ee" shared="true" includeChildSelections="true" childName="Shieldwall"/>
-                  </conditions>
-                </modifier>
-                <modifier type="append" value="Shieldwall" field="annotation" scope="unit" affects="self.entries.recursive.profiles.Unit" join=",">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="unit" childId="ea4b-5a2a-d631-f4ee" shared="true" includeChildSelections="true" childName="Shieldwall"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-        </selectionEntry>
-      </selectionEntries>
-      <constraints>
-        <constraint type="min" value="0" field="selections" scope="force" shared="true" id="a2fc-fb57-3c07-232a" automatic="false" negative="false" includeChildSelections="true"/>
-      </constraints>
+      <entryLinks>
+        <entryLink name="Brace" id="8f9e-2ab4-9210-b393" hidden="false" import="true" targetId="89f2-0839-9901-d14c" type="selectionEntry"/>
+      </entryLinks>
       <modifiers>
-        <modifier type="increment" value="2" field="a2fc-fb57-3c07-232a">
+        <modifier field="a2fc-fb57-3c07-232a" type="increment" value="2">
           <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
           </repeats>
         </modifier>
       </modifiers>
       <profiles>
-        <profile name="Gondorian Spearmen" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="95a1-3abf-8ed4-1245">
+        <profile name="Gondorian Spearmen" id="95a1-3abf-8ed4-1245" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">3</characteristic>
@@ -136,38 +160,73 @@
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
           <modifiers>
-            <modifier type="decrement" value="1" field="1b25-0ce9-c54e-e226">
+            <modifier field="1b25-0ce9-c54e-e226" type="decrement" value="1">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="unit" childId="ea4b-5a2a-d631-f4ee" shared="true" childName="ea4b-5a2a-d631-f4ee"/>
+                <condition childId="ea4b-5a2a-d631-f4ee" childName="ea4b-5a2a-d631-f4ee" field="selections" scope="unit" shared="true" type="atLeast" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
         </profile>
       </profiles>
-      <entryLinks>
-        <entryLink import="true" name="Brace" hidden="false" id="8f9e-2ab4-9210-b393" type="selectionEntry" targetId="89f2-0839-9901-d14c"/>
-        <entryLink import="true" name="Siege Upgrades" hidden="false" id="5bb0-279f-2845-5c79" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
-      </entryLinks>
+      <selectionEntries>
+        <selectionEntry name="Shieldwall" id="ea4b-5a2a-d631-f4ee" hidden="false" import="true" type="upgrade">
+          <constraints>
+            <constraint id="bd68-622b-9f58-ae23" field="selections" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="2085-9b6f-c588-0723" value="15"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Shieldwall" id="9d62-8ddc-f9be-d6f6" hidden="false" targetId="680f-f086-2048-28e1" type="rule"/>
+          </infoLinks>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier affects="self.entries.recursive.profiles.Unit" field="1b25-0ce9-c54e-e226" scope="unit" type="decrement" value="1">
+                  <conditions>
+                    <condition childId="ea4b-5a2a-d631-f4ee" childName="Shieldwall" field="selections" includeChildSelections="true" scope="unit" shared="true" type="atLeast" value="1"/>
+                  </conditions>
+                </modifier>
+                <modifier affects="self.entries.recursive.profiles.Unit" field="annotation" join="," scope="unit" type="append" value="Shieldwall">
+                  <conditions>
+                    <condition childId="ea4b-5a2a-d631-f4ee" childName="Shieldwall" field="selections" includeChildSelections="true" scope="unit" shared="true" type="atLeast" value="1"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <modifiers>
+            <modifier field="hidden" type="set" value="true">
+              <conditions>
+                <condition childId="2bc6-a5e8-b715-256f" childName="Show Homebrew" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Ithilien Rangers" hidden="false" id="0e29-f8fe-a495-ce28">
+    <selectionEntry name="Ithilien Rangers" id="0e29-f8fe-a495-ce28" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Infantry" id="b4cc-0baf-d8b4-789a" hidden="false" primary="true" targetId="5e38-77df-81d0-6399"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="2670-4910-920e-23a2" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="65"/>
       </costs>
-      <categoryLinks>
-        <categoryLink name="Infantry" hidden="false" id="b4cc-0baf-d8b4-789a" targetId="5e38-77df-81d0-6399" primary="true"/>
-      </categoryLinks>
-      <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="2670-4910-920e-23a2" includeChildSelections="true"/>
-      </constraints>
+      <entryLinks>
+        <entryLink name="Siege Upgrades" id="baae-a435-19f2-1fc6" hidden="false" import="true" targetId="be2d-be4e-b1fe-b35a" type="selectionEntryGroup"/>
+      </entryLinks>
       <modifiers>
-        <modifier type="increment" value="2" field="2670-4910-920e-23a2">
+        <modifier field="2670-4910-920e-23a2" type="increment" value="2">
           <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
           </repeats>
         </modifier>
       </modifiers>
       <profiles>
-        <profile name="Ithilien Rangers" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="054d-4641-65dc-1145">
+        <profile name="Ithilien Rangers" id="054d-4641-65dc-1145" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">3/1</characteristic>
@@ -177,35 +236,36 @@
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
         </profile>
-        <profile name="Ithilien Rangers" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="6527-0167-6bbf-af26">
+        <profile name="Ithilien Rangers" id="6527-0167-6bbf-af26" hidden="false" typeId="a5d3-6ea8-6425-5123" typeName="Ability">
           <characteristics>
             <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">Ithilien Rangers can see up to 2cm while in forests, and may be positioned 2cm inside forests and still shoot from the forest. In addition, Rangers do not suffer the normal -1 command penalty while in forests.</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <entryLinks>
-        <entryLink import="true" name="Siege Upgrades" hidden="false" id="baae-a435-19f2-1fc6" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
-      </entryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Gondorian Militia" hidden="false" id="a37b-52fb-3747-0c8f">
+    <selectionEntry name="Gondorian Militia" id="a37b-52fb-3747-0c8f" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Infantry" id="2b54-6fce-eaf3-b8d0" hidden="false" primary="true" targetId="5e38-77df-81d0-6399"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="90da-bb53-8ccd-f9a1" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="35"/>
       </costs>
-      <categoryLinks>
-        <categoryLink name="Infantry" hidden="false" id="2b54-6fce-eaf3-b8d0" targetId="5e38-77df-81d0-6399" primary="true"/>
-      </categoryLinks>
-      <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="90da-bb53-8ccd-f9a1" includeChildSelections="true"/>
-      </constraints>
+      <entryLinks>
+        <entryLink name="Brace" id="358a-be69-ee50-43d8" hidden="false" import="true" targetId="89f2-0839-9901-d14c" type="selectionEntry"/>
+        <entryLink name="Siege Upgrades" id="ffda-6ef1-67b2-0c68" hidden="false" import="true" targetId="be2d-be4e-b1fe-b35a" type="selectionEntryGroup"/>
+      </entryLinks>
       <modifiers>
-        <modifier type="increment" value="4" field="90da-bb53-8ccd-f9a1">
+        <modifier field="90da-bb53-8ccd-f9a1" type="increment" value="4">
           <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
           </repeats>
         </modifier>
       </modifiers>
       <profiles>
-        <profile name="Gondorian Militia" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="8574-e7cd-877f-00d0">
+        <profile name="Gondorian Militia" id="8574-e7cd-877f-00d0" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">3</characteristic>
@@ -216,30 +276,29 @@
           </characteristics>
         </profile>
       </profiles>
-      <entryLinks>
-        <entryLink import="true" name="Brace" hidden="false" id="358a-be69-ee50-43d8" type="selectionEntry" targetId="89f2-0839-9901-d14c"/>
-        <entryLink import="true" name="Siege Upgrades" hidden="false" id="ffda-6ef1-67b2-0c68" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
-      </entryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Gondorian Bowmen" hidden="false" id="71ca-be65-5023-e448">
+    <selectionEntry name="Gondorian Bowmen" id="71ca-be65-5023-e448" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Infantry" id="4e9a-7b15-52f0-35d3" hidden="false" primary="true" targetId="5e38-77df-81d0-6399"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="182f-43d5-e634-620e" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="55"/>
       </costs>
-      <categoryLinks>
-        <categoryLink name="Infantry" hidden="false" id="4e9a-7b15-52f0-35d3" targetId="5e38-77df-81d0-6399" primary="true"/>
-      </categoryLinks>
-      <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="182f-43d5-e634-620e" includeChildSelections="true"/>
-      </constraints>
+      <entryLinks>
+        <entryLink name="Siege Upgrades" id="80bb-b906-cdee-32f8" hidden="false" import="true" targetId="be2d-be4e-b1fe-b35a" type="selectionEntryGroup"/>
+      </entryLinks>
       <modifiers>
-        <modifier type="increment" value="4" field="182f-43d5-e634-620e">
+        <modifier field="182f-43d5-e634-620e" type="increment" value="4">
           <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
           </repeats>
         </modifier>
       </modifiers>
       <profiles>
-        <profile name="Gondorian Bowmen" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="ca97-a858-7ca7-1c20">
+        <profile name="Gondorian Bowmen" id="ca97-a858-7ca7-1c20" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">3/1</characteristic>
@@ -250,29 +309,26 @@
           </characteristics>
         </profile>
       </profiles>
-      <entryLinks>
-        <entryLink import="true" name="Siege Upgrades" hidden="false" id="80bb-b906-cdee-32f8" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
-      </entryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Gondorian Light Cavalry" hidden="false" id="cbb4-58e0-7966-4a46">
+    <selectionEntry name="Gondorian Light Cavalry" id="cbb4-58e0-7966-4a46" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Cavalry" id="2125-760b-4d91-3359" hidden="false" primary="true" targetId="6bff-b94d-a54a-8758"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="1676-93a2-34b8-7b92" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="90"/>
       </costs>
-      <categoryLinks>
-        <categoryLink name="Cavalry" hidden="false" id="2125-760b-4d91-3359" targetId="6bff-b94d-a54a-8758" primary="true"/>
-      </categoryLinks>
-      <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="1676-93a2-34b8-7b92" includeChildSelections="true"/>
-      </constraints>
       <modifiers>
-        <modifier type="increment" value="2" field="1676-93a2-34b8-7b92">
+        <modifier field="1676-93a2-34b8-7b92" type="increment" value="2">
           <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
           </repeats>
         </modifier>
       </modifiers>
       <profiles>
-        <profile name="Gondorian Light Cavalry" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="e182-c89f-a726-8e3d">
+        <profile name="Gondorian Light Cavalry" id="e182-c89f-a726-8e3d" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Cavalry</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">3/1</characteristic>
@@ -284,25 +340,25 @@
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Gondorian Cavalry" hidden="false" id="d7b2-c7f2-f87f-3603">
+    <selectionEntry name="Gondorian Cavalry" id="d7b2-c7f2-f87f-3603" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Cavalry" id="0105-6c14-64aa-e5e3" hidden="false" primary="true" targetId="6bff-b94d-a54a-8758"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="2e91-969d-c72c-6ae4" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="90"/>
       </costs>
-      <categoryLinks>
-        <categoryLink name="Cavalry" hidden="false" id="0105-6c14-64aa-e5e3" targetId="6bff-b94d-a54a-8758" primary="true"/>
-      </categoryLinks>
-      <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="2e91-969d-c72c-6ae4" includeChildSelections="true"/>
-      </constraints>
       <modifiers>
-        <modifier type="increment" value="2" field="2e91-969d-c72c-6ae4">
+        <modifier field="2e91-969d-c72c-6ae4" type="increment" value="2">
           <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
           </repeats>
         </modifier>
       </modifiers>
       <profiles>
-        <profile name="Gondorian Cavalry" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="86da-b77e-f0f0-d2b9">
+        <profile name="Gondorian Cavalry" id="86da-b77e-f0f0-d2b9" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Cavalry</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">3</characteristic>
@@ -314,25 +370,25 @@
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Knights of Dol Amroth" hidden="false" id="f497-7471-3446-476e">
+    <selectionEntry name="Knights of Dol Amroth" id="f497-7471-3446-476e" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Cavalry" id="3c5f-7da9-6510-b87c" hidden="false" primary="true" targetId="6bff-b94d-a54a-8758"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="0c74-caca-f565-6fd4" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="125"/>
       </costs>
-      <categoryLinks>
-        <categoryLink name="Cavalry" hidden="false" id="3c5f-7da9-6510-b87c" targetId="6bff-b94d-a54a-8758" primary="true"/>
-      </categoryLinks>
-      <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="0c74-caca-f565-6fd4" includeChildSelections="true"/>
-      </constraints>
       <modifiers>
-        <modifier type="increment" value="2" field="0c74-caca-f565-6fd4">
+        <modifier field="0c74-caca-f565-6fd4" type="increment" value="2">
           <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
           </repeats>
         </modifier>
       </modifiers>
       <profiles>
-        <profile name="Knights of Dol Amroth" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="6114-99de-ed07-143d">
+        <profile name="Knights of Dol Amroth" id="6114-99de-ed07-143d" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Cavalry</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">3</characteristic>
@@ -342,7 +398,7 @@
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
         </profile>
-        <profile name="Knights of Dol Amroth" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="b44b-19de-76b7-9422">
+        <profile name="Knights of Dol Amroth" id="b44b-19de-76b7-9422" hidden="false" typeId="a5d3-6ea8-6425-5123" typeName="Ability">
           <characteristics>
             <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">If this unit is charging against an enemy in the open it receives an additional +1 Attack modifier in the same way as chariots and monsters.
 
@@ -351,18 +407,18 @@ If Imrahil is present for a battle, a single unit of knights may designated as h
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="General" hidden="false" id="f4b5-3015-7864-ae96">
+    <selectionEntry name="General" id="f4b5-3015-7864-ae96" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="General" id="1957-f1ef-e825-4388" hidden="false" primary="true" targetId="bb23-a19b-bd9f-ba61"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="ace0-3910-988f-b5e2" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="1"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="125"/>
       </costs>
-      <categoryLinks>
-        <categoryLink name="General" hidden="false" id="1957-f1ef-e825-4388" targetId="bb23-a19b-bd9f-ba61" primary="true"/>
-      </categoryLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="ace0-3910-988f-b5e2" includeChildSelections="true"/>
-      </constraints>
       <profiles>
-        <profile name="General" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="5eb5-abc2-befe-73f5">
+        <profile name="General" id="5eb5-abc2-befe-73f5" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">General</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">+2</characteristic>
@@ -379,25 +435,25 @@ If Imrahil is present for a battle, a single unit of knights may designated as h
         </rule>
       </rules>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Hero" hidden="false" id="6355-2139-a7ff-7a8d">
+    <selectionEntry name="Hero" id="6355-2139-a7ff-7a8d" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Hero" id="e31d-2529-645b-753a" hidden="false" primary="true" targetId="227b-c83d-cd8c-bd1b"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="be51-9478-c89b-e843" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="80"/>
       </costs>
-      <categoryLinks>
-        <categoryLink name="Hero" hidden="false" id="e31d-2529-645b-753a" targetId="227b-c83d-cd8c-bd1b" primary="true"/>
-      </categoryLinks>
-      <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="be51-9478-c89b-e843" includeChildSelections="true"/>
-      </constraints>
       <modifiers>
-        <modifier type="increment" value="2" field="be51-9478-c89b-e843">
+        <modifier field="be51-9478-c89b-e843" type="increment" value="2">
           <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
           </repeats>
         </modifier>
       </modifiers>
       <profiles>
-        <profile name="Hero" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="5575-5f2c-8758-d5fe">
+        <profile name="Hero" id="5575-5f2c-8758-d5fe" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Hero</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">+1</characteristic>
@@ -409,9 +465,28 @@ If Imrahil is present for a battle, a single unit of knights may designated as h
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Ballista" hidden="false" id="d82c-f5f1-0967-0a04">
+    <selectionEntry name="Ballista" id="d82c-f5f1-0967-0a04" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Artillery" id="6789-3c38-fda8-4a35" hidden="false" primary="true" targetId="ab71-7ddd-db90-f5e5"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="3423-2c40-a417-7d63" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="65"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Bolt Thrower" id="ed3e-a853-8190-2029" hidden="false" targetId="f737-907d-9b29-b48f" type="rule"/>
+      </infoLinks>
+      <modifiers>
+        <modifier field="3423-2c40-a417-7d63" type="increment" value="1">
+          <repeats>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
+          </repeats>
+        </modifier>
+      </modifiers>
       <profiles>
-        <profile name="Ballista" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="cfe6-502b-7e48-8a45">
+        <profile name="Ballista" id="cfe6-502b-7e48-8a45" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Artillery</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">1/2</characteristic>
@@ -422,32 +497,29 @@ If Imrahil is present for a battle, a single unit of knights may designated as h
           </characteristics>
         </profile>
       </profiles>
-      <costs>
-        <cost name="pts" typeId="2085-9b6f-c588-0723" value="65"/>
-      </costs>
+    </selectionEntry>
+    <selectionEntry name="Pikemen" id="f8f4-4bed-c153-7355" hidden="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink name="Artillery" hidden="false" id="6789-3c38-fda8-4a35" targetId="ab71-7ddd-db90-f5e5" primary="true"/>
+        <categoryLink name="Infantry" id="3d14-9a48-afca-a589" hidden="false" primary="true" targetId="5e38-77df-81d0-6399"/>
       </categoryLinks>
-      <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="3423-2c40-a417-7d63" includeChildSelections="true"/>
-      </constraints>
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="50"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Siege Upgrades" id="e51c-48db-b9ed-4e6b" hidden="false" import="true" targetId="be2d-be4e-b1fe-b35a" type="selectionEntryGroup"/>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Pikemen" id="b079-7022-288a-db98" hidden="false" targetId="5f90-b8cc-37c8-7c2a" type="profile"/>
+      </infoLinks>
       <modifiers>
-        <modifier type="increment" value="1" field="3423-2c40-a417-7d63">
-          <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
-          </repeats>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="2bc6-a5e8-b715-256f" childName="Show Homebrew" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+          </conditions>
         </modifier>
       </modifiers>
-      <infoLinks>
-        <infoLink name="Bolt Thrower" id="ed3e-a853-8190-2029" hidden="false" type="rule" targetId="f737-907d-9b29-b48f"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Pikemen" hidden="false" id="f8f4-4bed-c153-7355">
-      <categoryLinks>
-        <categoryLink name="Infantry" hidden="false" id="3d14-9a48-afca-a589" targetId="5e38-77df-81d0-6399" primary="true"/>
-      </categoryLinks>
       <profiles>
-        <profile name="Pikemen" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="b463-5789-b04a-91a6">
+        <profile name="Pikemen" id="b463-5789-b04a-91a6" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">3</characteristic>
@@ -458,67 +530,60 @@ If Imrahil is present for a battle, a single unit of knights may designated as h
           </characteristics>
         </profile>
       </profiles>
-      <costs>
-        <cost name="pts" typeId="2085-9b6f-c588-0723" value="50"/>
-      </costs>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <entryLinks>
-        <entryLink import="true" name="Siege Upgrades" hidden="false" id="e51c-48db-b9ed-4e6b" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
-      </entryLinks>
-      <infoLinks>
-        <infoLink targetId="5f90-b8cc-37c8-7c2a" id="b079-7022-288a-db98" type="profile" name="Pikemen" hidden="false"/>
-      </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Brace" hidden="false" id="89f2-0839-9901-d14c">
+    <selectionEntry name="Brace" id="89f2-0839-9901-d14c" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="2225-417d-3b1c-cd07" field="selections" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="5"/>
       </costs>
       <infoLinks>
-        <infoLink name="Brace" id="fc2c-4e33-e20b-cd66" hidden="false" type="rule" targetId="cb95-fd3d-c914-72e7"/>
+        <infoLink name="Brace" id="fc2c-4e33-e20b-cd66" hidden="false" targetId="cb95-fd3d-c914-72e7" type="rule"/>
       </infoLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2225-417d-3b1c-cd07"/>
-      </constraints>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier type="append" value="Brace" field="annotation" scope="unit" affects="self.entries.recursive.profiles.Unit" join=",">
+            <modifier affects="self.entries.recursive.profiles.Unit" field="annotation" join="," scope="unit" type="append" value="Brace">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="unit" childId="89f2-0839-9901-d14c" shared="true" includeChildSelections="true" childName="Brace"/>
+                <condition childId="89f2-0839-9901-d14c" childName="Brace" field="selections" includeChildSelections="true" scope="unit" shared="true" type="atLeast" value="1"/>
               </conditions>
             </modifier>
           </modifiers>
         </modifierGroup>
       </modifierGroups>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Field Trebuchet" hidden="false" id="3086-2c51-ec89-d1e5">
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
+        <modifier field="hidden" type="set" value="true">
           <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="true" includeChildForces="true"/>
+            <condition childId="2bc6-a5e8-b715-256f" childName="Show Homebrew" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
           </conditions>
         </modifier>
-        <modifier type="increment" value="1" field="b773-6784-f585-86ab">
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry name="Field Trebuchet" id="3086-2c51-ec89-d1e5" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Artillery" id="0407-9d95-a80e-32ba" hidden="false" primary="true" targetId="ab71-7ddd-db90-f5e5"/>
+      </categoryLinks>
+      <constraints>
+        <constraint id="b773-6784-f585-86ab" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="0"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="100"/>
+      </costs>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="2bc6-a5e8-b715-256f" childName="Show Homebrew" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+        <modifier field="b773-6784-f585-86ab" type="increment" value="1">
           <repeats>
-            <repeat value="1000" repeats="1" field="limit::2085-9b6f-c588-0723" scope="roster" childId="any" shared="true" roundUp="true" includeChildSelections="false" includeChildForces="false" percentValue="false"/>
+            <repeat childId="any" field="limit::2085-9b6f-c588-0723" includeChildForces="false" includeChildSelections="false" percentValue="false" repeats="1" roundUp="true" scope="roster" shared="true" value="1000"/>
           </repeats>
         </modifier>
       </modifiers>
       <profiles>
-        <profile name="Field Trebuchet" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="17e4-3c5f-0da6-16d4">
+        <profile name="Field Trebuchet" id="17e4-3c5f-0da6-16d4" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Artillery</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">1/4</characteristic>
@@ -528,7 +593,7 @@ If Imrahil is present for a battle, a single unit of knights may designated as h
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">1</characteristic>
           </characteristics>
         </profile>
-        <profile name="Field Trebuchet" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="9c10-8294-ce9b-e5b3">
+        <profile name="Field Trebuchet" id="9c10-8294-ce9b-e5b3" hidden="false" typeId="a5d3-6ea8-6425-5123" typeName="Ability">
           <characteristics>
             <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">To represent that the Trebuchet is such a bulky warmachine, which takes time to assemble and disassemble, the Trebuchets can move but cannot shoot in the turn it moved.
 
@@ -549,68 +614,50 @@ Shooting Blind: If there is no target in sight a Trebuchet may instead shoot at 
           </characteristics>
         </profile>
       </profiles>
+    </selectionEntry>
+    <selectionEntry name="Greenvale Archers" id="5aa4-434d-f2b8-abf9" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Infantry" id="2889-bf08-f274-bb17" hidden="false" primary="true" targetId="5e38-77df-81d0-6399"/>
+      </categoryLinks>
       <costs>
-        <cost name="pts" typeId="2085-9b6f-c588-0723" value="100"/>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="65"/>
       </costs>
-      <categoryLinks>
-        <categoryLink name="Artillery" hidden="false" id="0407-9d95-a80e-32ba" targetId="ab71-7ddd-db90-f5e5" primary="true"/>
-      </categoryLinks>
-      <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="b773-6784-f585-86ab" includeChildSelections="true"/>
-      </constraints>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Greenvale Archers" hidden="false" id="5aa4-434d-f2b8-abf9">
-      <profiles>
-        <profile name="Greenvale Archers" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="1ec8-b7b9-a83e-9a09">
-          <characteristics>
-            <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
-            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6"/>
-            <characteristic name="Hits" typeId="f51a-b726-0fbe-0569"/>
-            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">0</characteristic>
-            <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc"/>
-            <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27"/>
-          </characteristics>
-        </profile>
-      </profiles>
-      <categoryLinks>
-        <categoryLink name="Infantry" hidden="false" id="2889-bf08-f274-bb17" targetId="5e38-77df-81d0-6399" primary="true"/>
-      </categoryLinks>
       <entryLinks>
-        <entryLink import="true" name="Siege Upgrades" hidden="false" id="6372-4318-b932-7210" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
+        <entryLink name="Siege Upgrades" id="6372-4318-b932-7210" hidden="false" import="true" targetId="be2d-be4e-b1fe-b35a" type="selectionEntryGroup"/>
       </entryLinks>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Pikemen of Dol Amroth" hidden="false" id="57eb-020f-89d7-5f1b">
       <profiles>
-        <profile name="Pikemen of Dol Amroth" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="e9b3-f6f5-15dc-5ec7">
+        <profile name="Greenvale Archers" id="1ec8-b7b9-a83e-9a09" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
-            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">3</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">3/1</characteristic>
             <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">3</characteristic>
-            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">5+</characteristic>
+            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">6+</characteristic>
             <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">-</characteristic>
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
         </profile>
+        <profile name="Greenvale Archers" id="79c8-8160-cc0f-fe99" hidden="false" typeId="a5d3-6ea8-6425-5123" typeName="Ability">
+          <characteristics>
+            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">This unit can shoot at up to 45cm</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
+    </selectionEntry>
+    <selectionEntry name="Pikemen of Dol Amroth" id="57eb-020f-89d7-5f1b" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Infantry" id="88bd-30ee-c6db-06e7" hidden="false" primary="true" targetId="5e38-77df-81d0-6399"/>
+      </categoryLinks>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="75"/>
       </costs>
-      <infoLinks>
-        <infoLink name="Pikemen" id="3f86-a401-a34f-4209" hidden="false" type="profile" targetId="5f90-b8cc-37c8-7c2a"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink name="Infantry" hidden="false" id="88bd-30ee-c6db-06e7" targetId="5e38-77df-81d0-6399" primary="true"/>
-      </categoryLinks>
       <entryLinks>
-        <entryLink import="true" name="Siege Upgrades" hidden="false" id="e570-be48-8e57-352a" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
+        <entryLink name="Siege Upgrades" id="e570-be48-8e57-352a" hidden="false" import="true" targetId="be2d-be4e-b1fe-b35a" type="selectionEntryGroup"/>
       </entryLinks>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Axemen of Lossarnach" hidden="false" id="c927-05f9-5c67-b6a5">
-      <categoryLinks>
-        <categoryLink name="Infantry" hidden="false" id="f8ed-4175-1bb1-6867" targetId="5e38-77df-81d0-6399" primary="true"/>
-      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Pikemen" id="3f86-a401-a34f-4209" hidden="false" targetId="5f90-b8cc-37c8-7c2a" type="profile"/>
+      </infoLinks>
       <profiles>
-        <profile name="Axemen of Lossarnach" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="95a3-1317-5bbd-df94">
+        <profile name="Pikemen of Dol Amroth" id="e9b3-f6f5-15dc-5ec7" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">3</characteristic>
@@ -621,22 +668,53 @@ Shooting Blind: If there is no target in sight a Trebuchet may instead shoot at 
           </characteristics>
         </profile>
       </profiles>
+    </selectionEntry>
+    <selectionEntry name="Axemen of Lossarnach" id="c927-05f9-5c67-b6a5" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Infantry" id="f8ed-4175-1bb1-6867" hidden="false" primary="true" targetId="5e38-77df-81d0-6399"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="70"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Brace" id="35a9-8926-ecfe-a665" hidden="false" import="true" targetId="89f2-0839-9901-d14c" type="selectionEntry">
+          <constraints>
+            <constraint id="8756-b7ad-3a1f-b403-min" field="selections" scope="parent" shared="true" type="min" value="1"/>
+            <constraint id="8756-b7ad-3a1f-b403-max" field="selections" scope="parent" shared="true" type="max" value="1"/>
+          </constraints>
+        </entryLink>
+        <entryLink name="Siege Upgrades" id="041d-935a-23f7-4fec" hidden="false" import="true" targetId="be2d-be4e-b1fe-b35a" type="selectionEntryGroup"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Axemen of Lossarnach" id="95a3-1317-5bbd-df94" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
+          <characteristics>
+            <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">3</characteristic>
+            <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">3</characteristic>
+            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">5+</characteristic>
+            <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">-</characteristic>
+            <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Axemen of Lossarnach" id="76e9-29e4-2a1f-b984" hidden="false" typeId="a5d3-6ea8-6425-5123" typeName="Ability">
+          <characteristics>
+            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">When making close combat attack worsen the armour of the target by 1.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Clansmen of Lamedon" id="1cb7-967b-9b0c-eea2" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Infantry" id="b4c9-ef43-615b-0acb" hidden="false" primary="true" targetId="5e38-77df-81d0-6399"/>
+      </categoryLinks>
       <costs>
         <cost name="pts" typeId="2085-9b6f-c588-0723" value="60"/>
       </costs>
       <entryLinks>
-        <entryLink import="true" name="Brace" hidden="false" id="35a9-8926-ecfe-a665" type="selectionEntry" targetId="89f2-0839-9901-d14c">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8756-b7ad-3a1f-b403-min"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8756-b7ad-3a1f-b403-max"/>
-          </constraints>
-        </entryLink>
-        <entryLink import="true" name="Siege Upgrades" hidden="false" id="041d-935a-23f7-4fec" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
+        <entryLink name="Siege Upgrades" id="1e6d-3b4a-9e14-8319" hidden="false" import="true" targetId="be2d-be4e-b1fe-b35a" type="selectionEntryGroup"/>
       </entryLinks>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Clansmen of Lamedon" hidden="false" id="1cb7-967b-9b0c-eea2">
       <profiles>
-        <profile name="Clansmen of Lamedon" typeId="939e-319b-8950-616f" typeName="Unit" hidden="false" id="b295-a3eb-9939-0e9f">
+        <profile name="Clansmen of Lamedon" id="b295-a3eb-9939-0e9f" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
           <characteristics>
             <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
             <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">3</characteristic>
@@ -646,78 +724,12 @@ Shooting Blind: If there is no target in sight a Trebuchet may instead shoot at 
             <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
           </characteristics>
         </profile>
-        <profile name="Clansmen of Lamedon" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="201b-9658-374f-bb31">
+        <profile name="Clansmen of Lamedon" id="201b-9658-374f-bb31" hidden="false" typeId="a5d3-6ea8-6425-5123" typeName="Ability">
           <characteristics>
             <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">Clansmen of Lamedon get +1 Attack for the first round of combat when they charge.</characteristic>
           </characteristics>
         </profile>
       </profiles>
-      <categoryLinks>
-        <categoryLink name="Infantry" hidden="false" id="b4c9-ef43-615b-0acb" targetId="5e38-77df-81d0-6399" primary="true"/>
-      </categoryLinks>
-      <costs>
-        <cost name="pts" typeId="2085-9b6f-c588-0723" value="60"/>
-      </costs>
-      <entryLinks>
-        <entryLink import="true" name="Siege Upgrades" hidden="false" id="1e6d-3b4a-9e14-8319" type="selectionEntryGroup" targetId="be2d-be4e-b1fe-b35a"/>
-      </entryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
-  <entryLinks>
-    <entryLink import="true" name="Citadel Guard" hidden="false" id="df8d-96a5-ae2d-1bd6" type="selectionEntry" targetId="f36e-4a74-aede-d3c1"/>
-    <entryLink import="true" name="General" hidden="false" id="d8e3-f796-28c0-fe4b" type="selectionEntry" targetId="f4b5-3015-7864-ae96"/>
-    <entryLink import="true" name="Gondorian Bowmen" hidden="false" id="82ea-2b86-df50-3f54" type="selectionEntry" targetId="71ca-be65-5023-e448"/>
-    <entryLink import="true" name="Gondorian Cavalry" hidden="false" id="56f5-873e-3800-a34b" type="selectionEntry" targetId="d7b2-c7f2-f87f-3603"/>
-    <entryLink import="true" name="Gondorian Infantry" hidden="false" id="cb58-577a-9d51-2d68" type="selectionEntry" targetId="1bfb-c6b2-00de-3bf9"/>
-    <entryLink import="true" name="Gondorian Light Cavalry" hidden="false" id="6074-e91a-911c-11d1" type="selectionEntry" targetId="cbb4-58e0-7966-4a46"/>
-    <entryLink import="true" name="Gondorian Militia" hidden="false" id="66c1-22a8-9a6d-b23e" type="selectionEntry" targetId="a37b-52fb-3747-0c8f"/>
-    <entryLink import="true" name="Gondorian Spearmen" hidden="false" id="5ebf-a26b-fcc1-5e9b" type="selectionEntry" targetId="0405-534b-2628-fc13"/>
-    <entryLink import="true" name="Hero" hidden="false" id="73fe-095c-4416-e80f" type="selectionEntry" targetId="6355-2139-a7ff-7a8d"/>
-    <entryLink import="true" name="Ithilien Rangers" hidden="false" id="25b6-e29f-a15f-af43" type="selectionEntry" targetId="0e29-f8fe-a495-ce28"/>
-    <entryLink import="true" name="Knights of Dol Amroth" hidden="false" id="c297-e378-e664-0bd9" type="selectionEntry" targetId="f497-7471-3446-476e"/>
-    <entryLink import="true" name="Ballista" hidden="false" id="0962-e87e-33b3-bb11" type="selectionEntry" targetId="d82c-f5f1-0967-0a04"/>
-    <entryLink import="true" name="Pikemen" hidden="false" id="1fab-b99c-3e95-7ae9" type="selectionEntry" targetId="f8f4-4bed-c153-7355"/>
-    <entryLink import="true" name="Field Trebuchet" hidden="false" id="83d9-5496-24e7-25d1" type="selectionEntry" targetId="3086-2c51-ec89-d1e5"/>
-    <entryLink import="true" name="Axemen of Lossarnach" hidden="false" id="e3d5-c5f7-1dd5-a05d" type="selectionEntry" targetId="c927-05f9-5c67-b6a5"/>
-    <entryLink import="true" name="Clansmen of Lamedon" hidden="false" id="834b-33c8-4526-acf3" type="selectionEntry" targetId="1cb7-967b-9b0c-eea2"/>
-    <entryLink import="true" name="Pikemen of Dol Amroth" hidden="false" id="1018-4b1d-b5b2-cd98" type="selectionEntry" targetId="57eb-020f-89d7-5f1b"/>
-    <entryLink import="true" name="Greenvale Archers" hidden="false" id="0ad5-d90a-dba9-b88e" type="selectionEntry" targetId="5aa4-434d-f2b8-abf9"/>
-  </entryLinks>
-  <sharedRules>
-    <rule name="Shieldwall" id="680f-f086-2048-28e1" hidden="false">
-      <description>The unit must pass a successful command roll to form into a shieldwall (with Command modifiers applied for orders already issued in the current turn). All attacks to the front edge of a shieldwall have a -1 to Hit penalty (5+). If a unit in a shieldwall moves, all bonuses are lost, and the unit must again pass a Command roll to form the shieldwall.</description>
-    </rule>
-    <rule name="Brace" id="cb95-fd3d-c914-72e7" hidden="false">
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="roster" childId="2bc6-a5e8-b715-256f" shared="true" childName="Show Homebrew" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <description>The unit must pass a successful command roll to brace (with Command modifiers applied for orders already issued in the current turn). Cavalry charging a braced unit have a -1 attack modifier in the combat phase. If a braced unit moves, they are no longer braced, and the unit must again pass a Command roll to brace. A unit cannot form a Shieldwall and be braced at the same time.</description>
-    </rule>
-  </sharedRules>
-  <catalogueLinks>
-    <catalogueLink type="catalogue" name="Siege Machines" id="8977-08ca-64c5-a94d" targetId="d49a-44f1-810f-4d9f" importRootEntries="true"/>
-  </catalogueLinks>
-  <sharedProfiles>
-    <profile name="Pikemen" typeId="a5d3-6ea8-6425-5123" typeName="Ability" hidden="false" id="5f90-b8cc-37c8-7c2a">
-      <characteristics>
-        <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">Pikemen can not enter dense terrain (even partially). They still may be in a defended position on higher ground or behind a low obstacle as usual, but can only claim defended status when fighting to the front.
-
-
-
-
-An enemy does not receive charge bonuses when charging Pikemen in the front, nor do Pikemen receive any charge bonus themselves.
-
-
-
-
-
-
-A Pikemen stand cannot support or be supported by other infantry - only by other Pikemen stands. In all other respects they count as infantry (movement/pursuit etc.).</characteristic>
-      </characteristics>
-    </profile>
-  </sharedProfiles>
 </catalogue>
