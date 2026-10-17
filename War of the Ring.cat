@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue name="War of the Ring" id="a85a-9f67-08e2-d9e9" battleScribeVersion="2.03" gameSystemId="sys-3065-0af8-9913-4a4c" gameSystemRevision="1" library="true" revision="1" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue name="War of the Ring" id="a85a-9f67-08e2-d9e9" battleScribeVersion="2.03" gameSystemId="sys-3065-0af8-9913-4a4c" gameSystemRevision="1" library="true" revision="2" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication name="War of the Ring" id="2fdc-4bd3-bba1-56b9" hidden="false" publisher="v1.5"/>
   </publications>
+  <rules>
+    <rule name="Brace" id="cb95-fd3d-c914-72e7" hidden="false">
+      <description>The unit must pass a successful command roll to brace (with Command modifiers applied for orders already issued in the current turn). Cavalry charging a braced unit have a -1 attack modifier in the combat phase. If a braced unit moves, they are no longer braced, and the unit must again pass a Command roll to brace. A unit cannot form a Shieldwall and be braced at the same time.</description>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="2bc6-a5e8-b715-256f" childName="Show Homebrew" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </rule>
+  </rules>
   <sharedRules>
     <rule name="Warband" id="0d1c-680a-f38d-6e29" hidden="false" publicationId="2fdc-4bd3-bba1-56b9">
       <description>If all units of a brigade are classified as Warband and the brigade consists of at least 3 units, the brigade&apos;s command value is increased by 1.
@@ -58,5 +70,39 @@ Wargs must always pursue retreating enemy where possible and must advance if th
 
 Note that these rules apply only to Warg units – not to characters that ride Wargs.</description>
     </rule>
+    <rule name="Shieldwall" id="680f-f086-2048-28e1" hidden="false">
+      <description>The unit must pass a successful command roll to form into a shieldwall (with Command modifiers applied for orders already issued in the current turn). All attacks to the front edge of a shieldwall have a -1 to Hit penalty (5+). If a unit in a shieldwall moves, all bonuses are lost, and the unit must again pass a Command roll to form the shieldwall.</description>
+    </rule>
   </sharedRules>
+  <sharedSelectionEntries>
+    <selectionEntry name="Brace" id="89f2-0839-9901-d14c" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="2225-417d-3b1c-cd07" field="selections" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="5"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Brace" id="fc2c-4e33-e20b-cd66" hidden="false" targetId="cb95-fd3d-c914-72e7" type="rule"/>
+      </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier affects="self.entries.recursive.profiles.Unit" field="annotation" join="," scope="unit" type="append" value="Brace">
+              <conditions>
+                <condition childId="89f2-0839-9901-d14c" childName="Brace" field="selections" includeChildSelections="true" scope="unit" shared="true" type="atLeast" value="1"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+      <modifiers>
+        <modifier field="hidden" type="set" value="true">
+          <conditions>
+            <condition childId="2bc6-a5e8-b715-256f" childName="Show Homebrew" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+  </sharedSelectionEntries>
 </catalogue>

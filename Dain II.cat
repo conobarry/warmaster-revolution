@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue name="Dain II" id="fbf5-eb74-eb2a-76a0" battleScribeVersion="2.03" gameSystemId="sys-3065-0af8-9913-4a4c" gameSystemRevision="1" library="false" revision="1" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <catalogueLinks>
+    <catalogueLink name="Siege Machines" id="f100-98e8-39d0-c106" targetId="d49a-44f1-810f-4d9f" type="catalogue"/>
+    <catalogueLink name="War of the Ring" id="fcbe-34de-ad33-97c0" targetId="a85a-9f67-08e2-d9e9" type="catalogue"/>
+  </catalogueLinks>
+  <entryLinks>
+    <entryLink name="Dwarf Axemen" id="451d-ccd8-2934-dba2" hidden="false" import="true" targetId="81dc-c15e-14eb-3978" type="selectionEntry"/>
+    <entryLink name="Dwarf Crossbows" id="2330-e2fc-f2d9-6b70" hidden="false" import="true" targetId="9532-b124-b3c0-b8af" type="selectionEntry"/>
+    <entryLink name="Dwarf General" id="acf1-3cd6-2cb0-41ce" hidden="false" import="true" targetId="e85b-5b41-51ba-265f" type="selectionEntry"/>
+    <entryLink name="Dwarf Goatriders" id="6b77-cd14-e336-8db8" hidden="false" import="true" targetId="3656-fa44-adb2-20a5" type="selectionEntry"/>
+    <entryLink name="Dwarf Greataxes" id="6aa3-c1fc-a9a7-f2a6" hidden="false" import="true" targetId="f7ac-fe97-65c9-23d2" type="selectionEntry"/>
+    <entryLink name="Dwarf Hero" id="a4b6-3d01-a05d-300c" hidden="false" import="true" targetId="8686-3f28-b06e-731a" type="selectionEntry"/>
+    <entryLink name="Dwarf Spearmen" id="7263-e89c-98ea-5321" hidden="false" import="true" targetId="1727-c486-8fe5-346c" type="selectionEntry"/>
+  </entryLinks>
+  <sharedSelectionEntries>
+    <selectionEntry name="Dwarf Axemen" id="81dc-c15e-14eb-3978" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Infantry" id="81af-e0ff-ecf3-4c97" hidden="false" primary="true" targetId="5e38-77df-81d0-6399"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="110"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Dwarf Axemen Charge" id="7ac5-4585-c2cd-ecdb" hidden="false" import="true" targetId="563f-a518-a9f5-276f" type="selectionEntry"/>
+        <entryLink name="Siege Upgrades" id="31a7-03e8-c1cf-10e7" hidden="false" import="true" targetId="be2d-be4e-b1fe-b35a" type="selectionEntryGroup"/>
+        <entryLink name="Bodyguard" id="c00e-7ef7-f534-fdba" hidden="false" import="true" targetId="9c0e-8955-fa70-7642" type="selectionEntry"/>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Shieldwall" id="eb5a-b44a-663d-1b87" hidden="false" targetId="0021-4af1-e9ee-f6ec" type="rule"/>
+      </infoLinks>
+      <profiles>
+        <profile name="Dwarf Axemen" id="ec89-f82f-aabd-d023" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
+          <characteristics>
+            <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">3</characteristic>
+            <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">4</characteristic>
+            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">4+</characteristic>
+            <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">-</characteristic>
+            <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Dwarf Axemen Charge" id="563f-a518-a9f5-276f" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="1137-e259-fd39-abe1" field="selections" scope="parent" shared="true" type="max" value="1"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="15"/>
+      </costs>
+      <profiles>
+        <profile name="Dwarf Axemen Charge" id="5fa3-a453-31c6-395b" hidden="false" typeId="a5d3-6ea8-6425-5123" typeName="Ability">
+          <characteristics>
+            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">Each stand in a Dwarven Axemen unit gains an additional +1 to Hit (hit on 3+) when charging into combat. This bonus is only applied for the first round of combat in an engagement, never for pursuits, or advances.
+
+
+NOTE: This is still an unplaytested rule, increase the cost of any Axe unit by 15 points if this rule is used.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Bodyguard" id="9c0e-8955-fa70-7642" hidden="false" import="true" type="upgrade">
+      <constraints>
+        <constraint id="2e1d-860f-f84c-8f15" field="selections" includeChildSelections="true" scope="force" shared="true" type="max" value="1"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Bodyguard" id="a606-7bd2-d6b0-8f0c" hidden="false" targetId="7ddf-8ea0-fe6d-6a72" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry name="Dwarf Greataxes" id="f7ac-fe97-65c9-23d2" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Infantry" id="3f1d-923f-eeac-58e6" hidden="false" primary="true" targetId="5e38-77df-81d0-6399"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="125"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Dwarf Axemen Charge" id="c853-8be9-c6a7-226b" hidden="false" import="true" targetId="563f-a518-a9f5-276f" type="selectionEntry"/>
+        <entryLink name="Siege Upgrades" id="4ef6-1e3c-16b7-405a" hidden="false" import="true" targetId="be2d-be4e-b1fe-b35a" type="selectionEntryGroup"/>
+        <entryLink name="Bodyguard" id="0264-6556-fa3f-73c6" hidden="false" import="true" targetId="9c0e-8955-fa70-7642" type="selectionEntry"/>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Shieldwall" id="55e3-451f-8c05-14b6" hidden="false" targetId="0021-4af1-e9ee-f6ec" type="rule"/>
+      </infoLinks>
+      <profiles>
+        <profile name="Dwarf Greataxes" id="0c5a-94f2-e74e-034e" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
+          <characteristics>
+            <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">3</characteristic>
+            <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">4</characteristic>
+            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">4+</characteristic>
+            <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">-</characteristic>
+            <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Dwarf Greataxes" id="0b54-781d-9580-ac46" hidden="false" typeId="a5d3-6ea8-6425-5123" typeName="Ability">
+          <characteristics>
+            <characteristic name="Description" typeId="bc69-55f2-6b4e-18e7">When making close combat attack worsen the armour of the target by 1.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Dwarf Crossbows" id="9532-b124-b3c0-b8af" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Infantry" id="bc8d-cf6c-e4ef-c732" hidden="false" primary="true" targetId="5e38-77df-81d0-6399"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="100"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Siege Upgrades" id="a808-51c2-4b9f-e5fc" hidden="false" import="true" targetId="be2d-be4e-b1fe-b35a" type="selectionEntryGroup"/>
+      </entryLinks>
+      <profiles>
+        <profile name="Dwarf Crossbows" id="675b-cf0b-86ff-8559" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
+          <characteristics>
+            <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">3/1</characteristic>
+            <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">4</characteristic>
+            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">5+</characteristic>
+            <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">-</characteristic>
+            <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Dwarf Spearmen" id="1727-c486-8fe5-346c" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Infantry" id="1e24-f768-b24b-54e1" hidden="false" primary="true" targetId="5e38-77df-81d0-6399"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="110"/>
+      </costs>
+      <entryLinks>
+        <entryLink name="Siege Upgrades" id="f395-6588-637f-4217" hidden="false" import="true" targetId="be2d-be4e-b1fe-b35a" type="selectionEntryGroup"/>
+        <entryLink name="Brace" id="84f2-82d1-2cc4-2433" hidden="false" import="true" targetId="89f2-0839-9901-d14c" type="selectionEntry"/>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Shieldwall" id="aa01-7ec8-003c-4f62" hidden="false" targetId="0021-4af1-e9ee-f6ec" type="rule"/>
+      </infoLinks>
+      <profiles>
+        <profile name="Dwarf Spearmen" id="208e-cb91-81ff-c4c8" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
+          <characteristics>
+            <characteristic name="Type" typeId="3087-9431-0004-e975">Infantry</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">3/1</characteristic>
+            <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">4</characteristic>
+            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">4+</characteristic>
+            <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">-</characteristic>
+            <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Dwarf Hero" id="8686-3f28-b06e-731a" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Hero" id="ea20-887f-40e3-622d" hidden="false" primary="true" targetId="227b-c83d-cd8c-bd1b"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="80"/>
+      </costs>
+      <profiles>
+        <profile name="Dwarf Hero" id="a206-bece-3991-af36" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
+          <characteristics>
+            <characteristic name="Type" typeId="3087-9431-0004-e975">General</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">+1</characteristic>
+            <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">-</characteristic>
+            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">-</characteristic>
+            <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">8</characteristic>
+            <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Dwarf General" id="e85b-5b41-51ba-265f" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="General" id="8fa3-fcc6-82e4-d953" hidden="false" primary="true" targetId="bb23-a19b-bd9f-ba61"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="125"/>
+      </costs>
+      <profiles>
+        <profile name="Dwarf General" id="7d9a-ef4e-38e1-a5b3" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
+          <characteristics>
+            <characteristic name="Type" typeId="3087-9431-0004-e975">General</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">+2</characteristic>
+            <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">-</characteristic>
+            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">-</characteristic>
+            <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">9</characteristic>
+            <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry name="Dwarf Goatriders" id="3656-fa44-adb2-20a5" hidden="false" import="true" type="unit">
+      <categoryLinks>
+        <categoryLink name="Cavalry" id="6e04-e0e7-244d-56a4" hidden="false" primary="true" targetId="6bff-b94d-a54a-8758"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="2085-9b6f-c588-0723" value="125"/>
+      </costs>
+      <profiles>
+        <profile name="Dwarf Goatriders" id="d430-5875-b7a1-3535" hidden="false" typeId="939e-319b-8950-616f" typeName="Unit">
+          <characteristics>
+            <characteristic name="Type" typeId="3087-9431-0004-e975">Cavalry</characteristic>
+            <characteristic name="Attacks" typeId="ce3c-e837-0a09-dba6">3</characteristic>
+            <characteristic name="Hits" typeId="f51a-b726-0fbe-0569">4</characteristic>
+            <characteristic name="Armour" typeId="1b25-0ce9-c54e-e226">4+</characteristic>
+            <characteristic name="Command" typeId="73c2-d4e8-04e7-dcbc">-</characteristic>
+            <characteristic name="Unit size" typeId="72b4-6deb-0f8e-7f27">3</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+  </sharedSelectionEntries>
+</catalogue>

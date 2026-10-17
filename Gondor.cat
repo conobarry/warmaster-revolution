@@ -2,6 +2,7 @@
 <catalogue name="Gondor" id="2a94-c33d-4532-52e8" battleScribeVersion="2.03" gameSystemId="sys-3065-0af8-9913-4a4c" gameSystemRevision="1" library="false" revision="3" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink name="Siege Machines" id="8977-08ca-64c5-a94d" importRootEntries="true" targetId="d49a-44f1-810f-4d9f" type="catalogue"/>
+    <catalogueLink name="New Catalogue (link)" id="0398-0b1d-d0ec-15e1" targetId="a85a-9f67-08e2-d9e9" type="catalogue"/>
   </catalogueLinks>
   <entryLinks>
     <entryLink name="Citadel Guard" id="df8d-96a5-ae2d-1bd6" hidden="false" import="true" targetId="f36e-4a74-aede-d3c1" type="selectionEntry"/>
@@ -42,21 +43,6 @@ A Pikemen stand cannot support or be supported by other infantry - only by other
       </characteristics>
     </profile>
   </sharedProfiles>
-  <sharedRules>
-    <rule name="Shieldwall" id="680f-f086-2048-28e1" hidden="false">
-      <description>The unit must pass a successful command roll to form into a shieldwall (with Command modifiers applied for orders already issued in the current turn). All attacks to the front edge of a shieldwall have a -1 to Hit penalty (5+). If a unit in a shieldwall moves, all bonuses are lost, and the unit must again pass a Command roll to form the shieldwall.</description>
-    </rule>
-    <rule name="Brace" id="cb95-fd3d-c914-72e7" hidden="false">
-      <description>The unit must pass a successful command roll to brace (with Command modifiers applied for orders already issued in the current turn). Cavalry charging a braced unit have a -1 attack modifier in the combat phase. If a braced unit moves, they are no longer braced, and the unit must again pass a Command roll to brace. A unit cannot form a Shieldwall and be braced at the same time.</description>
-      <modifiers>
-        <modifier field="hidden" type="set" value="true">
-          <conditions>
-            <condition childId="2bc6-a5e8-b715-256f" childName="Show Homebrew" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </rule>
-  </sharedRules>
   <sharedSelectionEntries>
     <selectionEntry name="Citadel Guard" id="f36e-4a74-aede-d3c1" hidden="false" import="true" type="unit">
       <categoryLinks>
@@ -141,6 +127,7 @@ A Pikemen stand cannot support or be supported by other infantry - only by other
       </costs>
       <entryLinks>
         <entryLink name="Brace" id="8f9e-2ab4-9210-b393" hidden="false" import="true" targetId="89f2-0839-9901-d14c" type="selectionEntry"/>
+        <entryLink name="Siege Upgrades" id="020d-3d37-9568-c275" hidden="false" import="true" targetId="be2d-be4e-b1fe-b35a" type="selectionEntryGroup"/>
       </entryLinks>
       <modifiers>
         <modifier field="a2fc-fb57-3c07-232a" type="increment" value="2">
@@ -530,35 +517,6 @@ If Imrahil is present for a battle, a single unit of knights may designated as h
           </characteristics>
         </profile>
       </profiles>
-    </selectionEntry>
-    <selectionEntry name="Brace" id="89f2-0839-9901-d14c" hidden="false" import="true" type="upgrade">
-      <constraints>
-        <constraint id="2225-417d-3b1c-cd07" field="selections" scope="parent" shared="true" type="max" value="1"/>
-      </constraints>
-      <costs>
-        <cost name="pts" typeId="2085-9b6f-c588-0723" value="5"/>
-      </costs>
-      <infoLinks>
-        <infoLink name="Brace" id="fc2c-4e33-e20b-cd66" hidden="false" targetId="cb95-fd3d-c914-72e7" type="rule"/>
-      </infoLinks>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier affects="self.entries.recursive.profiles.Unit" field="annotation" join="," scope="unit" type="append" value="Brace">
-              <conditions>
-                <condition childId="89f2-0839-9901-d14c" childName="Brace" field="selections" includeChildSelections="true" scope="unit" shared="true" type="atLeast" value="1"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
-      <modifiers>
-        <modifier field="hidden" type="set" value="true">
-          <conditions>
-            <condition childId="2bc6-a5e8-b715-256f" childName="Show Homebrew" field="selections" includeChildForces="true" includeChildSelections="true" scope="roster" shared="true" type="lessThan" value="1"/>
-          </conditions>
-        </modifier>
-      </modifiers>
     </selectionEntry>
     <selectionEntry name="Field Trebuchet" id="3086-2c51-ec89-d1e5" hidden="false" import="true" type="unit">
       <categoryLinks>
